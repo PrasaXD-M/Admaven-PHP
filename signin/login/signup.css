@@ -1,0 +1,119 @@
+/* ||Sign up CSS */
+.formcontainer {
+    padding: 0.8em;
+}
+
+.formcontainer input[type=text],
+input[type=password],
+input[type=email],
+input[type=tel] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: rgb(227, 227, 222);
+}
+
+.formcontainer input[type=text]:focus, input[type=password]:focus {
+    background-color: rgb(240, 240, 233);
+}
+
+.formcontainer hr {
+    border: 1px solid rgb(243, 243, 243);
+}
+
+.formcontainer button {
+    background-color: hsl(158, 94%, 36%);
+    color: #ffffff;
+    padding: 14px 20px;
+    margin: 8px 0;
+    width: 100%;
+    cursor: pointer;
+    /* display: flex; */
+    text-align: center;
+    opacity: 0.8;
+    border: 0;
+}
+
+.formcontainer button:hover {
+    opacity: 1;
+}
+
+.sign-cancel-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-cancel-btn .cancel-btn {
+    background-color: #da2424;
+}
+
+@media screen and (max-width: 700px) {
+    .sign-cancel-btn {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.position-cont {
+    position: relative;
+}
+
+.formcontainer {
+    position: absolute;
+    width: 60%;
+    background-color: #fff;
+    z-index: 10;
+    width: 40em;
+    left: -600px;
+    top: 170px;
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .formcontainer {
+        width: 30em;
+        left: -450px;
+    }
+}
+
+.xclose {
+    /* width: 40px; */
+    cursor: pointer;
+    color: red;
+    font-size: 70px;
+    font-weight: bold;
+    opacity: 0.6;
+}
+
+.xclose:hover {
+    opacity: 1;
+}
+
+.signup-btn button {
+    background-color: hsl(158, 88%, 34%);
+    padding: 12px 16px;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+.signup-btn button:hover {
+    opacity: 1;
+}
+
+.signup-btn button:hover {
+    cursor: pointer;
+}
+
+.signincont p{
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.signincont h2 {
+    text-align: center;
+}
