@@ -8,7 +8,7 @@
     <!-- <link rel="stylesheet" href="/css/style-grid.css"> -->
 
     <link rel="stylesheet" href="/signin/login/signup.css">
-    <!-- <script src="home.js"></script> -->
+    <script src="/Js/main.js"></script>
 </head>
 <body>
     <div class="header-cont">
@@ -19,6 +19,11 @@
 
         <div class="cont-hd__logoName"> 
             <p class="logo-name">A<span class="letter-big">D</span>MAVEN</p>
+        </div>
+
+        <div class="cont-hd__call">
+            <p class="call-num"><b>CALL US:</b></p>
+            <p>+94(076) 710 1829</p>
         </div>
 
     </div>
@@ -42,7 +47,7 @@
             <div class="moto-img">
 
                 <div class="image">
-                    <img src="img/homeimg/image4.jpg" name="slider" id="slider">
+                    <img src="/HomePage/img/image4.jpg" name="slider" id="slider">
                 </div>
 
                 <div class="content">
@@ -67,7 +72,7 @@
 
            
             <div class="abtimage">
-                <!-- <img src="img/homeimg/image5.jpg"> -->
+                <!-- <img src="/img/image5.jpg"> -->
             </div>
 
         <div class="about_container">
