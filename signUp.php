@@ -9,6 +9,44 @@
 <body>
     <div class="signup-container">
 
+        <?php
+            // print_r($_POST);
+            if(isset($_POST["submit"])) {
+                $fname = $_POST["rfName"];
+                $email = $_POST["uemail"];
+                $password = $_POST["email"];
+                $passwordRepeat = $_POST["rePassword"];
+    
+                $errors = array();
+
+                if(empty($fname) OR empty($email) OR empty($password) OR empty($passwordRepeat)) {
+
+                    array_push($errors, "All fields are required");
+                }
+
+                if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    array_push($errors, "Email is not Valid!");
+                }
+
+                if(strlen($password) < 4) {
+                    array_push($errors, "Password should be contain 6 characters!");
+                }
+
+                if($password !== $passwordRepeat) {
+                    array_push($errors, "Password does not match");
+                }
+
+                if(count($errors) > 0) {
+                    foreach($errors as $error) {
+                        echo "<div class = 'error-alert'>$error</div>";
+                    }
+
+                } else {
+                    //insert data into the database.
+                }
+            }
+        ?>
+
         <form action="signUp.php" method="post">
             <div class="form-bdy">
                 <label for="rfName">First Name:</label>
@@ -24,7 +62,7 @@
             </div>
             <div class="form-bdy">
                 <label for="password">Password:</label>
-                <input type="password" name="password" id="password" required>
+                <input type="password" name="password" id="password">
             </div>
             <!-- <div class="form-bdy">
                 <label for="cont-num">Contact No:</label>
@@ -32,7 +70,7 @@
             </div> -->
             <div class="form-bdy">
                 <label for="rePassword">Repeat Password:</label>
-                <input type="password" name="rePassword" id="rePassword" required>
+                <input type="password" name="rePassword" id="rePassword">
             </div>
             <div class="form-bdy">
                 <input type="submit" value="Register" name="submit">
