@@ -290,7 +290,7 @@ body {
 .about_container { grid-area: abtcontain; }
 
 .abtimage {
-    background-image: url("/HomePage/img/image5.jpg");
+    background-image: url("image5.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;

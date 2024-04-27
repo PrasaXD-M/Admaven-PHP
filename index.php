@@ -21,6 +21,7 @@
             <p class="logo-name">A<span class="letter-big">D</span>MAVEN</p>
         </div>
 
+        
         <!-- <div class="signup-btn">
             
             <button onclick="showFormCont()">Sign up</button>
@@ -110,7 +111,7 @@
             <div class="moto-img">
 
                 <div class="image">
-                    <img src="/HomePage/img/image4.jpg" name="slider" id="slider">
+                    <img src="img/homeimg/image4.jpg" name="slider" id="slider">
                 </div>
 
                 <div class="content">
@@ -135,7 +136,7 @@
 
            
             <div class="abtimage">
-                <!-- <img src="/img/image5.jpg"> -->
+                <!-- <img src="img/homeimg/image5.jpg"> -->
             </div>
 
         <div class="about_container">
