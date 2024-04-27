@@ -4,53 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up to AdMaven</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .signup-container input[type=text],
-        input[type=password],
-        input[type=email],
-        input[type=tel] {
-            width: 100%;
-            padding: 15px;
-            margin: 5px 0 22px 0;
-            display: inline-block;
-            border: none;
-            background: rgb(227, 227, 222);
-        }
-
-        .signup-container input[type=text]:focus,
-        input[type=password]:focus,
-        input[type=email]:focus{
-            background-color: rgb(243, 243, 227);
-        }
-
-        .signup-container {
-
-        }
-        /* SIGN UP BUTTON */
-        .signup-container input[type=submit] {
-            background-color: hsl(158, 94%, 36%);
-            color: #ffffff;
-            padding: 14px 20px;
-            margin: 8px 0;
-            width: 100%;
-            cursor: pointer;
-            text-align: center;
-            opacity: 0.8;
-            border: 0;
-        }
-
-        .signup-container input[type=submit]:hover {
-            opacity: 1;
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="signUp.css">
 </head>
 <body>
     <div class="signup-container">
