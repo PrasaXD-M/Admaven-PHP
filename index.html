@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdMaven</title>
+    <link rel="stylesheet" href="/HomePage/css/style.css">
+    <!-- <link rel="stylesheet" href="/css/style-grid.css"> -->
+
+    <link rel="stylesheet" href="/signin/login/signup.css">
+    <script src="/Js/main.js"></script>
+</head>
+<body>
+    <div class="header-cont">
+        <div class="cont-hd__mail">
+            <p><b>EMAIL US:</b></p>
+            <p>admavensco@gmail.com</p>
+        </div>
+
+        <div class="cont-hd__logoName"> 
+            <p class="logo-name">A<span class="letter-big">D</span>MAVEN</p>
+        </div>
+
+        <!-- <div class="cont-hd__call">
+            <p class="call-num"><b>CALL US:</b></p>
+            <p>+94(076) 710 1829</p>
+        </div> -->
+
+        <div class="signup-btn">
+            
+            <button onclick="showFormCont()">Sign up</button>
+
+        <div class="position-cont">
+        <div class="formcontainer" id="formcontainer">
+        
+        <form action="action_page.php" method="post"> 
+
+            <div class="formcontent" style="display: block;">
+                <span onclick="hideFormCont()" title="closer" class="xclose">&times;</span>
+            </div>
+
+            <div class="signincont">
+                <h2>Sign Up</h2>
+                <p>Please fill in this form to crete an account</p>
+            </div>
+            <hr>
+
+            <label for="fname">First Name:</label>
+            <input type="text" name="firstName" id="fname" required>
+
+            <label for="lname">Last Name:</label>
+            <input type="text" name="lastName" id="lname" required>
+
+            <label for="password">password:</label>
+            <input type="password" name="password" id="password" required>
+
+            <label for="confipass">Confirm password:</label>
+            <input type="password" name="confipass" id="confipass" required>
+
+            <label for="contactNo">Contact NO:</label>
+            <input type="tel" name="contactNo" id="contactNo" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+
+            <div class="rememberMe">
+                <input type="checkbox" name="remember" id="remember"> Remember me
+            </div>
+
+            <p>By creating an account you agree to our <a href="#terms">Terms  & condition</a></p>
+
+            <div class="sign-cancel-btn">
+                <button type="submit" class="signup-btn">Sign up</button>
+                <button type="button" class="cancel-btn" onclick="hideFormCont()">Cancel</button>
+            </div>
+        </form>
+    </div>
+        </div>
+
+            <script>
+                let formcontent = document.querySelector('.formcontent');
+                let formcontainer = document.getElementById('formcontainer');
+
+                function showFormCont() {
+                    formcontent.style.display = "block";
+                    formcontainer.style.display = "block";
+                }
+
+                function hideFormCont() {
+                    formcontent.style.display = "none";
+                    formcontainer.style.display = "none";
+                }
+
+            </script>
+        </div>
+
+    </div>
+
+    <div class="navbar">
+        <div class="inner-nav">
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="/ServicePage/final.html">SERVICES</a></li>
+                <li><a href="#blog">BLOG</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-container">
+
+        <div class="moto-cont item1">
+            
+            <div class="moto-img">
+
+                <div class="image">
+                    <img src="/HomePage/img/image4.jpg" name="slider" id="slider">
+                </div>
+
+                <div class="content">
+                    <h1>ADVERTISING AGENCY</h1>
+                    <h2>ADMAVEN</h2>
+
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores cum sint quisquam, ut fugit ea dolore suscipit sed at corporis praesentium rem impedit earum nesciunt consequuntur velit officiis! Ducimus, recusandae.</p>
+
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore aut voluptatibus molestiae, totam id fugit eos natus, sint nulla repellendus tempora consequuntur neque voluptatum asperiores? Debitis quos magni dolor assumenda.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    <div class="about-cont item2">
+
+           <div class="inner-about">
+                <h1 id="headabt">ABOUT US</h1>
+                <h1 id="abtsecondhd">WELCOME TO ADMAVEN</h1>
+           </div>
+
+           
+            <div class="abtimage">
+                <!-- <img src="/img/image5.jpg"> -->
+            </div>
+
+        <div class="about_container">
+
+            <section>
+                <div class="abt-heading-cont">
+                    <h2><span>ADMAVEN ADVERTISING AGENCY</span></h2>
+                    <p><span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni in quis cumque earum vitae. Nostrum corrupti asperiores ad vitae ut? Molestiae nesciunt eius non dolores nisi pariatur voluptatem facilis ab!
+                    </span></p>
+                </div>
+            </section>
+
+            <div class="about__content__para">
+                <div class="para1">
+                    <div class="orangebox"><div class="orangebox__inner"></div></div>
+                    <section class="scroll-txt">
+                        <h2><span>WORK EXPERIENCE</span></h2>
+                        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos consectetur sequi labore fuga, asperiores optio ad inventore facere.</span></p>
+                    </section>
+                </div>
+
+                <div class="para2">
+                    <div class="orangebox"><div class="orangebox__inner"></div></div>
+                    <section class="scroll-txt">
+                        <h2><span>AWARD WINNING</span></h2>
+                        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur dicta est pariatur.</span></p>
+                    </section>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="offer-cont item3">
+        <div class="offer-header">
+            <h1>WHAT WE OFFER</h1>
+        </div>
+
+        <div class="offer-card-cont">
+            <div class="card card1">
+                <div class="card-img">
+                </div>
+
+                <div class="card-inner-cont">
+                    <div class="box">
+                        <h3>SERVICE NAME</h3>
+                        <div class="morebtn">
+                            <a href="#abt">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="card card2">
+                <div class="card-img">
+                </div>
+
+                <div class="card-inner-cont">
+                    <div class="box">
+                        <h3>SERVICE NAME</h3>
+                        <div class="morebtn">
+                            <a href="#abt">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="card card3">
+                <div class="card-img">
+                </div>
+
+                <div class="card-inner-cont">
+                    <div class="box">
+                        <h3>SERVICE NAME</h3>
+                        <div class="morebtn">
+                            <a href="#abt">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="card card4">
+                <div class="card-img">
+                </div>
+
+                <div class="card-inner-cont">
+                    <div class="box">
+                        <h3>SERVICE NAME</h3>
+                        <div class="morebtn">
+                            <a href="#abt">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="card card5">
+                <div class="card-img">
+                </div>
+
+                <div class="card-inner-cont">
+                    <div class="box">
+                        <h3>SERVICE NAME</h3>
+                        <div class="morebtn">
+                            <a href="#abt">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="card card6">
+                <div class="card-img">
+                </div>
+
+                <div class="card-inner-cont">
+                    <div class="box">
+                        <h3>SERVICE NAME</h3>
+
+                        <div class="morebtn">
+                            <a href="#abt">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="brand-cont item4">
+            <div class="cont-video">
+                <!-- <video src=""></video> -->
+            </div>
+
+            <!-- <div class="brand-name"> -->
+                <div class="inner-about brand-abt">
+                    <h1 id="headabt">OUR CLIENTS</h1>
+                    <h1 id="abtsecondhd">BRANDS WE WORK WITH</h1>
+               </div>
+            <!-- </div> -->
+    </div>
+
+    <div class="testimonial item5">
+            <h3>testimonial(php)</h3>
+    </div>
+
+    <div class="footer item6">
+        <footer>
+            <div class="container">
+                <div class="row">
+                <div class="col" id="company">
+                    <img src="/footer/logo.jpg" alt=""   class="logo">
+                    <p>ape haanduruwane ape haanduruwaneee ape haanduruwane ape haanduruwaneee ape haanduruwane ape haanduruwaneee</p>
+                
+                <div class="social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+    
+    
+                
+    
+                <div class="col" id="useful-links">
+                    
+                    <div class="links">
+                    <ul>
+                    <li><a href="#"><h2>Home</h2></a></li>
+                    <li><a href="#"><h2>About us</h2></a></li>
+                    <li><a href="#"><h2>Services</h2></a></li>
+                    <li><a href="#"><h2>Blog</h2></a></li>
+                    <li><a href="#"><h2>Contact</h2></a></li>
+                    </ul>
+                </div>
+                </div>
+                <div class="col" id="contact">
+                    <h3>Contact us</h3>
+                    <div class="contact-details">
+                        <i class="fa fa-location"></i>
+                        <p>FF-42,Procube Avenue,<br>NY,USA</p>
+                    </div>
+                    <div class="contact-details">
+                        <i class="fa fa-phone"></i>
+                        <p><a href="tel:+1-876543210">+1-876543210</a></p>
+                    </div>
+                    <div class="contact-details">
+                        <i class="fa fa-envelope"></i>
+                        <p><a href="mailto:maindemattiya@gmail.com">maindemattiya@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+        
+        </footer>
+        <div class="bottom-bar">
+            <p>&copy;2023 your company.All rights reserved</p>
+        </div>
+    </div>
+</body>
+</html>
