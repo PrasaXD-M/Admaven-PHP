@@ -47,7 +47,7 @@
             <div class="moto-img">
 
                 <div class="image">
-                    <img src="/HomePage/img/image4.jpg" name="slider" id="slider">
+                    <img src="img/homeimg/image4.jpg" name="slider" id="slider">
                 </div>
 
                 <div class="content">
