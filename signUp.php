@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up to AdMaven</title>
     <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        
         .signup-container input[type=text],
         input[type=password],
         input[type=email],
@@ -42,6 +48,8 @@
         .signup-container input[type=submit]:hover {
             opacity: 1;
         }
+
+
     </style>
 </head>
 <body>
