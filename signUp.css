@@ -35,6 +35,15 @@
     margin: 0;
 }
 
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--ABT-FONT);
+}
+
 .signup-container input[type=text],
 input[type=password],
 input[type=email],
@@ -45,6 +54,7 @@ input[type=tel] {
     display: inline-block;
     border: none;
     background: rgb(203, 199, 199);
+    border-radius: 10px;
 }
 
 .signup-container input[type=text]:focus,
@@ -73,18 +83,16 @@ input[type=email]:focus{
     opacity: 1;
 }
 
-body {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: ;
-}
-
 /* Container */
 .signup-container {
-    background-color: hsl(0, 23%, 94%);
+    background-color: hsl(0, 15%, 94%);
     padding: 1em;
     border-radius: 20px;
+}
+
+.error-alert {
+    background-color: #fdadad;
+    padding: 0.6em;
+    border-radius: 12px;
+    color: red;
 }
