@@ -6,6 +6,29 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato&display=swap');
 
+:root {
+    /* || FONTS */
+    --SPACIAL-FF: 'Dancing Script', cursive;
+    --SPACIAL-FF2: 'system-ui';
+
+    --FF-CAPTION: 'Protest Strike', sans-serif;
+
+    --LINK-FF: 'Oswald', sans-serif;
+
+    --ABT-FONT: "Kanit";
+
+    /* || COLORS */
+    --INFO-MAIL-COLOR: #000;
+    --INFO-BGCOLOR: rgb(237, 232, 232);
+    --LIGHT-COLOR: #fff;
+        /* Nav color */
+    --NAV-BACK-COLOR: #333;
+    --NAV-LINE-BACK: hsl(39, 93%, 45%);
+
+    /* header content */
+    --ORANGE-COLOR: rgb(228, 151, 6); 
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -21,13 +44,13 @@ input[type=tel] {
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
-    background: rgb(227, 227, 222);
+    background: rgb(203, 199, 199);
 }
 
 .signup-container input[type=text]:focus,
 input[type=password]:focus,
 input[type=email]:focus{
-    background-color: rgb(243, 243, 227);
+    background-color: rgba(234, 234, 234, 0.895);
 }
 
 .signup-container {
@@ -56,9 +79,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: ;
 }
 
+/* Container */
 .signup-container {
-    background-color: hsl(0, 8%, 87%);
+    background-color: hsl(0, 23%, 94%);
     padding: 1em;
+    border-radius: 20px;
 }
