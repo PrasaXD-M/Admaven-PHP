@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AdMaven</title>
-    <link rel="stylesheet" href="/HomePage/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="/css/style-grid.css"> -->
 
     <link rel="stylesheet" href="/signin/login/signup.css">
-    <script src="/Js/main.js"></script>
+    <!-- <script src="home.js"></script> -->
 </head>
 <body>
     <div class="header-cont">
@@ -21,12 +21,7 @@
             <p class="logo-name">A<span class="letter-big">D</span>MAVEN</p>
         </div>
 
-        <!-- <div class="cont-hd__call">
-            <p class="call-num"><b>CALL US:</b></p>
-            <p>+94(076) 710 1829</p>
-        </div> -->
-
-        <div class="signup-btn">
+        <!-- <div class="signup-btn">
             
             <button onclick="showFormCont()">Sign up</button>
 
@@ -74,7 +69,7 @@
                 <button type="button" class="cancel-btn" onclick="hideFormCont()">Cancel</button>
             </div>
         </form>
-    </div>
+        </div>
         </div>
 
             <script>
@@ -92,7 +87,7 @@
                 }
 
             </script>
-        </div>
+        </div> -->
 
     </div>
 
