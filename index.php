@@ -6,13 +6,13 @@
     <title>AdMaven</title>
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="/css/style-grid.css"> -->
-
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="/signin/login/signup.css">
     <script src="/Js/main.js"></script>
 </head>
 <body>
-    <?php include("header.php"); ?>
-    <!-- <div class="header-cont">
+    
+    <div class="header-cont">
         <div class="cont-hd__mail">
             <p><b>EMAIL US:</b></p>
             <p>admavensco@gmail.com</p>
@@ -22,9 +22,24 @@
             <p class="logo-name">A<span class="letter-big">D</span>MAVEN</p>
         </div>
 
-        <div class="cont-hd__call">
-            <p class="call-num"><b>CALL US:</b></p>
-            <p>+94(076) 710 1829</p>
+        <?php 
+            session_start();
+            if (!isset($_SESSION["user"])) {
+                
+        ?>
+
+        <div class="signup-btn">
+            <a href="signUp.php">Sign Up</a>
+        </div>
+
+        <div class="signup-btn">
+            <a href="login.php">Login</a>
+        </div>
+
+        <?php } ?>
+
+        <div class="logout-btn">
+            <a href="logout.php">Log out</a>
         </div>
 
     </div>
@@ -39,7 +54,7 @@
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
         </div>
-    </div> -->
+    </div>
 
     <div class="main-container">
 

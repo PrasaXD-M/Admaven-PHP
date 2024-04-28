@@ -44,7 +44,7 @@ body {
     --ORANGE-COLOR: rgb(228, 151, 6); 
 }
 
-.header-cont  {
+/* .header-cont  {
     background-color: var(--INFO-BGCOLOR);
     color: var(--INFO-MAIL-COLOR);
     display: flex;
@@ -73,10 +73,10 @@ body {
 .cont-hd__mail, 
 .cont-hd__call {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+} */
 
 /* || NAVIGATION BAR */
-.inner-nav ul {
+/* .inner-nav ul {
     list-style-type: none;
     display: block;
 }
@@ -130,7 +130,7 @@ body {
 .navbar a:hover {
     color: var(--ORANGE-COLOR);
     transition: 1.3s;
-}
+} */
 
 /* || IMAGE */
 
