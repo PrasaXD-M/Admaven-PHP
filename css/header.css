@@ -140,7 +140,7 @@
 
     .logout-btn a {
         padding: 10px 13px;
-        background-color: hsl(158, 94%, 36%);
+        background-color: hsl(0, 95%, 63%);
         color: var(--LIGHT-COLOR);
         font-family: var(--FF-CAPTION);
         text-decoration: none;
