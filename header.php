@@ -202,10 +202,7 @@
             <p class="logo-name">A<span class="letter-big">D</span>MAVEN</p>
         </div>
 
-        <div class="testdiv">
-            <h1>hello</h1>
-        </div>
-
+    
         <?php if (!isset($_SESSION["user"])) { ?>
 
             <!-- <div class="header__option_cont"> -->
@@ -218,7 +215,7 @@
                     <a href="login.php">Login</a>
                 </div>
 
-                <?php } else {?>
+                <?php  } else {?>
 
                 <div class="my_account">
                     <button><a href="userdash.php">My Account</a></button>
