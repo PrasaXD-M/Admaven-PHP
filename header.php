@@ -218,9 +218,9 @@
         <?php } else {?>
 
         <div class="my_account">
-            <a href="userdash.php">My Account</a>
+            <button><a href="userdash.php">My Account</a></button>
         </div>
-        
+
         <div class="logout-btn">
             <a href="logout.php">Log out</a>
         </div>
@@ -230,7 +230,7 @@
     <div class="navbar">
         <div class="inner-nav">
             <ul>
-                <li><a href="#home">HOME</a></li>
+                <li><a href="index.php">HOME</a></li>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="/ServicePage/final.html">SERVICES</a></li>
                 <li><a href="#blog">BLOG</a></li>

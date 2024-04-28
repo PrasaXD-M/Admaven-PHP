@@ -145,4 +145,21 @@
         font-family: var(--FF-CAPTION);
         text-decoration: none;
         opacity: 0.8;
+        border-radius: 10px;
+    }
+
+    .my_account a {
+        display: inline-block;
+        background-color: rgb(76, 76, 182);
+        padding: 8px 12px;
+        color: #fff;
+        font-family: var(--ABT-FONT);
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+
+    .my_account button {
+        border: none;
     }
