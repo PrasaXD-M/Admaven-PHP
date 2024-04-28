@@ -17,7 +17,7 @@
     <div class="form-body">
         <div class="signup-container">
 
-            <?php 
+            <?php
                 if(isset($_POST["submit"])) {
                     $email = $_POST["uemail"];
                     $password = $_POST["password"];
@@ -55,6 +55,10 @@
                     <input type="password" name="password" id="password" placeholder="Enter your password..">
                 </div>
 
+                <div class="new_acc">
+                    <p>Still don't have an account? <a href="signUp.php">Sign Up here</a></p>
+                </div>
+
                 <div class="form-bdy button-flex">
                     <div class="reg">
                         <input type="submit" value="Login" name="submit">
@@ -66,6 +70,9 @@
                     </div>
                 </div>
             </form>
+           <div class="remember-terms">
+            <a href="#">Terms & Conditions | Privacy</a>
+           </div>
         </div>
     </div>
 </body>
