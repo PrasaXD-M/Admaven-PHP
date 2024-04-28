@@ -36,12 +36,12 @@
             <a href="login.php">Login</a>
         </div>
 
-        <?php } ?>
+        <?php } else {?>
 
         <div class="logout-btn">
             <a href="logout.php">Log out</a>
         </div>
-
+        <?php } ?>
     </div>
 
     <div class="navbar">
