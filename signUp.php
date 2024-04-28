@@ -12,6 +12,10 @@
     <div class="form-body">
         <div class="signup-container">
 
+            <div class="signup-head">
+                <h2>Welcome To AdMaven</h2>
+            </div>
+
             <?php
                 // print_r($_POST);
                 if(isset($_POST["submit"])) {
@@ -70,10 +74,6 @@
                 }
             ?>
 
-            <div class="signup-head">
-                <h2>Welcome To AdMaven</h2>
-            </div>
-
             <form action="signUp.php" method="post">
                 <div class="form-bdy">
                     <label for="rfName">First Name:</label>
@@ -104,7 +104,7 @@
                     <p>Already have an account? <a href="login.php">Login here</a></p>
                 </div>
 
-                <div class="form-bdy">
+                <div class="form-bdy button-flex">
                     <div class="reg">
                         <input type="submit"value="Register" 
                         name="submit">

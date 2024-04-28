@@ -71,8 +71,8 @@ input[type=email]:focus{
     background-color: hsl(158, 94%, 36%);
     color: #ffffff;
     padding: 14px 20px;
-    margin: 8px 0;
-    width: 100%;
+    margin: 8px 2px;
+    width: 20em;
     cursor: pointer;
     text-align: center;
     opacity: 0.8;
@@ -144,3 +144,17 @@ input[type=email]:focus{
     color: blue;
 }
 
+/****** Flex buttons  **********/
+.button-flex {
+    /* width: 5em; */
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+    
+}
+
+.form-body {
+    padding: 1em;
+}
