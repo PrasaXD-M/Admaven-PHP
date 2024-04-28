@@ -38,13 +38,26 @@
                         array_push($errors, "Password does not match");
                     }
 
+                    require_once "config/database.php";
+
+                    $sql = "SELECT * FROM user_registration WHERE email = '$email'";
+                    $result = mysqli_query($con, $sql);
+
+                    $rowCount = mysqli_num_rows($result);
+                    if($rowCount > 0) {
+                        array_push($errors, "Email already exists!");
+                    }
+
+
                     if(count($errors) > 0) {
                         foreach($errors as $error) {
                             echo "<div class = 'error-alert'>$error</div>";
                         }
 
                     } else {
-                        //insert data into the database.
+                        mysqli_query($con, "INSERT INTO user_registration (name, email, password) VALUES ('$fname', '$email', '$password')");
+
+                        echo "<div class = 'success-alert'>Welcome to AdMaven You are registered successfully!</div>";
                     }
                 }
             ?>
