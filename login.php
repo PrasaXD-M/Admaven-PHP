@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link rel="stylesheet" href="signUp.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
     <div class="form-body">
@@ -41,8 +42,8 @@
                     }
                 }
             ?>
-
-            <h2 style="text-align: center;">Login form</h2>
+            <h2 class="welcom-msg" style="text-align: center;">Login form</h2>
+            <div class = 'success-alert'>Welcome to AdMaven</div>
             <form action="login.php" method="post">
                 <div class="form-bdy">
                     <label for="uemail">Email:</label>
@@ -54,8 +55,15 @@
                     <input type="password" name="password" id="password" placeholder="Enter your password..">
                 </div>
 
-                <div class="form-bdy">
-                    <input type="submit" value="Login" name="submit">
+                <div class="form-bdy button-flex">
+                    <div class="reg">
+                        <input type="submit" value="Login" name="submit">
+                    </div>
+                
+                    <div class="back">
+                            <input type="submit"value="Cancel" 
+                            name="cancel">
+                    </div>
                 </div>
             </form>
         </div>
