@@ -11,7 +11,8 @@
     <script src="/Js/main.js"></script>
 </head>
 <body>
-    <div class="header-cont">
+    <?php include("header.php"); ?>
+    <!-- <div class="header-cont">
         <div class="cont-hd__mail">
             <p><b>EMAIL US:</b></p>
             <p>admavensco@gmail.com</p>
@@ -38,7 +39,7 @@
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
         </div>
-    </div>
+    </div> -->
 
     <div class="main-container">
 

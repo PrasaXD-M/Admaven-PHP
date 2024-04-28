@@ -131,6 +131,19 @@
             color: var(--ORANGE-COLOR);
             transition: 1.3s;
         }
+
+        .signup-btn a{
+            padding: 10px 13px;
+            background-color: hsl(158, 94%, 36%);
+            color: var(--LIGHT-COLOR);
+            font-family: var(--FF-CAPTION);
+            text-decoration: none;
+            opacity: 0.8;
+        }
+
+        .signup-btn a:hover {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -143,18 +156,22 @@
         <div class="cont-hd__logoName"> 
             <p class="logo-name">A<span class="letter-big">D</span>MAVEN</p>
         </div>
-
-        <div class="cont-hd__call">
-            <p class="call-num"><b>CALL US:</b></p>
-            <p>+94(076) 710 1829</p>
+        
+        
+        <div class="signup-btn">
+            <a href="signUp.php">Sign Up</a>
         </div>
 
+        <div class="signup-btn">
+            <a href="login.php">Login</a>
+        </div>
+        
     </div>
 
     <div class="navbar">
         <div class="inner-nav">
             <ul>
-                <li><a href="#home">HOME</a></li>
+                <li><a href="/index.php">HOME</a></li>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="/ServicePage/final.html">SERVICES</a></li>
                 <li><a href="#blog">BLOG</a></li>
