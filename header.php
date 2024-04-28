@@ -158,7 +158,17 @@
             <p class="logo-name">A<span class="letter-big">D</span>MAVEN</p>
         </div>
         
-        
+        <?php 
+            session_start();
+            if (isset($_SESSION["user"])) {
+                
+        ?>
+
+        <div class="logout-btn">
+            <a href="logout.php">Log out</a>
+        </div>
+
+        <?php  }?>
         <div class="signup-btn">
             <a href="signUp.php">Sign Up</a>
         </div>
