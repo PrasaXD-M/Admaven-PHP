@@ -217,6 +217,10 @@
 
         <?php } else {?>
 
+        <div class="my_account">
+            <a href="userdash.php">My Account</a>
+        </div>
+        
         <div class="logout-btn">
             <a href="logout.php">Log out</a>
         </div>
