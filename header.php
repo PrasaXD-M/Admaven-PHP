@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -171,7 +172,7 @@
     <div class="navbar">
         <div class="inner-nav">
             <ul>
-                <li><a href="/index.php">HOME</a></li>
+                <li><a href="index.php">HOME</a></li>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="/ServicePage/final.html">SERVICES</a></li>
                 <li><a href="#blog">BLOG</a></li>
