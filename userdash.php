@@ -1,3 +1,9 @@
+<?php 
+    session_start();
+    if(!isset($_SESSION["user"])) {
+        header("location: login.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,5 +13,7 @@
 </head>
 <body>
     <h1 style="text-align: center;">Hello! welcome to dashboard</h1>
+
+    <div class="logout-btn"><a href="logout.php">Log Out</a></div>
 </body>
 </html>

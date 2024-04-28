@@ -57,7 +57,7 @@
                         }
 
                     } else {
-                        mysqli_query($con, "INSERT INTO user_registration (name, email, password) VALUES ('$fname', '$email', '$passwordHash')");
+                        mysqli_query($con, "INSERT INTO user_registration (name, email, password) VALUES ('$fname', '$email', '$password')");
 
                         echo "<div class = 'success-alert'>Welcome to AdMaven You are registered successfully!</div>";
                     }

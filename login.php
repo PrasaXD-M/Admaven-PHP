@@ -1,3 +1,9 @@
+<?php 
+    session_start();
+    if (isset($_SESSION["user"])) {
+        header("location: userdash.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +17,7 @@
         <div class="signup-container">
 
             <?php 
-                if(isset($_POST["login"])) {
+                if(isset($_POST["submit"])) {
                     $email = $_POST["uemail"];
                     $password = $_POST["password"];
 
@@ -22,9 +28,11 @@
                     $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
                     if($user) {
-                        if(password_verify($password, $user["password"])) {
+                        if($password == $user["password"]) {
+                            session_start();
+                            $_SESSION["user"] = "yes";
                             header("location: userdash.php");
-                            // die();
+                            die();
                         } else {
                             echo "<div class = 'error-alert'>Password does not match!</div>";
                         }
