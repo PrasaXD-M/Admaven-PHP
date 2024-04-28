@@ -31,7 +31,7 @@
                         if($password == $user["password"]) {
                             session_start();
                             $_SESSION["user"] = "yes";
-                            header("location: userdash.php");
+                            header("location: index.php");
                             die();
                         } else {
                             echo "<div class = 'error-alert'>Password does not match!</div>";
