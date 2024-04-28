@@ -4,5 +4,5 @@
     $dbpassowrd = "";
     $dbName = "testlogin";
 
-    $conn = mysqli_connect($hostName, $dbUser, $dbpassowrd, $dbName);
+    $con = mysqli_connect($hostName, $dbUser, $dbpassowrd, $dbName);
 ?>
