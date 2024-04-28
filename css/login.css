@@ -2,6 +2,6 @@
     margin-bottom: 1em;
 }
 
-.button-flex {
-    /* width: 15em; */
+.signup-container input[type=submit] {
+    width: 12em;
 }
