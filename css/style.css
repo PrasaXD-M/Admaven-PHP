@@ -421,9 +421,9 @@ body {
 /*********** OFFER PART ************/
 
 .offer-cont {
-    margin-top: 1em;
+    margin-top: 1.5em;
     width: 100%;
-    height: 100vh;
+    height: 30vh;
     background-image: url("bg.jpg");
 }
 .offer-header h1 {
@@ -431,8 +431,15 @@ body {
     color: var(--ORANGE-COLOR);
     text-align: center;
     font-size: 5em;
-    /* margin-top: 1em; */
+    padding: 0.6em;
 }
+
+/******** SERVICE CARD **********/
+.service_card_container {
+    width: 100%;
+    height: 100vh;
+}
+
 
 
 

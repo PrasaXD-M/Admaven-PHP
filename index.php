@@ -85,10 +85,10 @@
         <div class="offer-header">
             <h1>WHAT WE OFFER</h1>
         </div>
+    </div>
 
-       
-
-        </div>
+    <div class="service_card_container">
+        
     </div>
 
     <div class="brand-cont item4">
