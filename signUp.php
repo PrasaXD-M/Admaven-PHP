@@ -90,19 +90,17 @@
                     <input type="password" name="rePassword" id="rePassword">
                 </div>
                 <div class="form-bdy">
-                    <div class="reg-back">
-                        <div class="reg">
-                            <input type="submit" value="Register" 
-                            name="submit">
-                        </div>
-                        <div class="back">
-                            <input type="submit" value="Cancel" 
-                            name="submit">
-                        </div>
+                    
+                    <div class="reg">
+                        <input type="submit"value="Register" 
+                        name="submit">
                     </div>
+                   
                 </div>
-            </form>
-
+                </form>
+                <div class="back">
+                        <a href="index.php">Cancel</a> 
+                </div>
         </div>
     </div>
 

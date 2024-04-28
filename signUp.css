@@ -77,13 +77,14 @@ input[type=email]:focus{
     text-align: center;
     opacity: 0.8;
     border: 0;
+
 }
 
 .signup-container input[type=submit]:hover {
     opacity: 1;
 }
 
-/* Container */
+/***** Container *****/
 .signup-container {
     background-color: hsl(0, 15%, 94%);
     padding: 1em;
@@ -107,4 +108,11 @@ input[type=email]:focus{
     color: rgb(0, 72, 255);
     margin: 0.4em;
     text-align: center;
+}
+
+/***** register and cancel container *****/
+.back a{
+    display: inline-block;
+    background-color: red;
+    text-decoration: none;
 }
