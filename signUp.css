@@ -99,3 +99,12 @@ input[type=email]:focus{
     text-align: center;
 }
 
+/***** Success alert ******/
+.success-alert {
+    background-color: #c2d7ff;
+    padding: 0.6em;
+    border-radius: 12px;
+    color: rgb(0, 72, 255);
+    margin: 0.4em;
+    text-align: center;
+}
