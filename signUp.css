@@ -35,7 +35,7 @@
     margin: 0;
 }
 
-body {
+.form-body {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -91,9 +91,11 @@ input[type=email]:focus{
 }
 
 .error-alert {
-    background-color: #fdadad;
+    background-color: #ffc2c2;
     padding: 0.6em;
     border-radius: 12px;
     color: red;
+    margin: 0.4em;
+    text-align: center;
 }
 
