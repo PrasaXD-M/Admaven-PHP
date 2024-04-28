@@ -192,7 +192,7 @@
     <link rel="stylesheet" href="css/header.css">
 </head>
 <body>
-<div class="header-cont">
+    <div class="header-cont">
         <div class="cont-hd__mail">
             <p><b>EMAIL US:</b></p>
             <p>admavensco@gmail.com</p>
@@ -202,29 +202,35 @@
             <p class="logo-name">A<span class="letter-big">D</span>MAVEN</p>
         </div>
 
-        <?php 
-            if (!isset($_SESSION["user"])) {
-                
-        ?>
-
-        <div class="signup-btn">
-            <a href="signUp.php">Sign Up</a>
+        <div class="testdiv">
+            <h1>hello</h1>
         </div>
 
-        <div class="signup-btn">
-            <a href="login.php">Login</a>
-        </div>
+        <?php if (!isset($_SESSION["user"])) { ?>
 
-        <?php } else {?>
+            <!-- <div class="header__option_cont"> -->
 
-        <div class="my_account">
-            <button><a href="userdash.php">My Account</a></button>
-        </div>
+                <div class="signup-btn">
+                    <a href="signUp.php">Sign Up</a>
+                </div>
 
-        <div class="logout-btn">
-            <a href="logout.php">Log out</a>
-        </div>
+                <div class="signup-btn">
+                    <a href="login.php">Login</a>
+                </div>
+
+                <?php } else {?>
+
+                <div class="my_account">
+                    <button><a href="userdash.php">My Account</a></button>
+                </div>
+
+                <div class="logout-btn">
+                    <a href="logout.php">Log out</a>
+                </div>
+
+            <!-- </div> -->
         <?php } ?>
+
     </div>
 
     <div class="navbar">
@@ -237,6 +243,7 @@
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
         </div>
-    </div>
+    </div> 
+
 </body>
 </html>

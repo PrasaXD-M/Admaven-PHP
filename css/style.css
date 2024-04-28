@@ -223,7 +223,7 @@ body {
 #abtsecondhd {
     font-size: 3.3rem;
     color: var(--LIGHT-COLOR);
-    font-family: var(--LINK-FF);
+    font-family: var(--LINK-FF); 
     position: relative;
     text-decoration: underline;
 }

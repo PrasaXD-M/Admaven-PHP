@@ -42,6 +42,13 @@
                     }
                 }
             ?>
+
+            
+            <?php 
+                if(isset($_POST["cancel"])) {
+                    header("location: index.php");
+                }
+            ?>
             <h2 class="welcom-msg" style="text-align: center;">Login form</h2>
             <div class = 'success-alert'>Welcome to AdMaven</div>
             <form action="login.php" method="post">
