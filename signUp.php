@@ -100,8 +100,8 @@
                     <input type="password" name="rePassword" id="rePassword">
                 </div>
 
-                <div class="already-msg" style="text-align: center;">
-                    <p>You already have an account? <a href="login.php">Login here</a></p>
+                <div class="already-msg">
+                    <p>Already have an account? <a href="login.php">Login here</a></p>
                 </div>
 
                 <div class="form-bdy">
@@ -115,7 +115,7 @@
                     </div>
                 </div>
             </form>
-            <div class="remember-terms" style="text-align: center;">
+            <div class="remember-terms">
                 <p>By continuing, you agree to AdMaven's <a href="#">Tearms of service & privacy policy.</a></p>
             </div>
         </div>

@@ -116,4 +116,31 @@ input[type=email]:focus{
     opacity: 0.6;
 }
 
-.
+/**** header h2 *****/
+.signup-head h2 {
+    text-align: center;
+    color: var(--ORANGE-COLOR);
+    margin-bottom: 1em;
+    text-decoration: underline;
+    font-size: 1.8em;
+}
+
+/***** Already message ******/
+.already-msg {
+    text-align: center;
+    margin-bottom: 2.8em;
+}
+.already-msg a {
+    color: blue;
+}
+
+
+/***** Terms & conditions ******/
+.remember-terms p{
+    text-align: center;
+}
+
+.remember-terms a {
+    color: blue;
+}
+
