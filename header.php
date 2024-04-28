@@ -168,7 +168,8 @@
             <a href="logout.php">Log out</a>
         </div>
 
-        <?php  }?>
+        <?php } ?>
+
         <div class="signup-btn">
             <a href="signUp.php">Sign Up</a>
         </div>
