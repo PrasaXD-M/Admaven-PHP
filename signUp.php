@@ -20,6 +20,8 @@
                     $password = $_POST["password"];
                     $passwordRepeat = $_POST["rePassword"];
         
+                    $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+
                     $errors = array();
 
                     if(empty($fname) OR empty($email) OR empty($password) OR empty($passwordRepeat)) {
@@ -55,7 +57,7 @@
                         }
 
                     } else {
-                        mysqli_query($con, "INSERT INTO user_registration (name, email, password) VALUES ('$fname', '$email', '$password')");
+                        mysqli_query($con, "INSERT INTO user_registration (name, email, password) VALUES ('$fname', '$email', '$passwordHash')");
 
                         echo "<div class = 'success-alert'>Welcome to AdMaven You are registered successfully!</div>";
                     }
