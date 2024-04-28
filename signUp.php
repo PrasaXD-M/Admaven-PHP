@@ -64,6 +64,16 @@
                 }
             ?>
 
+            <?php 
+                if(isset($_POST["cancel"])) {
+                    header("location: index.php");
+                }
+            ?>
+
+            <div class="signup-head">
+                <h2>Welcome To AdMaven</h2>
+            </div>
+
             <form action="signUp.php" method="post">
                 <div class="form-bdy">
                     <label for="rfName">First Name:</label>
@@ -89,18 +99,25 @@
                     <label for="rePassword">Repeat Password:</label>
                     <input type="password" name="rePassword" id="rePassword">
                 </div>
+
+                <div class="already-msg" style="text-align: center;">
+                    <p>You already have an account? <a href="login.php">Login here</a></p>
+                </div>
+
                 <div class="form-bdy">
-                    
                     <div class="reg">
                         <input type="submit"value="Register" 
                         name="submit">
                     </div>
-                   
+                    <div class="back">
+                        <input type="submit"value="Cancel" 
+                        name="cancel">
+                    </div>
                 </div>
-                </form>
-                <div class="back">
-                        <a href="index.php">Cancel</a> 
-                </div>
+            </form>
+            <div class="remember-terms" style="text-align: center;">
+                <p>By continuing, you agree to AdMaven's <a href="#">Tearms of service & privacy policy.</a></p>
+            </div>
         </div>
     </div>
 

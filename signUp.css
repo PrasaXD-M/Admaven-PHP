@@ -110,9 +110,10 @@ input[type=email]:focus{
     text-align: center;
 }
 
-/***** register and cancel container *****/
-.back a{
-    display: inline-block;
+/***** cancel button *****/
+.back input[type=submit] {
     background-color: red;
-    text-decoration: none;
+    opacity: 0.6;
 }
+
+.
