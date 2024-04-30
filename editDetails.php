@@ -35,7 +35,7 @@
     }
 
     /* Extra styles for the cancel button */
-    .cancelbtn {
+    .edit__cancelbtn {
         width: auto;
         padding: 10px 18px;
         background-color: #f44336;
@@ -48,7 +48,7 @@
         position: relative;
     }
 
-    img.avatar {
+    img.user_prof {
         width: 40%;
         border-radius: 50%;
     }
@@ -101,7 +101,6 @@
         cursor: pointer;
     }
 
-    /* Add Zoom Animation */
     .animate {
         -webkit-animation: animatezoom 0.6s;
         animation: animatezoom 0.6s
@@ -117,7 +116,6 @@
         to {transform: scale(1)}
     }
 
-    /* Change styles for span and cancel button on extra small screens */
     @media screen and (max-width: 300px) {
         span.psw {
             display: block;
@@ -138,33 +136,31 @@
   <form class="modal-content animate" action="/action_page.php" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+      <img src="img/homeimg/image4.jpg" alt="userProfile" class="user_prof">
     </div>
 
     <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <label for="fname"><b>New First Name:</b></label>
+      <input type="text" placeholder="Enter first name" name="fname" required>
+      <label for="lname"><b>New First Name:</b></label>
+      <input type="text" placeholder="Enter Last name" name="lname" required>
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <label for="psw"><b>New Password:</b></label>
+      <input type="password" placeholder="Enter Password" name="npassword" required>
         
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
+      <input type="submit" class="edit__btn" name="update" value="Update">
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="edit__cancelbtn">Cancel</button>
     </div>
   </form>
 </div>
 
 <script>
-// Get the modal
+
 var modal = document.getElementById('id01');
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
