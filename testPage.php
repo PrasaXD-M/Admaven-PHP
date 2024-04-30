@@ -18,7 +18,7 @@
 
         .user_side_bar {
             flex: 30%;
-            height: 80vh;
+            height: 79vh;
             background-color: #333;
         }
 
