@@ -26,7 +26,7 @@
         
                     $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
-                    $errors = array();
+                    $errors = array(); 
 
                     if(empty($fname) OR empty($email) OR empty($password) OR empty($passwordRepeat)) {
                         array_push($errors, "All fields are requied!");
@@ -64,6 +64,7 @@
                         mysqli_query($con, "INSERT INTO user_registration (name, email, password) VALUES ('$fname', '$email', '$password')");
 
                         echo "<div class = 'success-alert'>Welcome to AdMaven You are registered successfully!</div>";
+                        header("location: login.php");
                     }
                 }
             ?>
@@ -110,7 +111,7 @@
                         name="submit">
                     </div>
                     <div class="back">
-                        <input type="submit"value="Cancel" 
+                        <input type="submit" value="Cancel"
                         name="cancel">
                     </div>
                 </div>

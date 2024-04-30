@@ -200,7 +200,7 @@
 
         <div class="cont-hd__logoName"> 
             <p class="logo-name">A<span class="letter-big">D</span>MAVEN</p>
-        </div>
+        </div> 
 
     
         <?php if (!isset($_SESSION["user"])) { ?>

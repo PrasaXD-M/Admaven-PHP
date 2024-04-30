@@ -2,7 +2,7 @@
     session_start();
     if(!isset($_SESSION["user"])) {
         header("location: login.php");
-    }
+    } else { 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,6 +33,6 @@
     <div class="change_details">
 
     </div>
-
+        <?php } ?>
 </body>
 </html>
