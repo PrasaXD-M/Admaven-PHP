@@ -51,7 +51,7 @@
         .user_side_bar {
             flex: 30%;
             height: 79vh;
-            background-color: lightblue;
+            background-color: lightgrey;
             /* opacity: 0.5; */
         }
 
@@ -85,6 +85,10 @@
         .details_cont_user p{
             margin-top: 0.4em;
         }
+        .details_cont_user p:hover {
+            background-color: rgba(225, 129, 20, 1);
+            transition: 0.5s;
+        }
 
         .style_inner_pic {
             width: 200px;
@@ -115,12 +119,21 @@
             display: inline-block;
             padding: 1em 1.3em;
             background-color: var(--ORANGE-COLOR);
+            background-color: #333;
             text-decoration: none;
             font-family: var(--FF-CAPTION);
             color: var(--LIGHT-COLOR);
         }
-        
-        
+
+        .edit_profile a:hover{
+            background-color: var(--DARK-ORANGE);
+            transition: 0.5s;
+        }
+        .Detailsedit-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
