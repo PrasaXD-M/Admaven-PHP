@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -80,8 +81,17 @@
 </head>
 <body>
     <header>
-    <?php include("header.php"); ?>
+        <?php include("header.php"); ?>
     </header>
+
+    <?php
+        require_once "config/database.php";
+        $sysUser = $_SESSION["user"];
+        $sql = "SELECT * FROM user_registration WHERE email = '$sysUser'";
+        $result = mysqli_query($con, $sql);
+        $userDetails = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    ?>
+
     <div class="main">
         <div class="user_interface_container">
             <div class="user_side_bar">
@@ -95,11 +105,11 @@
             <div class="user_details">
                 <div class="details_cont_user">
                     <h3>My Account Details</h3>
-                    <p><b>Fist Name: </b></p>
-                    <p><b>Last Name: </b></p>
-                    <p><b>Email: </b></p>
-                    <p><b>Password: </b></p>
-                    <p><b>Contact Number: </b></p>
+                    <p><b>Fist Name: <?php echo $userDetails['name']; ?></b></p>
+                    <p><b>Last Name: <?php echo $userDetails['name']; ?></b></p>
+                    <p><b>Email: <?php echo $userDetails['email']; ?></b></p>
+                    <p><b>Password: <?php echo $userDetails['password']; ?></b></p>
+                    <p><b>Contact Number: <?php echo $userDetails['name']; ?></b></p>
                 </div>
             </div>
         </div>
