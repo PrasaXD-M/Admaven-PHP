@@ -29,6 +29,7 @@
             --INFO-MAIL-COLOR: #000;
             --INFO-BGCOLOR: rgb(237, 232, 232);
             --LIGHT-COLOR: #fff;
+            --DARK-ORANGE: rgba(225, 129, 20, 0.8);
                 /* Nav color */
             --NAV-BACK-COLOR: #333;
             --NAV-LINE-BACK: hsl(39, 93%, 45%);
@@ -61,22 +62,53 @@
         .details_cont_user {
             background-color: dodgerblue;
             /* opacity: 0.6; */
-            padding: 1rem;
+            padding: 1.5rem;
             border-radius: 20px;
-            margin: 1em;
+            margin: 3em;
+            background-image: url("img/homeimg/image4.jpg");
         }
-        
         .details_cont_user h3 {
             text-align: center;
             font-family: var(--ABT-FONT);
             color: var(--LIGHT-COLOR);
             text-decoration: underline var(--ORANGE-COLOR);
         }
-
         .details_cont_user p {
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--LIGHT-COLOR);
+            background-color: var(--DARK-ORANGE);
+            padding: 0.4em;
+            border-radius: 10px;
+            font-family: var(--ABT-FONT);
         }
 
+        .details_cont_user p{
+            margin-top: 0.4em;
+        }
+
+        .style_inner_pic {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            border-radius: 50%;
+            /* background-image: url("img/homeimg/image1.jpg"); */
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .style_inner_pic img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        .user_profile_pic {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            /* box-shadow: 10px 10px 5px 12px lightblue; */
+        }
     </style>
 </head>
 <body>
@@ -94,13 +126,18 @@
 
     <div class="main">
         <div class="user_interface_container">
-            <div class="user_side_bar">
-                <div class="user_profile_pic">
 
+            <div class="user_side_bar">
+
+                <div class="user_profile_pic">
+                    <div class="style_inner_pic">
+                        <img src="<?php echo $userDetails['profile_photo'] ?>" alt="profile-photo">
+                    </div>
                 </div>
                 <div class="Detailsedit-btn">
 
                 </div>
+
             </div>
             <div class="user_details">
                 <div class="details_cont_user">
