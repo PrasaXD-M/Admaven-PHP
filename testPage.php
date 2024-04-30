@@ -12,7 +12,29 @@
         @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Oswald:wght@500&family=Rubik+Burned&display=swap');
 
         @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato&display=swap');
-        
+
+        :root {
+            /* || FONTS */
+            --SPACIAL-FF: 'Dancing Script', cursive;
+            --SPACIAL-FF2: 'system-ui';
+
+            --FF-CAPTION: 'Protest Strike', sans-serif;
+
+            --LINK-FF: 'Oswald', sans-serif;
+
+            --ABT-FONT: "Kanit";
+
+            /* || COLORS */
+            --INFO-MAIL-COLOR: #000;
+            --INFO-BGCOLOR: rgb(237, 232, 232);
+            --LIGHT-COLOR: #fff;
+                /* Nav color */
+            --NAV-BACK-COLOR: #333;
+            --NAV-LINE-BACK: hsl(39, 93%, 45%);
+
+            /* header content */
+            --ORANGE-COLOR: rgb(228, 151, 6); 
+        }
         * {
             padding: 0;
             margin: 0;
@@ -37,6 +59,7 @@
 
         .details_cont_user {
             background-color: dodgerblue;
+            /* opacity: 0.6; */
             padding: 1rem;
             border-radius: 20px;
             margin: 1em;
@@ -44,8 +67,15 @@
         
         .details_cont_user h3 {
             text-align: center;
-
+            font-family: var(--ABT-FONT);
+            color: var(--LIGHT-COLOR);
+            text-decoration: underline var(--ORANGE-COLOR);
         }
+
+        .details_cont_user p {
+            margin-bottom: 0.3rem;
+        }
+
     </style>
 </head>
 <body>
