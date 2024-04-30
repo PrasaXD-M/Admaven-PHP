@@ -58,6 +58,3 @@
     color: var(--ORANGE-COLOR);
 }
 
-.form-bdy input[type=email], input[type=password] {
-    width: 100%;
-}

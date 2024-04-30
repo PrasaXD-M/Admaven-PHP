@@ -109,6 +109,18 @@
             padding: 1rem;
             /* box-shadow: 10px 10px 5px 12px lightblue; */
         }
+
+        /****** Profile edit button *******/
+        .edit_profile a {
+            display: inline-block;
+            padding: 1em 1.3em;
+            background-color: var(--ORANGE-COLOR);
+            text-decoration: none;
+            font-family: var(--FF-CAPTION);
+            color: var(--LIGHT-COLOR);
+        }
+        
+        
     </style>
 </head>
 <body>
@@ -126,27 +138,30 @@
 
     <div class="main">
         <div class="user_interface_container">
-
+            <!-- Side bar -->
             <div class="user_side_bar">
-
+                <!-- User profile photo -->
                 <div class="user_profile_pic">
                     <div class="style_inner_pic">
                         <img src="<?php echo $userDetails['profile_photo'] ?>" alt="profile-photo">
                     </div>
                 </div>
+                <!-- Account details edit button -->
                 <div class="Detailsedit-btn">
-
+                    <div class="edit_profile">
+                        <a href="#">Edit Profile</a>
+                    </div>
                 </div>
 
             </div>
             <div class="user_details">
                 <div class="details_cont_user">
                     <h3>My Account Details</h3>
-                    <p><b>Fist Name: <?php echo $userDetails['name']; ?></b></p>
-                    <p><b>Last Name: <?php echo $userDetails['name']; ?></b></p>
-                    <p><b>Email: <?php echo $userDetails['email']; ?></b></p>
-                    <p><b>Password: <?php echo $userDetails['password']; ?></b></p>
-                    <p><b>Contact Number: <?php echo $userDetails['name']; ?></b></p>
+                    <p><b>Fist Name : <?php echo $userDetails['name']; ?></b></p>
+                    <p><b>Last Name : <?php echo $userDetails['name']; ?></b></p>
+                    <p><b>Email : <?php echo $userDetails['email']; ?></b></p>
+                    <p><b>Password : <?php echo $userDetails['password']; ?></b></p>
+                    <p><b>Contact Number : <?php echo $userDetails['contact_no']; ?></b></p>
                 </div>
             </div>
         </div>

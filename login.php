@@ -12,6 +12,11 @@
     <title>Login Page</title>
     <link rel="stylesheet" href="signUp.css">
     <link rel="stylesheet" href="css/login.css">
+    <style>
+        .form-bdy input[type=email], input[type=password] {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <div class="form-body">
