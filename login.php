@@ -27,12 +27,13 @@
                     $result = mysqli_query($con, $sql);
 
                     $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
+                    // $user_id = $user["user_ID"];
 
                     if($user) {
                         if($password == $user["password"]) {
                             session_start();
                             // $_SESSION["user"] = "yes";
-                            $_SESSION["user"] = $email;
+                            $_SESSION["user"] = $user["email"];
                             header("location: index.php");
                             die();
                         } else {

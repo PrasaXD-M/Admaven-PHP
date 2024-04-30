@@ -1,8 +1,8 @@
 <?php 
     session_start();
-    if(!isset($_SESSION["user"])) {
-        header("location: login.php");
-    } else { 
+    // if(!isset($_SESSION["user"])) {
+    //     header("location: login.php");
+    // } else { 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,19 +20,20 @@
     
    <?php
         require_once "config/database.php";
-        $id = $_SESSION["user"];
-        $query = mysqli_query($con, "SELECT * FROM user_registration WHERE user_ID = $id");
-
-        while($result = mysqli_fetch_assoc($query)) {
-            $res_id = $result['user_ID'];
-        }
-
-        echo "<a href='edit.php?user_ID=$res_id'>Change Profile</a>";
+        $sysUser = $_SESSION["user"];
+        $sql = "SELECT * FROM user_registration WHERE email = '$sysUser'";
+        $result = mysqli_query($con, $sql);
+        $userDetails = mysqli_fetch_array($result, MYSQLI_ASSOC);
+        echo "<div class = 'userDetails_container'>";
+        echo "User ID is: " . $userDetails["user_ID"] . "<br>";
+        echo "Name is: " . $userDetails["name"] . "<br>";
+        echo "Email is: " . $userDetails["email"] . "<br>";
+        echo "<div>";
     ?>
 
     <div class="change_details">
 
     </div>
-        <?php } ?>
+        <?php // } ?>
 </body>
 </html>
