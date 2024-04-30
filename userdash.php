@@ -24,12 +24,17 @@
         $sql = "SELECT * FROM user_registration WHERE email = '$sysUser'";
         $result = mysqli_query($con, $sql);
         $userDetails = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    ?>
+    <div class="user_interface_cont">
+        <?php 
         echo "<div class = 'userDetails_container'>";
         echo "User ID is: " . $userDetails["user_ID"] . "<br>";
         echo "Name is: " . $userDetails["name"] . "<br>";
         echo "Email is: " . $userDetails["email"] . "<br>";
         echo "<div>";
-    ?>
+        ?>
+    </div>
+    
 
     <div class="change_details">
 

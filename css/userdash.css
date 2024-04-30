@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.user_interface_cont {
+    width: 100%;
+    height: 30vh;
+    background-color: lightblue;
+}

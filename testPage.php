@@ -1,43 +1,54 @@
-<div class="header-cont">
-        <div class="cont-hd__mail">
-            <p><b>EMAIL US:</b></p>
-            <p>admavensco@gmail.com</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .user_interface_container {
+            display: flex;
+
+        }
+
+        .user_side_bar {
+            flex: 30%;
+            height: 80vh;
+            background-color: #333;
+        }
+
+        .user_details {
+            flex: 70%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <?php include("header.php"); ?>
+    </header>
+    <div class="main">
+        <div class="user_interface_container">
+            <div class="user_side_bar">
+                <div class="user_profile_pic">
+
+                </div>
+                <div class="Detailsedit-btn">
+
+                </div>
+            </div>
+            <div class="user_details">
+                <p><b>Fist Name: </b></p>
+                <p><b>Last Name: </b></p>
+                <p><b>Email: </b></p>
+                <p><b>Password: </b></p>
+                <p><b>Contact Number: </b></p>
+            </div>
         </div>
-
-        <div class="cont-hd__logoName"> 
-            <p class="logo-name">A<span class="letter-big">D</span>MAVEN</p>
-        </div>
-
-        <?php 
-            
-            if (!isset($_SESSION["user"])) {
-                
-        ?>
-
-        <div class="signup-btn">
-            <a href="signUp.php">Sign Up</a>
-        </div>
-
-        <div class="login-btn">
-            <a href="login.php" style="display: inline-block; padding: 10px 12px; color: white; text-decoration: none; background-color: #4169E1;">Login</a>
-        </div>
-
-        <?php } else {?>
-
-        <div class="logout-btn">
-            <a href="logout.php">Log out</a>
-        </div>
-        <?php } ?>
     </div>
-
-    <div class="navbar">
-        <div class="inner-nav">
-            <ul>
-                <li><a href="index.php">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="/ServicePage/final.html">SERVICES</a></li>
-                <li><a href="#blog">BLOG</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-        </div>
-    </div>
+</body>
+</html>
