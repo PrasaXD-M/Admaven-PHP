@@ -58,8 +58,6 @@
     color: var(--ORANGE-COLOR);
 }
 
-@media screen and (min-width:780px) {
-    .signup-container {
-        width: 50%;
-    }
+.form-bdy input[type=email], input[type=password] {
+    width: 100%;
 }

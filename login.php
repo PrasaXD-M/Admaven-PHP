@@ -43,7 +43,7 @@
                         echo "<div class = 'error-alert'>Email does not match!</div>";
                     }
                 }
-            ?>
+            ?> 
 
             
             <?php 
