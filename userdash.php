@@ -39,7 +39,7 @@
                 <!-- Account details edit button -->
                 <div class="Detailsedit-btn">
                     <div class="edit_profile">
-                        <a href="#">Edit Profile</a>
+                        <a href="editDetails.php">Edit Profile</a>
                     </div>
                 </div>
 
