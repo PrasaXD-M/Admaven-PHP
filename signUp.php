@@ -72,7 +72,7 @@
             <?php 
                 if(isset($_POST["cancel"])) {
                     header("location: index.php");
-                }
+                } 
             ?>
 
             <form action="signUp.php" method="post">

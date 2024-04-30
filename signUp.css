@@ -48,7 +48,7 @@
 input[type=password],
 input[type=email],
 input[type=tel] {
-    width: 100%;
+    width: 1000%;
     padding: 15px;
     margin: 5px 0 22px 0;
     display: inline-block;
@@ -148,7 +148,7 @@ input[type=email]:focus{
 .button-flex {
     /* width: 5em; */
     display: flex;
-    width: 100%;
+    width: 90%;
     align-items: center;
     justify-content: center;
     /* flex-direction: column; */
@@ -157,4 +157,10 @@ input[type=email]:focus{
 
 .form-body {
     padding: 1em;
+}
+
+@media screen and (max-width: 600px) {
+    .signup-container {
+        width: 60% !important;
+    }
 }
