@@ -38,7 +38,7 @@
                         if($password == $user["password"]) {
                             session_start();
                             // $_SESSION["user"] = "yes";
-                            $_SESSION["user"] = $user["email"];
+                            $_SESSION["user"] = $user["user_ID"];
                             header("location: index.php");
                             die();
                         } else {

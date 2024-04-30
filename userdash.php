@@ -16,7 +16,7 @@
     <?php
         require_once "config/database.php";
         $sysUser = $_SESSION["user"];
-        $sql = "SELECT * FROM user_registration WHERE email = '$sysUser'";
+        $sql = "SELECT * FROM user_registration WHERE user_ID = '$sysUser'";
         $result = mysqli_query($con, $sql);
         $userDetails = mysqli_fetch_array($result, MYSQLI_ASSOC);
     ?>
@@ -43,7 +43,7 @@
                 <div class="details_cont_user">
                     <h3>My Account Details</h3>
                     <p><b>Fist Name : <?php echo $userDetails['name']; ?></b></p>
-                    <p><b>Last Name : <?php echo $userDetails['name']; ?></b></p>
+                    <p><b>Last Name : <?php echo $userDetails['L_name']; ?></b></p>
                     <p><b>Email : <?php echo $userDetails['email']; ?></b></p>
                     <p><b>Password : <?php echo $userDetails['password']; ?></b></p>
                     <p><b>Contact Number : <?php echo $userDetails['contact_no']; ?></b></p>
