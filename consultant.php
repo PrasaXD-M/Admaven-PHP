@@ -19,6 +19,9 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
+    .details_cont_user {
+        background-image: url("consimg/image4.jpg");
+    }
 </style>
 <body>
     <header>
