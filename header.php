@@ -18,9 +18,22 @@
         </div> 
 
     
-        <?php if (!isset($_SESSION["user"])) { ?>
+        <?php if (isset($_SESSION["user"]) OR isset($_SESSION["consultant"])) { ?>
+                <div class="my_account">
+                    <button>
+                        <?php if(isset($_SESSION["consultant"])) { ?>
+                            <a href="consultant.php">My Account</a>
+                       <?php } else { ?>
+                        <a href="userdash.php">My Account</a>
+                        <?php } ?>
+                    </button>
+                </div>
 
-            <!-- <div class="header__option_cont"> -->
+                <div class="logout-btn">
+                    <a href="logout.php">Log out</a>
+                </div>
+
+                <?php  } else {?>
 
                 <div class="signup-btn">
                     <a href="signUp.php">Sign Up</a>
@@ -29,18 +42,6 @@
                 <div class="signup-btn">
                     <a href="login.php">Login</a>
                 </div>
-
-                <?php  } else {?>
-
-                <div class="my_account">
-                    <button><a href="userdash.php">My Account</a></button>
-                </div>
-
-                <div class="logout-btn">
-                    <a href="logout.php">Log out</a>
-                </div>
-
-            <!-- </div> -->
         <?php } ?>
 
     </div>

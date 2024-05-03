@@ -57,7 +57,7 @@
     padding: 1.5rem;
     border-radius: 20px;
     margin: 3em;
-    background-image: url("image4.jpg");
+    background-image: url("image4.jpg") !important;
 }
 .details_cont_user h3 {
     text-align: center;
