@@ -86,7 +86,7 @@ input[type=email]:focus{
 
 /***** Container *****/
 .signup-container {
-    background-color: hsl(0, 15%, 94%);
+    background-color: rgb(242, 237, 237);
     padding: 1em;
     border-radius: 20px;
 }

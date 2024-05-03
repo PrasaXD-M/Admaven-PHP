@@ -24,7 +24,7 @@
         }
 
         .signup-container {
-            background-image: url("img/generic-background.jpg");
+            /* background-image: url("img/generic-background.jpg"); */
         }
 
 
