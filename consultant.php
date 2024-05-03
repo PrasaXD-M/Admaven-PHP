@@ -1,8 +1,8 @@
 <?php
     session_start();
-    if(!isset($_SESSION['user'])) {
-        header("location: index.php");
-    }  
+    if(isset($_SESSION['consultant'])) {
+        // header("location: index.php");
+     
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- User Dashboard stylesheet -->
-    <link rel="stylesheet" href="consultant.css">
+    <link rel="stylesheet" href="consultant/consultant.css">
 </head>
 <style>
     .user_side_bar {
@@ -27,8 +27,8 @@
 
     <?php
         require_once "config/database.php"; 
-        $sysUser = $_SESSION["user"];
-        $sql = "SELECT * FROM user_registration WHERE user_ID = '$sysUser'";
+        $sysUser = $_SESSION["consultant"];
+        $sql = "SELECT * FROM consultant WHERE cons_ID = '$sysUser'";
         $result = mysqli_query($con, $sql);
         $userDetails = mysqli_fetch_array($result, MYSQLI_ASSOC);
     ?>
@@ -40,7 +40,7 @@
                 <!-- User profile photo -->
                 <div class="user_profile_pic">
                     <div class="style_inner_pic">
-                        <img src="<?php echo $userDetails['profile_photo'] ?>" alt="profile-photo">
+                        <img src="<?php echo $userDetails['C_image'] ?>" alt="profile-photo">
                     </div>
                 </div>
                 <!-- Account details edit button -->
@@ -55,14 +55,17 @@
             <div class="user_details">
                 <div class="details_cont_user">
                     <h3>My Account Details</h3>
-                    <p><b>Fist Name : <?php echo $userDetails['name']; ?></b></p>
-                    <p><b>Last Name : <?php echo $userDetails['L_name']; ?></b></p>
-                    <p><b>Email : <?php echo $userDetails['email']; ?></b></p>
-                    <p><b>Password : <?php echo $userDetails['password']; ?></b></p>
-                    <p><b>Contact Number : <?php echo $userDetails['contact_no']; ?></b></p>
+                    <p><b>Fist Name : <?php echo $userDetails['C_fname']; ?></b></p>
+                    <p><b>Last Name : <?php echo $userDetails['C_lname']; ?></b></p>
+                    <p><b>Email : <?php echo $userDetails['C_email']; ?></b></p>
+                    <p><b>Password : <?php echo $userDetails['C_password']; ?></b></p>
+                    <p><b>Contact Number : <?php echo $userDetails['C_contactNO']; ?></b></p>
                 </div>
             </div>
         </div>
     </div>
 </body>
 </html>
+<?php } else {
+    header("location: /index.php");
+} ?>

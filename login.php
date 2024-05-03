@@ -34,6 +34,12 @@
                     $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
                     // $user_id = $user["user_ID"];
 
+                    // ********* CONSULTANT TABLE ************
+                    $cons_sql = "SELECT * FROM consultant WHERE C_email = '$email'";
+                    $cons_result = mysqli_query($con, $cons_sql);
+                    $consultant = mysqli_fetch_array($cons_result, MYSQLI_ASSOC);
+
+
                     if($user) {
                         if($password == $user["password"]) {
                             session_start();
@@ -44,6 +50,17 @@
                         } else {
                             echo "<div class = 'error-alert'>Password does not match!</div>";
                         }
+                    } elseif($consultant) {
+                        if($password == $consultant["C_password"]) {
+                            session_start();
+                            $_SESSION["consultant"] = $consultant["cons_ID"];
+                            header("location: consultant.php");
+                            die();
+
+                        } else {
+                            echo "<div class = 'error-alert'>Password does not match!</div>";
+                        }
+                        // echo "<div class = 'error-alert'>Email does not match!</div>";
                     } else {
                         echo "<div class = 'error-alert'>Email does not match!</div>";
                     }
