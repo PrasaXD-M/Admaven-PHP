@@ -19,7 +19,7 @@
     </header>
 
     <?php
-        require_once "config/database.php";
+        require_once "config/database.php"; 
         $sysUser = $_SESSION["user"];
         $sql = "SELECT * FROM user_registration WHERE user_ID = '$sysUser'";
         $result = mysqli_query($con, $sql);
