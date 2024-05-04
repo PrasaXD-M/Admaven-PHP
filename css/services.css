@@ -190,7 +190,11 @@ img {vertical-align: middle;}
 /*********** SERVICE CARDS *************/
 .service_inner_sec {
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 2em;
+  margin: 1em;
+  box-shadow: 10px 4px 15px gray;
 }
 
 .service_content_details {
@@ -204,17 +208,34 @@ img {vertical-align: middle;}
 .service_image_cont img {
   /* width: 400px; */
   height: 200px;
+  /* position: relative; */
 }
 
 .service_content_details {
-  /* text-align: center; */
   padding: 0.7em;
 }
 
+.pack_btn a {
+  text-decoration: none;
+  display: block;
+  padding: 0.8em 1.3em;
+  background-color: rgba(221, 147, 8, 0.8);
+  color: var(--LIGHT-COLOR);
+  font-family: var(--ABT-FONT);
+  font-weight: 700;
+}
 
-.service_as_card {
-  background-color: rgb(255, 255, 255);
-  /* border: 2px solid ; */
-  box-shadow: #717171;
-  margin-bottom: 1em;
+.pack_btn a:hover {
+  background-color: rgba(221, 147, 8, 1);
+}
+
+.ser_img {
+  position: relative;
+}
+
+.pack_btn button {
+  border: 1px solid var(--ORANGE-COLOR);
+  position: absolute;
+  bottom: -10px;
+  left: 35%;
 }
