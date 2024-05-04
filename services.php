@@ -80,9 +80,20 @@
             <div class="navbar_inner">
                 <ul>
                     <?php 
-                        
+                        require 'config/database.php';
+
+                        $ser_title = "SELECT S_title FROM services";
+
+                        $result_title = $con->query($ser_title);
+
+                        if($result_title->num_rows > 0) {
+                            while($row = $result_title->fetch_assoc())
+                            {   ?>
+                                <li><a href="#"><?php echo $row['S_title']; ?></a></li>
+                           <?php }
+                        }
                     ?>
-                    <li><a href="#">Service Name</a></li>
+                    <!-- <li><a href="#">Service Name</a></li> -->
                 </ul>
             </div>
         </div>
