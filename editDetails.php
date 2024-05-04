@@ -300,8 +300,14 @@ window.onclick = function(event) {
 <button class="edit__btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Edit Details</button>
 
 <div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="/action_page.php" method="post">
+
+    <?php 
+        require 'config/database.php';
+
+        
+    ?>
+
+  <form class="modal-content animate" action="editDetails.php" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="img/homeimg/image4.jpg" alt="userProfile" class="user_prof"> 
@@ -321,7 +327,10 @@ window.onclick = function(event) {
       <input type="text" placeholder="Enter Contact number" name="contactNo" required>
 
       <label for="npassword"><b>New Password:</b></label>
-      <input type="password" placeholder="Enter Password" name="npassword" required>
+      <input type="password" placeholder="Enter Password" name="npassword" required><br>
+
+      <label for="constimg"><b>Profile photo:</b></label>
+      <input type="file" name="constimg" id="constimg" accept="image/png, image/gif, image/jpeg">
         
       <input type="submit" class="edit__btn" name="update" value="Update">
     </div>
