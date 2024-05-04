@@ -34,10 +34,14 @@
                     $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
                     // $user_id = $user["user_ID"];
 
-                    // ********* CONSULTANT TABLE ************
+                    /********* CONSULTANT TABLE ************/
                     $cons_sql = "SELECT * FROM consultant WHERE C_email = '$email'";
                     $cons_result = mysqli_query($con, $cons_sql);
                     $consultant = mysqli_fetch_array($cons_result, MYSQLI_ASSOC);
+
+                    /******* USER ADMIN TABLE **********/ 
+
+                    
 
 
                     if($user) {
