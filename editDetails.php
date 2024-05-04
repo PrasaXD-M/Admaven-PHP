@@ -1,3 +1,6 @@
+<?php session_start(); 
+    
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,7 +51,7 @@
                     $password = $_POST["password"];
                     $passwordRepeat = $_POST["rePassword"];
         
-                    $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+                    // $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
                     $errors = array(); 
 
@@ -80,18 +83,20 @@
                             echo "<div class = 'error-alert'>$error</div>";
                         }
 
-                    } else {
-                        mysqli_query($con, "INSERT INTO user_registration (name, L_name,  email, password) VALUES ('$fname','$lname', '$email', '$password')");
+                    } elseif($_SESSION["consultant"]) {
+                        $cons_ID = $_SESSION["consultant"];
+
+                        mysqli_query($con, "UPDATE consultant SET C_fname = '$fname', C_lname = '$lname', C_email = '$email', C_password = '$password' WHERE cons_ID = '$cons_ID'");
 
                         echo "<div class = 'success-alert'>Welcome to AdMaven You are registered successfully!</div>";
-                        header("location: login.php");
+                        header("location: consultant.php");
                     }
                 }
             ?>
 
             <?php 
                 if(isset($_POST["cancel"])) {
-                    header("location: /index.php");
+                    header("location: consultant.php");
                 } 
             ?>
 
