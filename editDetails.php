@@ -52,6 +52,7 @@
                     $password = $_POST["password"];
                     $passwordRepeat = $_POST["rePassword"];
                     $contactNO = $_POST["contnum"];
+                    $cons_img = $_POST["pimage"];
         
                     // $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
@@ -88,7 +89,7 @@
                     } elseif($_SESSION["consultant"]) {
                         $cons_ID = $_SESSION["consultant"];
 
-                        mysqli_query($con, "UPDATE consultant SET C_fname = '$fname', C_lname = '$lname', C_email = '$email', C_password = '$password' WHERE cons_ID = '$cons_ID'");
+                        mysqli_query($con, "UPDATE consultant SET C_fname = '$fname', C_lname = '$lname', C_email = '$email', C_password = '$password', C_image = '$cons_img' WHERE cons_ID = '$cons_ID'");
 
                         echo "<div class = 'success-alert'>Welcome to AdMaven You are registered successfully!</div>";
                         header("location: consultant.php");

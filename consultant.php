@@ -39,7 +39,7 @@
                 <!-- User profile photo -->
                 <div class="user_profile_pic">
                     <div class="style_inner_pic">
-                        <img src="<?php echo $userDetails['C_image'] ?>" alt="profile-photo">
+                        <img src="consultant/Consimg/<?php echo $userDetails['C_image'] ?>" alt="profile-photo">
                     </div>
                 </div>
                 <!-- Account details edit button -->
