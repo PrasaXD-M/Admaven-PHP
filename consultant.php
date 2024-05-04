@@ -46,7 +46,6 @@
                 <div class="Detailsedit-btn">
                     <div class="edit_profile">
                         <a href="editDetails.php">Edit Profile</a>
-                       
                     </div>
                 </div>
 
