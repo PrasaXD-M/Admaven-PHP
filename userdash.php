@@ -46,8 +46,8 @@
                 <!-- Account details edit button -->
                 <div class="Detailsedit-btn">
                     <div class="edit_profile">
-                        <!-- <a href="editDetails.php">Edit Profile</a> -->
-                        <?php include("editDetails.php"); ?>
+                        <a href="editDetails.php">Edit Profile</a> 
+                        
                     </div>
                 </div>
 
