@@ -40,7 +40,7 @@
         <div class="signup-container">
 
             <div class="signup-head">
-                <h2>Welcome To AdMaven</h2>
+                <h2>Update Your Profile</h2>
             </div>
 
             <?php
@@ -133,6 +133,11 @@
                 <!-- <div class="already-msg">
                     <p>Already have an account? <a href="login.php">Login here</a></p>
                 </div> -->
+
+                <div class="form-bdy">
+                    <label for="Profileimage">Profile Photo</label><br>
+                    <input type="file" name="pimage" id="pimage">
+                </div>
 
                 <div class="form-bdy button-flex" style="width: 100%;">
                     <div class="reg">
