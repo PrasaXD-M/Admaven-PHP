@@ -180,7 +180,7 @@ window.onclick = function(event) {
 </head>
 <body>
 <style>
-    input[type=text], input[type=password] {
+    input[type=text], input[type=password], input[type=email] {
         width: 100%;
         padding: 12px 20px;
         margin: 8px 0;
@@ -304,16 +304,23 @@ window.onclick = function(event) {
   <form class="modal-content animate" action="/action_page.php" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="img/homeimg/image4.jpg" alt="userProfile" class="user_prof">
+      <img src="img/homeimg/image4.jpg" alt="userProfile" class="user_prof"> 
     </div>
 
     <div class="container">
-      <label for="fname"><b>New First Name:</b></label>
-      <input type="text" placeholder="Enter first name" name="fname" required>
-      <label for="lname"><b>New First Name:</b></label>
-      <input type="text" placeholder="Enter Last name" name="lname" required>
+      <label for="fname"><b>First Name:</b></label>
+      <input type="text" placeholder="Enter first name" name="fname" required><br>
 
-      <label for="psw"><b>New Password:</b></label>
+      <label for="lname"><b>Last Name:</b></label>
+      <input type="text" placeholder="Enter Last name" name="lname" required><br>
+
+      <label for="email"><b>Email:</b></label>
+      <input type="email" placeholder="Enter your email" name="email" required><br>
+
+      <label for="contactNo"><b>Contact Number:</b></label>
+      <input type="text" placeholder="Enter Contact number" name="contactNo" required>
+
+      <label for="npassword"><b>New Password:</b></label>
       <input type="password" placeholder="Enter Password" name="npassword" required>
         
       <input type="submit" class="edit__btn" name="update" value="Update">
