@@ -1,5 +1,7 @@
 <?php session_start(); 
-    
+    if(!isset($_SESSION["user"]) || !isset($_SESSION["consultant"]) ) {
+        header("location: index.php");
+    }
 ?>
 
 <!DOCTYPE html>

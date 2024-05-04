@@ -1,8 +1,7 @@
 <?php
     session_start();
     if(isset($_SESSION['consultant'])) {
-        header("location: index.php");
-     
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -67,5 +66,5 @@
 </body>
 </html>
 <?php } else {
-    header("location: /index.php");
+    header("location: index.php");
 } ?>
