@@ -10,13 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- User Dashboard stylesheet -->
-    <link rel="stylesheet" href="consultant.css">
+    <link rel="stylesheet" href="css/userAdmin.css">
 </head>
 <style>
     .user_side_bar {
         background-image: url("https://images.squarespace-cdn.com/content/v1/618ed4140aeae666976e4752/c99c377f-cf64-4f80-959a-9ceb4f471dcb/contact-page-background.jpeg");
         background-size: cover;
-        background-repeat: no-repeat;
+        /* background-repeat: no-repeat; */
     }
 </style>
 <body>
