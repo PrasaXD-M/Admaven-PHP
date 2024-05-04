@@ -51,7 +51,7 @@
             <ul>
                 <li><a href="index.php">HOME</a></li>
                 <li><a href="#about">ABOUT</a></li>
-                <li><a href="/ServicePage/final.html">SERVICES</a></li>
+                <li><a href="services.php">SERVICES</a></li>
                 <li><a href="#blog">BLOG</a></li>
                 <li><a href="#contact">CONTACT</a></li>
             </ul>

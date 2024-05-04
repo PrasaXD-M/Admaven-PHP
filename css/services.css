@@ -1,6 +1,42 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Rubik+Burned&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Protest+Strike&family=Rubik+Burned&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Oswald:wght@500&family=Rubik+Burned&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato&display=swap');
+
+
+
 * {
     box-sizing: border-box;
 }
+
+:root {
+  /* || FONTS */
+  --SPACIAL-FF: 'Dancing Script', cursive;
+  --SPACIAL-FF2: 'system-ui';
+
+  --FF-CAPTION: 'Protest Strike', sans-serif;
+
+  --LINK-FF: 'Oswald', sans-serif;
+
+  --ABT-FONT: "Kanit";
+
+  /* || COLORS */
+  --INFO-MAIL-COLOR: #000;
+  --INFO-BGCOLOR: rgb(237, 232, 232);
+  --LIGHT-COLOR: #fff;
+      /* Nav color */
+  --NAV-BACK-COLOR: #333;
+  --NAV-LINE-BACK: hsl(39, 93%, 45%);
+
+  /* header content */
+  --ORANGE-COLOR: rgb(228, 151, 6); 
+}
+
+
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
 img {vertical-align: middle;}
@@ -106,4 +142,49 @@ img {vertical-align: middle;}
 
 .service_nav_bar {
     flex: 40%;
+}
+
+
+/*************** SERVICE NAV BAR ****************/
+.navbar_inner ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar_inner li{
+  list-style-type: none;
+}
+
+.navbar_inner li a {
+  display: block;
+  text-decoration: none;
+  /* font-family: var(--FF-CAPTION); */
+  padding: 1em;
+  margin: 0.5em;
+  background-color: rgba(221, 147, 8, 0.7) ;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+}
+
+.navbar_inner li a:hover {
+  background-color: rgba(221, 147, 8, 1);
+  transition: 0.5s;
+}
+
+/*********** SERVICE CARDS *************/
+.service_inner_sec {
+  display: flex;
+}
+
+.service_content_details {
+  flex: 80%;
+}
+
+.service_image_cont {
+  flex: 20%;
+}
+
+.service_image_cont img {
+  
 }

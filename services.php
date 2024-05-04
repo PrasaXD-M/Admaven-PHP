@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="Service">
+    <div class="Service_header">
         <?php include ("header.php"); ?>
     </div>
 
@@ -82,19 +82,34 @@
                     <?php 
                         require 'config/database.php';
 
-                        $ser_title = "SELECT S_title FROM services";
+                        $ser_title = "SELECT S_ID, S_title FROM services";
 
                         $result_title = $con->query($ser_title);
 
                         if($result_title->num_rows > 0) {
                             while($row = $result_title->fetch_assoc())
                             {   ?>
-                                <li><a href="#"><?php echo $row['S_title']; ?></a></li>
+                                <li><a href="#<?php echo $row['S_ID']; ?>"><?php echo $row['S_title']; ?></a></li>
                            <?php }
                         }
                     ?>
                     <!-- <li><a href="#">Service Name</a></li> -->
                 </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="services__secction">
+        <div class="service_inner_sec">
+            
+            <div class="service_content_details">
+                
+            </div>
+
+            <div class="service_image_cont">
+
+                <div class="ser_img"><img src="img/serviceimg/image4.jpg<?php //echo $row['S_image'] ?>" alt="<?php //echo $row['S_title']; ?>"></div>
+
             </div>
         </div>
     </div>
