@@ -52,12 +52,12 @@
             </div>
             <div class="user_details">
                 <div class="details_cont_user">
-                    <h3>My Account Details</h3>
+                    <h4>My Account Details</h4>
                     <p><b>Fist Name : <?php echo $userDetails['ua_Fname']; ?></b></p>
                     <p><b>Last Name : <?php echo $userDetails['ua_Lname']; ?></b></p>
                     <p><b>Email : <?php echo $userDetails['ua_email']; ?></b></p>
                     <p><b>Password : <?php echo $userDetails['ua_password']; ?></b></p>
-                    <p><b>Contact Number : <?php echo $userDetails['ua_image']; ?></b></p>
+                    <p><b>Contact Number : <?php echo $userDetails['ua_contactNO']; ?></b></p>
                 </div>
             </div>
         </div>
