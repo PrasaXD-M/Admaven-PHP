@@ -2,7 +2,7 @@
     $hostName = "localhost";
     $dbUser = "root";
     $dbpassowrd = "";
-    $dbName = "AdMaven"; //AdMaven //testlogin
+    $dbName = "AdMaven";
 
     $con = mysqli_connect($hostName, $dbUser, $dbpassowrd, $dbName);
 

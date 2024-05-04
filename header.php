@@ -18,13 +18,17 @@
         </div> 
 
     
-        <?php if (isset($_SESSION["user"]) OR isset($_SESSION["consultant"])) { ?>
+        <?php if (isset($_SESSION["user"]) OR isset($_SESSION["consultant"]) OR isset($_SESSION["usAdmin"])) { ?>
                 <div class="my_account">
                     <button>
                         <?php if(isset($_SESSION["consultant"])) { ?>
                             <a href="consultant.php">My Account</a>
-                       <?php } else { ?>
-                        <a href="userdash.php">My Account</a>
+
+                       <?php } elseif(isset($_SESSION["user"])) { ?>
+                            <a href="userdash.php">My Account</a>
+
+                        <?php } elseif(isset($_SESSION["usAdmin"])) {?>
+                            <a href="userAdmin.php">My Account</a>
                         <?php } ?>
                     </button>
                 </div>

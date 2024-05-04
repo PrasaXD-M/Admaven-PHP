@@ -28,6 +28,8 @@
                     $password = $_POST["password"];
 
                     require_once "config/database.php";
+
+                    /************ USER TABLE **************/
                     $sql = "SELECT * FROM user_registration WHERE email = '$email'";
                     $result = mysqli_query($con, $sql);
 
@@ -40,8 +42,10 @@
                     $consultant = mysqli_fetch_array($cons_result, MYSQLI_ASSOC);
 
                     /******* USER ADMIN TABLE **********/ 
+                    $us_ad_sql = "SELECT * FROM user_admin WHERE ua_email = '$email'";
+                    $us_ad_result = mysqli_query($con, $us_ad_sql);
+                    $us_admin = mysqli_fetch_array($us_ad_result, MYSQLI_ASSOC);
 
-                    
 
 
                     if($user) {
@@ -65,6 +69,17 @@
                             echo "<div class = 'error-alert'>Password does not match!</div>";
                         }
                         // echo "<div class = 'error-alert'>Email does not match!</div>";
+
+                    } elseif($us_admin) {
+                        if($password == $us_admin["ua_password"]) {
+                            session_start();
+                            $_SESSION["usAdmin"] = $us_admin["User_admin_id"];
+                            header("location: userAdmin.php");
+                            die();
+
+                        } else {
+                            echo "<div class = 'error-alert'>Password does not match!</div>";
+                        }
                     } else {
                         echo "<div class = 'error-alert'>Email does not match!</div>";
                     }
