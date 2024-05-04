@@ -105,27 +105,44 @@
 
     <div class="services__secction">
 
-        <div class="service_inner_sec">
+        <?php 
+            require 'config/database.php';
+
+            $ser_info = "SELECT S_ID, S_title, S_details, S_image FROM services";
+            $result_info = $con->query($ser_info);
+
+            if($result_info->num_rows > 0) {
+                while($row_info = $result_info->fetch_assoc())
+                { ?>
+
+                    <div class="service_inner_sec">
                 
-            <div class="service_content_details">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt maiores fugit, voluptatibus repellat minima repudiandae, eum quibusdam veniam atque consequatur fuga. Quidem necessitatibus accusamus ducimus sequi corporis dolores omnis voluptate.</p>
+                        <div class="service_content_details">
+                            <p>
+                                <?php echo $row_info['S_details']; ?>
+                            </p>
+                                
+                        </div>
+            
+                        <div class="service_image_cont">
+            
+                            <div class="ser_img"><img src="img/serviceimg/<?php echo $row_info['S_image']; ?>" alt="<?php echo $row_info['S_title']; ?>">
+            
+                            <div class="pack_btn">
+                                <button>
+                                    <a href="packages.php">View Pckages</a>
+                                </button>
+                            </div>
+                        </div>
                     
-            </div>
+                    
+                        <!-- </div> -->
+                    </div>    
 
-            <div class="service_image_cont">
-
-                <div class="ser_img"><img src="img/serviceimg/image4.jpg<?php //echo $row['S_image'] ?>" alt="<?php //echo $row['S_title']; ?>">
-                
-                <div class="pack_btn">
-                    <button>
-                        <a href="packages.php">View Pckages</a>
-                    </button>
-                </div>
-            </div>
-                
-                
-            </div>
-        </div>
+            <?php }
+            }
+        ?>
+        
 
     </div>
 </body>
