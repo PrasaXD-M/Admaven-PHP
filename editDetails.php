@@ -1,7 +1,8 @@
-<?php session_start(); 
-    if(!isset($_SESSION["user"]) || !isset($_SESSION["consultant"]) ) {
-        header("location: index.php");
-    }
+<?php 
+    session_start(); 
+    // if(!isset($_SESSION["user"]) || !isset($_SESSION["consultant"]) ) {
+    //     header("location: index.php");
+    // }
 ?>
 
 <!DOCTYPE html>
@@ -52,6 +53,7 @@
                     $email = $_POST["uemail"];
                     $password = $_POST["password"];
                     $passwordRepeat = $_POST["rePassword"];
+                    $contactNO = $_POST["contnum"];
         
                     // $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
@@ -119,10 +121,12 @@
                     <label for="password">Password:</label><br>
                     <input type="password" name="password" id="password" style="width: 100%;">
                 </div>
-                <!-- <div class="form-bdy">
-                    <label for="cont-num">Contact No:</label><br>
-                    <input type="tel" name="cont-num" id="cont-num" style="width: 100%;">
-                </div> -->
+
+                <div class="form-bdy">
+                    <label for="contnum">Contact No:</label><br>
+                    <input type="text" name="contnum" id="contnum" style="width: 100%;">
+                </div>
+
                 <div class="form-bdy">
                     <label for="rePassword">Repeat Password:</label><br>
                     <input type="password" name="rePassword" id="rePassword" style="width: 100%;">

@@ -14,12 +14,6 @@
     <link rel="stylesheet" href="css/userdash.css">
 </head>
 <style>
-    .details_cont_user {
-        /* background-image: url("https://thumbs.dreamstime.com/b/consulting-business-concept-inscription-text-icons-website-banner-background-184916152.jpg"); */
-        /* background-size: cover; */
-    }
-
-
     .user_side_bar {
         /* background-image: url("https://images.squarespace-cdn.com/content/v1/618ed4140aeae666976e4752/c99c377f-cf64-4f80-959a-9ceb4f471dcb/contact-page-background.jpeg"); */
         background-size: cover;
