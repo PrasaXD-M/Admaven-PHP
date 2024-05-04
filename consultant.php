@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- User Dashboard stylesheet -->
-    <link rel="stylesheet" href="consultant/consultant.css">
+    <link rel="stylesheet" href="consultant.css">
 </head>
 <style>
     .user_side_bar {
@@ -45,7 +45,7 @@
                 <!-- Account details edit button -->
                 <div class="Detailsedit-btn">
                     <div class="edit_profile">
-                        <a href="editDetails.php">Edit Profile</a>
+                        <!-- <a href="editDetails.php">Edit Profile</a> -->
                        
                     </div>
                 </div>
