@@ -75,7 +75,7 @@
                 }
                 </script>
         </div>
-        
+
         <div class="service_nav_bar">
             <div class="navbar_inner">
                 <ul>
@@ -99,18 +99,27 @@
         </div>
     </div>
 
+    <div class="service_header_topic">
+        <h1>OUR SERVICES</h1>
+    </div>
+
     <div class="services__secction">
-        <div class="service_inner_sec">
-            
-            <div class="service_content_details">
+        <div class="service_as_card">
+
+            <div class="service_inner_sec">
                 
+                <div class="service_content_details">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt maiores fugit, voluptatibus repellat minima repudiandae, eum quibusdam veniam atque consequatur fuga. Quidem necessitatibus accusamus ducimus sequi corporis dolores omnis voluptate.</p>
+                    
+                </div>
+
+                <div class="service_image_cont">
+
+                    <div class="ser_img"><img src="img/serviceimg/image4.jpg<?php //echo $row['S_image'] ?>" alt="<?php //echo $row['S_title']; ?>"></div>
+
+                </div>
             </div>
 
-            <div class="service_image_cont">
-
-                <div class="ser_img"><img src="img/serviceimg/image4.jpg<?php //echo $row['S_image'] ?>" alt="<?php //echo $row['S_title']; ?>"></div>
-
-            </div>
         </div>
     </div>
 </body>

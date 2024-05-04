@@ -172,9 +172,25 @@ img {vertical-align: middle;}
   transition: 0.5s;
 }
 
+
+/************ SERVICE TOPIC **************/
+.service_header_topic {
+  height: 20vh;
+  text-align: center;
+  margin: 3em 0 1em 0;
+}
+.service_header_topic h1 {
+  font-family: var(--FF-CAPTION);
+  color: var(--NAV-LINE-BACK);
+  font-size: 3em;
+  text-decoration: underline var(--ORANGE-COLOR);
+}
+
+
 /*********** SERVICE CARDS *************/
 .service_inner_sec {
   display: flex;
+  padding: 2em;
 }
 
 .service_content_details {
@@ -186,5 +202,19 @@ img {vertical-align: middle;}
 }
 
 .service_image_cont img {
-  
+  /* width: 400px; */
+  height: 200px;
+}
+
+.service_content_details {
+  /* text-align: center; */
+  padding: 0.7em;
+}
+
+
+.service_as_card {
+  background-color: rgb(255, 255, 255);
+  /* border: 2px solid ; */
+  box-shadow: #717171;
+  margin-bottom: 1em;
 }
