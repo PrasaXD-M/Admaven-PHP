@@ -141,7 +141,7 @@
             <div class="customer_info_container">
                 <div class="customer_info_table">
                     <table border="1">
-                        <a href="CAcreate.php" class="create__btn" target="_blank">Add Content Creator</a>
+                        <a href="CAcreate.php" class="create__btn">Add Content Creator</a>
                         <h2>Content Creaotors</h2>
                         <!-- <a href="#" class="create_btn">Create Account</a> -->
                         <thead>
