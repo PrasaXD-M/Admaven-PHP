@@ -143,11 +143,12 @@
 .customer_info_container{
     /* width: 100%; */
     padding: 3em;
-    box-shadow: 10px 5px 13px lightgray;
+    box-shadow: 10px 5px 14px lightgray;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 1em;
 }
 
 body {
@@ -161,6 +162,7 @@ body {
     border-collapse: collapse;
     padding: 3em 5em;
     /* background-color: rgba(0, 0, 255, 0.3); */
+    /* margin-bottom: 1em; */
 }
 
 .User_Admin_details_container_crud {
@@ -174,6 +176,7 @@ body {
 
 .customer_info_table table th, td {
     padding: 0.3em 1em;
+    /* margin-bottom: 1em; */
 }
 
 .customer_info_table h2 {
@@ -219,3 +222,4 @@ body {
     font-size: 300;
     
 }
+
