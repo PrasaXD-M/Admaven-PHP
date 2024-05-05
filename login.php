@@ -52,6 +52,13 @@
 
                     $contCreator = mysqli_fetch_array($contCreator_result, MYSQLI_ASSOC);
 
+                    /*********** MANAGER ADMIN ***************/ 
+                    $Man_admin_sql = "SELECT * FROM manage_admin WHERE Mand_email = '$email'";
+                    $manAdmin_result = mysqli_query($con, $Man_admin_sql);
+
+                    $managerAdmin = mysqli_fetch_array($manAdmin_result, MYSQLI_ASSOC);
+
+
                     if($user) {
                         if($password == $user["password"]) {
                             session_start();
@@ -94,7 +101,18 @@
                         } else {
                             echo "<div class = 'error-alert'>Password does not match!</div>";
                         }
-                    } else {
+                    } elseif($managerAdmin) {
+                        if($password == $managerAdmin["Mand_password"]){
+                            session_start();
+                            $_SESSION["ManagerAdmin"] = $managerAdmin["Mnadmin_ID"];
+
+                            header("location: ManagerAdmin.php");
+
+                        } else {
+                            echo "<div class = 'error-alert'>Password does not match!</div>";
+                        }
+                    } else {  
+                    
                         echo "<div class = 'error-alert'>Email does not match!</div>";
                     }
                 }
