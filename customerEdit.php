@@ -22,9 +22,9 @@
 
         <?php
                 if(isset($_GET["user_ID"])) {
-                    $contid = $_GET["user_ID"];
+                    $cusid = $_GET["user_ID"];
                     require 'config/database.php';
-                    $sql = "SELECT * FROM user_registration WHERE user_ID = $contid";
+                    $sql = "SELECT * FROM user_registration WHERE user_ID = $cusid";
                     $result = mysqli_query($con, $sql);
                     $row = mysqli_fetch_array($result);
                 ?> 

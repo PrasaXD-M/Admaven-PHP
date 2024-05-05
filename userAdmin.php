@@ -209,8 +209,8 @@
                                         <td><?php echo $custrow["contact_no"]; ?></td>
 
                                         <td>
-                                            <a href="customerEdit.php?user_ID=<?php echo $controw["user_ID"]; ?>" class="edit_btn">Edit</a>
-                                            <a href="deleteCons.php?user_ID=<?php echo $controw["user_ID"]; ?>" class="remove_btn">Remove</a>
+                                            <a href="customerEdit.php?user_ID=<?php echo $custrow["user_ID"]; ?>" class="edit_btn">Edit</a>
+                                            <a href="deleteCons.php?user_ID=<?php echo $custrow["user_ID"]; ?>" class="remove_btn">Remove</a>
                                         </td>
                                     </tr>
                                <?php }
