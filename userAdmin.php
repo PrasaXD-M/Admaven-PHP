@@ -78,19 +78,25 @@
                 <div class="customer_info_table">
                     <table border="1">
                         <thead>
-                            <?php
-                                require_once "config/database.php"; 
-                                                
-                            ?>
                             <tr>
+                                <th>Customer ID</th>
                                 <th>Customer Name</th>
-                                    <th>Emali</th>
-                                    <th>Contact NO</th>
-                                    <th>Actions</th>                               
+                                <th>Emali</th>
+                                <th>Contact NO</th>
+                                <th>Actions</th>                               
                             </tr>
                         </thead>
                         <tbody>
+                            <?php
+                                require_once "config/database.php"; 
+                                $customerSql = "SELECT * FROM user_registration";
+                                $customerResult = mysqli_query($con, $customerResult);
 
+                                while($custrrow = mysqli_fetch_array($customerResult)) { ?>
+                                    
+                               <?php }
+                                
+                            ?>
                         </tbody>
                     </table>
                 </div>
