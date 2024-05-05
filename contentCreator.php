@@ -26,8 +26,8 @@
 
     <?php
         require_once "config/database.php"; 
-        $sysUser = $_SESSION["consultant"];
-        $sql = "SELECT * FROM consultant WHERE cons_ID = '$sysUser'";
+        $sysUser = $_SESSION["contentCreator"];
+        $sql = "SELECT * FROM content_creator WHERE Cont_ID = '$sysUser'";
         $result = mysqli_query($con, $sql);
         $userDetails = mysqli_fetch_array($result, MYSQLI_ASSOC);
     ?>
@@ -39,7 +39,7 @@
                 <!-- User profile photo -->
                 <div class="user_profile_pic">
                     <div class="style_inner_pic">
-                        <img src="consultant/Consimg/<?php echo $userDetails['C_image'] ?>" alt="profile-photo">
+                        <img src="consultant/Consimg/<?php echo $userDetails['Cont_image'] ?>" alt="profile-photo">
                     </div>
                 </div>
                 <!-- Account details edit button -->
@@ -53,11 +53,11 @@
             <div class="user_details">
                 <div class="details_cont_user">
                     <h3>My Account Details</h3>
-                    <p><b>Fist Name : <?php echo $userDetails['C_fname']; ?></b></p>
-                    <p><b>Last Name : <?php echo $userDetails['C_lname']; ?></b></p>
-                    <p><b>Email : <?php echo $userDetails['C_email']; ?></b></p>
-                    <p><b>Password : <?php echo $userDetails['C_password']; ?></b></p>
-                    <p><b>Contact Number : <?php echo $userDetails['C_contactNO']; ?></b></p>
+                    <p><b>Fist Name : <?php echo $userDetails['Cont_Fname']; ?></b></p>
+                    <p><b>Last Name : <?php echo $userDetails['Cont_Lname']; ?></b></p>
+                    <p><b>Email : <?php echo $userDetails['Cont_email']; ?></b></p>
+                    <p><b>Password : <?php echo $userDetails['Cont_password']; ?></b></p>
+                    <p><b>Contact Number : <?php echo $userDetails['Cont_contactNO']; ?></b></p>
                 </div>
             </div>
         </div>
