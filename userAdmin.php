@@ -74,9 +74,55 @@
 
     <div class="User_Admin_details_container_crud">
 
+    <div class="customer_info_container">
+                <div class="customer_info_table">
+                    <table border="1">
+                        <a href="#" class="create__btn">Add Consultant</a>
+                        <h2>Consultant Details</h2>
+                        <!-- <a href="#" class="create_btn">Create Account</a> -->
+                        <thead>
+                            <tr>
+                                <th>Customer ID</th>
+                                <th>Customer Name</th>
+                                <th>Emali</th>
+                                <th>Contact NO</th>
+                                <th>Actions</th>                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                                require_once "config/database.php"; 
+                                $constSql = "SELECT * FROM consultant";
+                                $constResult = mysqli_query($con, $constSql);
+
+                                while($constrow = mysqli_fetch_array($constResult)) { ?>
+
+                                    <tr>
+                                        <td><?php echo $constrow["cons_ID"]; ?></td>
+                                        <td><?php echo $constrow["C_fname"]; ?></td>
+                                        <td><?php echo $constrow["C_email"]; ?></td>
+                                        <td><?php echo $constrow["C_contactNO"]; ?></td>
+
+                                        <td>
+                                            <a href="userAdmin/edit.php?id" class="edit_btn">Edit</a>
+                                            <a href="#" class="remove_btn">Remove</a>
+                                        </td>
+                                    </tr>
+                               <?php }
+                                
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
             <div class="customer_info_container">
                 <div class="customer_info_table">
                     <table border="1">
+                        <h2>Customer Details</h2>
+                        <!-- <a href="#" class="create_btn">Create Account</a> -->
                         <thead>
                             <tr>
                                 <th>Customer ID</th>
@@ -101,7 +147,7 @@
                                         <td><?php echo $custrow["contact_no"]; ?></td>
 
                                         <td>
-                                            <a href="#" class="edit_btn">Edit</a>
+                                            <a href="userAdmin/edit.php?id" class="edit_btn">Edit</a>
                                             <a href="#" class="remove_btn">Remove</a>
                                         </td>
                                     </tr>
