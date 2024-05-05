@@ -18,6 +18,21 @@
         background-size: cover;
         /* background-repeat: no-repeat; */
     }
+    
+    .create__btn {
+        display: inline-block;
+        text-decoration: none;
+        color: var(--LIGHT-COLOR);
+        padding: 6px 13px;
+        border-radius: 5px;
+        font-family: var(--ABT-FONT);
+        font-size: 300;
+        background-color: rgb(0, 0, 255);
+    }
+
+    .create__btn:hover {
+        background-color: rgba(0, 0, 255, 0.7);
+    }
 </style>
 <body>
     <header>
