@@ -35,7 +35,7 @@
     <div class="main">
         <div class="user_interface_container">
             <!-- Side bar -->
-            <div class="user_side_bar">
+            <div class="user_side_bar" style="height: 55vh;">
                 <!-- User profile photo -->
                 <div class="user_profile_pic">
                     <div class="style_inner_pic">
@@ -50,17 +50,51 @@
                 </div>
 
             </div>
-            <div class="user_details">
-                <div class="details_cont_user">
-                    <h4>My Account Details</h4>
-                    <p><b>Fist Name : <?php echo $userDetails['ua_Fname']; ?></b></p>
-                    <p><b>Last Name : <?php echo $userDetails['ua_Lname']; ?></b></p>
-                    <p><b>Email : <?php echo $userDetails['ua_email']; ?></b></p>
-                    <p><b>Password : <?php echo $userDetails['ua_password']; ?></b></p>
-                    <p><b>Contact Number : <?php echo $userDetails['ua_contactNO']; ?></b></p>
+
+            <!-- <div class="UserAdmin_body_container"> -->
+
+                <div class="user_details" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+
+                    <div class="details_cont_user" style="width: 70%;">
+                        <h4>My Account Details</h4>
+                        <p><b>Fist Name : <?php echo $userDetails['ua_Fname']; ?></b></p>
+                        <p><b>Last Name : <?php echo $userDetails['ua_Lname']; ?></b></p>
+                        <p><b>Email : <?php echo $userDetails['ua_email']; ?></b></p>
+                        <p><b>Password : <?php echo $userDetails['ua_password']; ?></b></p>
+                        <p><b>Contact Number : <?php echo $userDetails['ua_contactNO']; ?></b></p>
+                    </div>
+
+                </div>                
+            <!-- </div> -->
+        </div>
+
+        
+    </div>
+
+
+    <div class="User_Admin_details_container_crud">
+
+            <div class="customer_info_container">
+                <div class="customer_info_table">
+                    <table border="1">
+                        <thead>
+                            <?php
+                                require_once "config/database.php"; 
+                                                
+                            ?>
+                            <tr>
+                                <th>Customer Name</th>
+                                    <th>Emali</th>
+                                    <th>Contact NO</th>
+                                    <th>Actions</th>                               
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
                 </div>
             </div>
-        </div>
     </div>
 </body>
 </html>

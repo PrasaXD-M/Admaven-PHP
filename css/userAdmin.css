@@ -43,7 +43,12 @@
 
 .user_details {
     flex: 70%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+
 
 .details_cont_user {
    box-shadow: 10px 5px 14px lightgray;
@@ -122,3 +127,34 @@
     align-items: center;
 }
 
+
+@media screen and (max-width: 750px) {
+    .user_interface_container {
+        flex-direction: column;
+    }
+
+    .user_profile_pic {
+        flex-direction: column;
+    }
+}
+
+
+/********* CUSTOMER INFORMATION TABLE ***********/
+.customer_info_table{
+    width: 100%;
+    padding: 3em;
+    box-shadow: 10px 5px 13px lightgray;
+}
+
+body {
+    height: 200vh;
+}
+
+.User_Admin_details_container_crud {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
