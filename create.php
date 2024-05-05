@@ -19,6 +19,66 @@
     <div class="form-body">
         <div class="signup-container">
 
+        <?php
+                // print_r($_POST);
+                if(isset($_POST["submit"])) {
+                    $fname = $_POST["rfName"];
+                    $lname = $_POST["rlName"];
+                    $email = $_POST["uemail"];
+                    $password = $_POST["password"];
+                    $passwordRepeat = $_POST["rePassword"];
+        
+                    $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+
+                    $errors = array(); 
+
+                    if(empty($fname) OR empty($lname) OR empty($email) OR empty($password) OR empty($passwordRepeat)) {
+                        array_push($errors, "All fields are requied!");
+                    }
+
+                    if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                        array_push($errors, "Email is not Valid!");
+                    }
+
+                    if(strlen($password) < 4) {
+                        array_push($errors, "Password should be contain 6 characters!");
+                    }
+
+                    if($password !== $passwordRepeat) {
+                        array_push($errors, "Password does not match");
+                    }
+
+                    require_once "config/database.php";
+
+                    $sql = "SELECT * FROM user_registration WHERE email = '$email'";
+                    $result = mysqli_query($con, $sql);
+
+                    $rowCount = mysqli_num_rows($result);
+                    if($rowCount > 0) {
+                        array_push($errors, "Email already exists!");
+                    }
+
+
+                    if(count($errors) > 0) {
+                        foreach($errors as $error) {
+                            echo "<div class = 'error-alert'>$error</div>";
+                        }
+
+                    } else {
+                        mysqli_query($con, "INSERT INTO user_registration (name, L_name,  email, password) VALUES ('$fname','$lname', '$email', '$password')");
+
+                        echo "<div class = 'success-alert'>Welcome to AdMaven You are registered successfully!</div>";
+                        header("location: login.php");
+                    }
+                }
+            ?>
+
+            <?php 
+                if(isset($_POST["cancel"])) {
+                    header("location: index.php");
+                } 
+            ?>
+
             
             <h2 class="welcom-msg" style="text-align: center;">Add accounts form</h2>
             <!-- <div class = 'success-alert'>Welcome to AdMaven</div> -->
@@ -64,7 +124,7 @@
                     </div>
                 </div>
             </form>
-            <?php if(isset($_POST["cancel"])) { header("location: userAdmin.php"); } ?>
+            <?php //if(isset($_POST["cancel"])) { header("location: userAdmin.php"); } ?>
             
            <!-- <div class="remember-terms">
             <a href="#">Terms & Conditions | Privacy</a>
