@@ -106,6 +106,13 @@
                         mysqli_query($con, "UPDATE content_creator SET Cont_Fname = '$fname', Cont_Lname = '$lname', Cont_email = '$email', Cont_password = '$password', Cont_contactNO = '$contactNO', Cont_image = '$cons_img' WHERE Cont_ID = '$Cont_creator_id'");
 
                         header("location: contentCreator.php");
+
+                    } elseif($_SESSION["ManagerAdmin"]) {
+                        $manager_admin_id = $_SESSION["ManagerAdmin"];
+
+                        mysqli_query($con, "UPDATE manage_admin SET Mnad_Fname = '$fname', Mand_Lname = '$lname', Mand_email = '$email', Mand_password = '$password', Mand_contactNO = '$contactNO', Mand_image = '$cons_img' WHERE Mnadmin_ID = '$manager_admin_id'");
+
+                        header("location: managerAdmin.php");
                     }
                 }
             ?>

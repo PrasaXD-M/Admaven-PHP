@@ -52,17 +52,15 @@
 }
 
 .details_cont_user {
-    background-color: dodgerblue;
-    /* opacity: 0.6; */
+    box-shadow: 10px 5px 14px lightgray;
     padding: 1.5rem;
     border-radius: 20px;
     margin: 3em;
-    background-image: url("image4.jpg") !important;
 }
 .details_cont_user h3 {
     text-align: center;
     font-family: var(--ABT-FONT);
-    color: var(--LIGHT-COLOR);
+    color: var(--INFO-MAIL-COLOR);
     text-decoration: underline var(--ORANGE-COLOR);
 }
 .details_cont_user p {
