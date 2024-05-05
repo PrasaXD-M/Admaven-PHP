@@ -140,14 +140,24 @@
 
 
 /********* CUSTOMER INFORMATION TABLE ***********/
-.customer_info_table{
-    width: 100%;
+.customer_info_container{
+    width: 90%;
     padding: 3em;
     box-shadow: 10px 5px 13px lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 body {
     height: 200vh;
+}
+
+
+.customer_info_table table{
+    width: 100%;
+    border-collapse: collapse;
 }
 
 .User_Admin_details_container_crud {
@@ -157,4 +167,8 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 2em;
+}
+
+.customer_info_table table th {
+    padding: 0.3em 1em;
 }
