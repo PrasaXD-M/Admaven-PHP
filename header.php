@@ -31,8 +31,11 @@
                             <a href="userAdmin.php">My Account</a>
 
                         <?php } elseif(isset($_SESSION["contentCreator"])) { ?>
-                            <a href="contentCreator.php">My Account</a>
-                        <?php } ?> 
+                            <a href="userAdmin.php">My Account</a>
+
+                        <?php } elseif(isset($_SESSION["ManagerAdmin"])) { ?> 
+                            <a href="ManagerAdmin.php">My Account</a>
+                        <?php } ?>
                     </button>
                 </div>
 
@@ -49,7 +52,8 @@
                 <div class="signup-btn">
                     <a href="login.php">Login</a>
                 </div>
-        <?php } ?>
+
+                <?php } ?>
 
     </div>
 
