@@ -46,7 +46,11 @@
                     $us_ad_result = mysqli_query($con, $us_ad_sql);
                     $us_admin = mysqli_fetch_array($us_ad_result, MYSQLI_ASSOC);
 
+                    /*************** CONTENT CREATOR *************/
+                    $contCreatorSQL = "SELECT * FROM content_creator WHERE Cont_email = '$email'";
+                    $contCreator_result = mysqli_query($con, $contCreatorSQL);
 
+                    $contCreator = mysqli_fetch_array($contCreator_result, MYSQLI_ASSOC);
 
                     if($user) {
                         if($password == $user["password"]) {
@@ -76,6 +80,14 @@
                             $_SESSION["usAdmin"] = $us_admin["User_admin_id"];
                             header("location: userAdmin.php");
                             die();
+
+                        } else {
+                            echo "<div class = 'error-alert'>Password does not match!</div>";
+                        }
+                    } elseif($contCreator) {
+                        if($password == $contCreator["Cont_password"]) {
+                            session_start();
+                            $_SESSION["contentCreator"] = $contCreator["Cont_ID"];
 
                         } else {
                             echo "<div class = 'error-alert'>Password does not match!</div>";
