@@ -7,6 +7,23 @@
             echo "Deleted!";
             header("location: userAdmin.php");
         }
+    } elseif(isset($_GET['Cont_ID'])) {
+        $consid = $_GET['Cont_ID'];
+        require 'config/database.php'; 
+        $sql = "DELETE FROM content_creator WHERE Cont_ID = $consid";
+        if(mysqli_query($con, $sql)) {
+            echo "Deleted!";
+            header("location: userAdmin.php");
+        }
+
+    } elseif(isset($_GET['user_ID'])) {
+        $userid = $_GET['user_ID'];
+        require 'config/database.php'; 
+        $sql = "DELETE FROM user_registration WHERE user_ID = $userid";
+        if(mysqli_query($con, $sql)) {
+            echo "Deleted!";
+            header("location: userAdmin.php");
+        }
     }
 
 ?>

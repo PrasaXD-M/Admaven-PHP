@@ -168,8 +168,8 @@
                                         <td><?php echo $controw["Cont_contactNO"]; ?></td>
 
                                         <td>
-                                            <a href="userAdmin/edit.php?id" class="edit_btn">Edit</a>
-                                            <a href="#" class="remove_btn">Remove</a>
+                                            <a href="CAedit.php?Cont_ID=<?php echo $controw["Cont_ID"]; ?>" class="edit_btn">Edit</a>
+                                            <a href="deleteCons.php?Cont_ID=<?php echo $controw["Cont_ID"]; ?>" class="remove_btn">Remove</a>
                                         </td>
                                     </tr>
                                <?php }
@@ -209,8 +209,8 @@
                                         <td><?php echo $custrow["contact_no"]; ?></td>
 
                                         <td>
-                                            <a href="userAdmin/edit.php?id" class="edit_btn">Edit</a>
-                                            <a href="#" class="remove_btn">Remove</a>
+                                            <a href="customerEdit.php?user_ID=<?php echo $controw["user_ID"]; ?>" class="edit_btn">Edit</a>
+                                            <a href="deleteCons.php?user_ID=<?php echo $controw["user_ID"]; ?>" class="remove_btn">Remove</a>
                                         </td>
                                     </tr>
                                <?php }
