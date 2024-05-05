@@ -56,6 +56,10 @@
                         <input type="password" name="password" id="password" value="<?php echo $row['C_password']; ?>" >
                     </div>
 
+                    <div>
+                        <input type="hidden" name="cont_ID" value="<?php echo $row['cons_ID']; ?>">
+                    </div>
+
                     <div class="form-bdy button-flex">
                         <div class="reg">
                             <input type="submit" value="Update" name="update">

@@ -126,8 +126,8 @@
                                         <td><?php echo $constrow["C_contactNO"]; ?></td>
 
                                         <td>
-                                            <a href="editCons.php?cons_ID=<?php echo $constrow["cons_ID"] ?>" class="edit_btn">Edit</a>
-                                            <a href="#" class="remove_btn">Remove</a>
+                                            <a href="editCons.php?cons_ID=<?php echo $constrow["cons_ID"]; ?>" class="edit_btn">Edit</a>
+                                            <a href="deleteCons.php?cons_ID=<?php echo $constrow["cons_ID"]; ?>" class="remove_btn">Remove</a>
                                         </td>
                                     </tr>
                                <?php }

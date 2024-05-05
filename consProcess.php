@@ -1,11 +1,12 @@
 <?php 
-                if(isset($_POST["update"])) {
+            if(isset($_POST["update"])) {
                     $fname = $_POST["rfName"];
                     $lname = $_POST["rlName"];
                     $email = $_POST["uemail"];
                     $password = $_POST["password"];
                     // $passwordRepeat = $_POST["rePassword"];
                     $contactNO = $_POST["contnum"];
+                    $hiddencons_idh = $_POST["cont_ID"];
         
                     $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
@@ -29,13 +30,13 @@
 
                     require_once "config/database.php";
 
-                    $sql = "SELECT * FROM consultant WHERE C_email = '$email'";
-                    $result = mysqli_query($con, $sql);
+                    // $sql = "SELECT * FROM consultant WHERE C_email = '$email'";
+                    // $result = mysqli_query($con, $sql);
 
-                    $rowCount = mysqli_num_rows($result);
-                    if($rowCount > 0) {
-                        array_push($errors, "Email already exists!");
-                    }
+                    // $rowCount = mysqli_num_rows($result);
+                    // if($rowCount > 0) {
+                    //     array_push($errors, "Email already exists!");
+                    // }
  
 
                     if(count($errors) > 0) {
@@ -44,10 +45,16 @@
                         }
 
                     } else {
-                        mysqli_query($con, "INSERT INTO consultant (C_fname, C_lname,  C_email, C_password, C_contactNO) VALUES ('$fname','$lname', '$email', '$password', '$contactNO')");
+                        $update_sql = "UPDATE consultant SET C_fname = '$fname', C_lname = '$lname', C_email = '$email', C_password = '$password', C_contactNO = '$contactNO' WHERE cons_ID = '$hiddencons_idh'";
 
-                        echo "<div class = 'success-alert'>Welcome to AdMaven You are registered successfully!</div>";
-                        header("location: userAdmin.php");
+                        if(mysqli_query($con, $update_sql)) {
+                            echo "Recode updated";
+                            header("location: userAdmin.php");
+                        } else {
+                            die("Somthing went wrong!");
+                        }
+        
+                        
                     }
                 }
             ?>
