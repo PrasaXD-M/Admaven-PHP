@@ -93,13 +93,20 @@
 
                         echo "<div class = 'success-alert'>Welcome to AdMaven You are registered successfully!</div>";
                         header("location: consultant.php");
+
+                    } elseif($_SESSION["usAdmin"]) {
+                        $usAdmin_id = $_SESSION["usAdmin"];
+
+                        mysqli_query($con, "UPDATE user_admin SET ua_Fname = '$fname', ua_Lname = '$lname', ua_email = '$email', ua_password = '$password', ua_contactNO = '$contactNO', ua_image = '$cons_img' WHERE User_admin_id = '$usAdmin_id'");
+
+                        header("location: userAdmin.php");
                     }
                 }
             ?>
 
             <?php 
                 if(isset($_POST["cancel"])) {
-                    header("location: consultant.php");
+                    header("location: index.php");
                 } 
             ?>
 
@@ -122,13 +129,13 @@
                 </div>
 
                 <div class="form-bdy">
-                    <label for="contnum">Contact No:</label><br>
-                    <input type="text" name="contnum" id="contnum" style="width: 100%;">
+                    <label for="rePassword">Repeat Password:</label><br>
+                    <input type="password" name="rePassword" id="rePassword" style="width: 100%;">
                 </div>
 
                 <div class="form-bdy">
-                    <label for="rePassword">Repeat Password:</label><br>
-                    <input type="password" name="rePassword" id="rePassword" style="width: 100%;">
+                    <label for="contnum">Contact No:</label><br>
+                    <input type="text" name="contnum" id="contnum" style="width: 100%;">
                 </div>
 
                 <!-- <div class="already-msg">
