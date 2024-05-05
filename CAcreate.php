@@ -41,7 +41,7 @@
                         array_push($errors, "Email is not Valid!");
                     }
 
-                    if(strlen($password) < 4) {
+                    if(strlen($password) < 6) {
                         array_push($errors, "Password should be contain 6 characters!");
                     }
 

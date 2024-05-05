@@ -146,8 +146,8 @@
                         <!-- <a href="#" class="create_btn">Create Account</a> -->
                         <thead>
                             <tr>
-                                <th>Customer ID</th>
-                                <th>Customer Name</th>
+                                <th>Cont_ID</th>
+                                <th>Cont_Name</th>
                                 <th>Emali</th>
                                 <th>Contact NO</th>
                                 <th>Actions</th>                               
