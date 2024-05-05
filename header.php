@@ -18,7 +18,7 @@
         </div> 
 
     
-        <?php if (isset($_SESSION["user"]) OR isset($_SESSION["consultant"]) OR isset($_SESSION["usAdmin"]) OR isset($_SESSION["contentCreator"])) { ?>
+        <?php if (isset($_SESSION["user"]) OR isset($_SESSION["consultant"]) OR isset($_SESSION["usAdmin"]) OR isset($_SESSION["contentCreator"]) OR isset($_SESSION["ManagerAdmin"])) { ?>
                 <div class="my_account">
                     <button>
                         <?php if(isset($_SESSION["consultant"])) { ?>
@@ -43,7 +43,7 @@
                     <a href="logout.php">Log out</a>
                 </div>
 
-                <?php  } else {?>
+        <?php  } else {?>
 
                 <div class="signup-btn">
                     <a href="signUp.php">Sign Up</a>

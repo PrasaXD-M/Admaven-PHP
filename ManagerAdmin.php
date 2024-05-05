@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- User Dashboard stylesheet -->
-    <link rel="stylesheet" href="consultant.css">
+    <link rel="stylesheet" href="css/managerAdmin.css">
 </head>
 <style>
     .user_side_bar {
