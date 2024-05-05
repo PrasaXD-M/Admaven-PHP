@@ -92,7 +92,7 @@
     <div class="customer_info_container">
                 <div class="customer_info_table">
                     <table border="1">
-                        <a href="#" class="create__btn">Add Consultant</a>
+                        <a href="UserAdmin/create.php" class="create__btn">Add Consultant</a>
                         <h2>Consultant Details</h2>
                         <!-- <a href="#" class="create_btn">Create Account</a> -->
                         <thead>
