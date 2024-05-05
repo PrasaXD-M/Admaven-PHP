@@ -90,10 +90,21 @@
                             <?php
                                 require_once "config/database.php"; 
                                 $customerSql = "SELECT * FROM user_registration";
-                                $customerResult = mysqli_query($con, $customerResult);
+                                $customerResult = mysqli_query($con, $customerSql);
 
-                                while($custrrow = mysqli_fetch_array($customerResult)) { ?>
-                                    
+                                while($custrow = mysqli_fetch_array($customerResult)) { ?>
+
+                                    <tr>
+                                        <td><?php echo $custrow["user_ID"]; ?></td>
+                                        <td><?php echo $custrow["name"]; ?></td>
+                                        <td><?php echo $custrow["email"]; ?></td>
+                                        <td><?php echo $custrow["contact_no"]; ?></td>
+
+                                        <td>
+                                            <a href="#" class="edit_btn">Edit</a>
+                                            <a href="#" class="remove_btn">Remove</a>
+                                        </td>
+                                    </tr>
                                <?php }
                                 
                             ?>

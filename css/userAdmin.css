@@ -141,7 +141,7 @@
 
 /********* CUSTOMER INFORMATION TABLE ***********/
 .customer_info_container{
-    width: 90%;
+    /* width: 100%; */
     padding: 3em;
     box-shadow: 10px 5px 13px lightgray;
     display: flex;
@@ -156,8 +156,10 @@ body {
 
 
 .customer_info_table table{
-    width: 100%;
+    /* width: 100%; */
+    width: 50rem;
     border-collapse: collapse;
+    padding: 3em 5em;
 }
 
 .User_Admin_details_container_crud {
@@ -169,6 +171,6 @@ body {
     margin-top: 2em;
 }
 
-.customer_info_table table th {
+.customer_info_table table th, td {
     padding: 0.3em 1em;
 }
