@@ -88,6 +88,8 @@
                         if($password == $contCreator["Cont_password"]) {
                             session_start();
                             $_SESSION["contentCreator"] = $contCreator["Cont_ID"];
+                            header("location: contentCreator.php");
+                            die();
 
                         } else {
                             echo "<div class = 'error-alert'>Password does not match!</div>";
