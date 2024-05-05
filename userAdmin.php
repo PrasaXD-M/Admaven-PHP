@@ -33,6 +33,13 @@
     .create__btn:hover {
         background-color: rgba(0, 0, 255, 0.7);
     }
+
+    .customer_info_container {
+        box-shadow: 10px 5px 13px lightgray;
+        border-radius: 10px;
+        /* margin-bottom: 1rem; */
+        /* background-color: lightgray; */
+    }
 </style>
 <body>
     <header>

@@ -177,6 +177,7 @@ body {
 .customer_info_table table th, td {
     padding: 0.3em 1em;
     /* margin-bottom: 1em; */
+    font-family: var(--ABT-FONT);
 }
 
 .customer_info_table h2 {
@@ -223,3 +224,6 @@ body {
     
 }
 
+.customer_info_container {
+    background-color: rgb(237, 233, 233);
+}
