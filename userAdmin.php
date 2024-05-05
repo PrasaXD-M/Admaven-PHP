@@ -89,7 +89,7 @@
 
     <div class="User_Admin_details_container_crud">
 
-    <div class="customer_info_container">
+            <div class="customer_info_container">
                 <div class="customer_info_table">
                     <table border="1">
                         <a href="create.php" class="create__btn">Add Consultant</a>
@@ -131,7 +131,47 @@
                 </div>
             </div>
 
+            <div class="customer_info_container">
+                <div class="customer_info_table">
+                    <table border="1">
+                        <a href="create.php" class="create__btn">Add Content Creator</a>
+                        <h2>Content Creaotors</h2>
+                        <!-- <a href="#" class="create_btn">Create Account</a> -->
+                        <thead>
+                            <tr>
+                                <th>Customer ID</th>
+                                <th>Customer Name</th>
+                                <th>Emali</th>
+                                <th>Contact NO</th>
+                                <th>Actions</th>                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                                require_once "config/database.php"; 
+                                $contSql = "SELECT * FROM content_creator";
+                                $contResult = mysqli_query($con, $contSql);
 
+                                while($controw = mysqli_fetch_array($contResult)) { ?>
+
+                                    <tr>
+                                        <td><?php echo $controw["Cont_ID"]; ?></td>
+                                        <td><?php echo $controw["Cont_Fname"]; ?></td>
+                                        <td><?php echo $controw["Cont_email"]; ?></td>
+                                        <td><?php echo $controw["Cont_contactNO"]; ?></td>
+
+                                        <td>
+                                            <a href="userAdmin/edit.php?id" class="edit_btn">Edit</a>
+                                            <a href="#" class="remove_btn">Remove</a>
+                                        </td>
+                                    </tr>
+                               <?php }
+                                
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
             <div class="customer_info_container">
                 <div class="customer_info_table">
