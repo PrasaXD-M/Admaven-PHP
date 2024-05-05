@@ -1,14 +1,14 @@
 
-<?php //session_start(); ?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="signUp.css">
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="create.css">
+    <link rel="stylesheet" href="UserAdmin/signUp.css">
+    <link rel="stylesheet" href="UserAdmin/login.css">
+    <link rel="stylesheet" href="UserAdmin/create.css">
     <style>
         .form-bdy input[type=email], input[type=password] {
             width: 100%;
@@ -64,6 +64,7 @@
                     </div>
                 </div>
             </form>
+            <?php if(isset($_POST["cancel"])) { header("location: userAdmin.php"); } ?>
             
            <!-- <div class="remember-terms">
             <a href="#">Terms & Conditions | Privacy</a>
