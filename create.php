@@ -21,18 +21,19 @@
 
         <?php
                 // print_r($_POST);
-                if(isset($_POST["submit"])) {
+                if(isset($_POST["create"])) {
                     $fname = $_POST["rfName"];
                     $lname = $_POST["rlName"];
                     $email = $_POST["uemail"];
                     $password = $_POST["password"];
-                    $passwordRepeat = $_POST["rePassword"];
+                    // $passwordRepeat = $_POST["rePassword"];
+                    $contactNO = $_POST["contnum"];
         
                     $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
                     $errors = array(); 
 
-                    if(empty($fname) OR empty($lname) OR empty($email) OR empty($password) OR empty($passwordRepeat)) {
+                    if(empty($fname) OR empty($lname) OR empty($email) OR empty($password) OR empty($contactNO)) {
                         array_push($errors, "All fields are requied!");
                     }
 
@@ -44,20 +45,20 @@
                         array_push($errors, "Password should be contain 6 characters!");
                     }
 
-                    if($password !== $passwordRepeat) {
-                        array_push($errors, "Password does not match");
-                    }
+                    // if($password !== $passwordRepeat) {
+                    //     array_push($errors, "Password does not match");
+                    // }
 
                     require_once "config/database.php";
 
-                    $sql = "SELECT * FROM user_registration WHERE email = '$email'";
+                    $sql = "SELECT * FROM consultant WHERE C_email = '$email'";
                     $result = mysqli_query($con, $sql);
 
                     $rowCount = mysqli_num_rows($result);
                     if($rowCount > 0) {
                         array_push($errors, "Email already exists!");
                     }
-
+ 
 
                     if(count($errors) > 0) {
                         foreach($errors as $error) {
@@ -65,24 +66,24 @@
                         }
 
                     } else {
-                        mysqli_query($con, "INSERT INTO user_registration (name, L_name,  email, password) VALUES ('$fname','$lname', '$email', '$password')");
+                        mysqli_query($con, "INSERT INTO consultant (C_fname, C_lname,  C_email, C_password, C_contactNO) VALUES ('$fname','$lname', '$email', '$password', '$contactNO')");
 
                         echo "<div class = 'success-alert'>Welcome to AdMaven You are registered successfully!</div>";
-                        header("location: login.php");
+                        header("location: userAdmin.php");
                     }
                 }
             ?>
 
             <?php 
                 if(isset($_POST["cancel"])) {
-                    header("location: index.php");
+                    header("location: userAdmin.php");
                 } 
             ?>
 
             
             <h2 class="welcom-msg" style="text-align: center;">Add accounts form</h2>
             <!-- <div class = 'success-alert'>Welcome to AdMaven</div> -->
-            <form action="login.php" method="post">
+            <form action="create.php" method="post">
 
                 <div class="form-bdy">
                     <label for="rfName">First Name:</label><br>
@@ -100,8 +101,8 @@
                 </div>
 
                 <div class="form-bdy">
-                    <label for="cont-num">Contact No:</label><br>
-                    <input type="tel" name="cont-num" id="cont-num" style="width: 100%;">
+                    <label for="contnum">Contact No:</label><br>
+                    <input type="text" name="contnum" id="contnum" style="width: 100%;">
                 </div>
 
                 <div class="form-bdy">
