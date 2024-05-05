@@ -33,32 +33,28 @@
 
                     <div class="form-bdy">
                         <label for="rfName">First Name:</label><br>
-                        <input type="text" name="rfName" id="rfName" placeholder="Your fist name.." style="width: 100%;">
+                        <input type="text" name="rfName" id="rfName" value="<?php echo $row['C_fname']; ?>" style="width: 100%;">
                     </div>
 
                     <div class="form-bdy">
                         <label for="rlName">Last Name:</label><br>
-                        <input type="text" name="rlName" id="rlName" placeholder="Your last name.." style="width: 100%;">
+                        <input type="text" name="rlName" id="rlName" value="<?php echo $row['C_lname']; ?>" style="width: 100%;">
                     </div>
 
                     <div class="form-bdy">
                         <label for="uemail">Email:</label>
-                        <input type="email" name="uemail" id="uemail" placeholder="Enter your email..">
+                        <input type="email" name="uemail" id="uemail" value="<?php echo $row['C_email']; ?>">
                     </div>
 
                     <div class="form-bdy">
                         <label for="contnum">Contact No:</label><br>
-                        <input type="text" name="contnum" id="contnum" style="width: 100%;">
+                        <input type="text" name="contnum" id="contnum" value="<?php echo $row['C_contactNO']; ?>" style="width: 100%;">
                     </div>
 
                     <div class="form-bdy">
                         <label for="password">Password:</label>
-                        <input type="password" name="password" id="password" placeholder="Enter your password..">
+                        <input type="password" name="password" id="password" value="<?php echo $row['C_password']; ?>" >
                     </div>
-
-                    <!-- <div class="new_acc">
-                        <p>Still don't have an account? <a href="signUp.php">Sign Up here</a></p>
-                    </div> -->
 
                     <div class="form-bdy button-flex">
                         <div class="reg">
