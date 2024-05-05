@@ -98,8 +98,14 @@
                         $usAdmin_id = $_SESSION["usAdmin"];
 
                         mysqli_query($con, "UPDATE user_admin SET ua_Fname = '$fname', ua_Lname = '$lname', ua_email = '$email', ua_password = '$password', ua_contactNO = '$contactNO', ua_image = '$cons_img' WHERE User_admin_id = '$usAdmin_id'");
-
                         header("location: userAdmin.php");
+
+                    } elseif($_SESSION["contentCreator"]) {
+                        $Cont_creator_id = $_SESSION["contentCreator"];
+
+                        mysqli_query($con, "UPDATE content_creator SET Cont_Fname = '$fname', Cont_Lname = '$lname', Cont_email = '$email', Cont_password = '$password', Cont_contactNO = '$contactNO', Cont_image = '$cons_img' WHERE Cont_ID = '$Cont_creator_id'");
+
+                        header("location: contentCreator.php");
                     }
                 }
             ?>

@@ -18,7 +18,7 @@
         </div> 
 
     
-        <?php if (isset($_SESSION["user"]) OR isset($_SESSION["consultant"]) OR isset($_SESSION["usAdmin"])) { ?>
+        <?php if (isset($_SESSION["user"]) OR isset($_SESSION["consultant"]) OR isset($_SESSION["usAdmin"]) OR isset($_SESSION["contentCreator"])) { ?>
                 <div class="my_account">
                     <button>
                         <?php if(isset($_SESSION["consultant"])) { ?>
@@ -29,7 +29,10 @@
 
                         <?php } elseif(isset($_SESSION["usAdmin"])) {?>
                             <a href="userAdmin.php">My Account</a>
-                        <?php } ?>
+
+                        <?php } elseif(isset($_SESSION["contentCreator"])) { ?>
+                            <a href="contentCreator.php">My Account</a>
+                        <?php } ?> 
                     </button>
                 </div>
 
