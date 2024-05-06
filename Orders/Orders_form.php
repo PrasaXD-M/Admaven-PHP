@@ -5,7 +5,8 @@
         <link rel="stylesheet" href="Orders_form.css">
 
     </head>
-    <body>
+    <body> 
+    <?php include "../header.php"; ?>
     <div class="myorders">
     <h1>MY ORDER</h1> 
     </div>
