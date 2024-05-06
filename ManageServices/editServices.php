@@ -21,33 +21,33 @@
         <h2 class="welcom-msg" style="text-align: center;">Edit Service</h2>
 
         <?php
-                if(isset($_GET["Cont_ID"])) {
-                    $contid = $_GET["Cont_ID"];
-                    require 'config/database.php';
-                    $sql = "SELECT * FROM content_creator WHERE Cont_ID = $contid";
+                if(isset($_GET["S_ID"])) {
+                    $contid = $_GET["S_ID"];
+                    require '../config/database.php';
+                    $sql = "SELECT * FROM Services WHERE S_ID = $contid";
                     $result = mysqli_query($con, $sql);
                     $row = mysqli_fetch_array($result);
                 ?> 
 
-                <form action="ContProcess.php" method="post">
+                <form action="ServiceProcess.php" method="post">
 
                 <div class="form-bdy">
                     <label for="rfName">Service Title:</label><br>
-                    <input type="text" name="title" id="rfName" placeholder="Enter title..." style="width: 100%;">
+                    <input type="text" name="title" id="rfName" value="<?php echo $row['S_title']; ?>" style="width: 100%;">
                 </div>
 
                 <div class="form-bdy">
                     <label for="rfName">Service Title:</label><br>
-                    <textarea name="description" id="rfName" placeholder="Enter description..." style="width: 100%;" class="textarea"></textarea>
+                    <textarea name="description" id="rfName" value="<?php echo $row['S_details']; ?>" style="width: 100%;" class="textarea"></textarea>
                 </div>
 
                 <div class="form-bdy">
                     <label for="serviceImage">Image:</label><br>
-                    <input type="file" name="serviceImage" id="serviceImage" style="width: 100%;">
+                    <input type="file" name="serviceImage" id="serviceImage" value="<?php echo $row['S_image']; ?>" style="width: 100%;">
                 </div>
 
                     <div>
-                        <input type="hidden" name="Cont_ID" value="<?php echo $row['Cont_ID']; ?>">
+                        <input type="hidden" name="S_ID" value="<?php echo $row['S_ID']; ?>">
                     </div>
 
                     <div class="form-bdy button-flex">

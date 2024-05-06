@@ -74,8 +74,7 @@
                 <div class="customer_info_table">
                     <table border="1">
                         <a href="ManageServices/createService.php" class="create__btn">Add New Service</a>
-                        <h2>Manager Admin Table</h2>
-                        <!-- <a href="#" class="create_btn">Create Account</a> -->
+                        <h2>Manager Services</h2>
                         <thead>
                             <tr>
                                 <th>Service ID</th>
@@ -99,7 +98,7 @@
 
                                         <td>
                                             <a href="ManageServices/editServices.php?S_ID=<?php echo $servicerow["S_ID"]; ?>" class="edit_btn">Edit</a>
-                                            <a href="deleteServices.php?S_ID=<?php echo $servicerow["S_ID"]; ?>" class="remove_btn">Remove</a>
+                                            <a href="ManageServices/deleteService.php?S_ID=<?php echo $servicerow["S_ID"]; ?>" class="remove_btn">Delete</a>
                                         </td>
                                     </tr>
                             <?php }
