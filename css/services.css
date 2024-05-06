@@ -239,3 +239,10 @@ img {vertical-align: middle;}
   bottom: -10px;
   left: 35%;
 } 
+
+.services__secction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

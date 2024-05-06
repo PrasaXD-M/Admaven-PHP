@@ -7,6 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/services.css">
     <title>Document</title>
+    <style>
+        .services__secction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+    </style>
 </head>
 <body>
     <div class="Service_header">
@@ -116,7 +124,7 @@
             if($result_info->num_rows > 0) {
                 while($row_info = $result_info->fetch_assoc())
                 { ?>
-
+                    <div class="service_outer_cont">
                     <div class="service_inner_sec">
                 
                         <div class="service_content_details">
@@ -135,6 +143,7 @@
                                     <a href="packages.php">View Pckages</a>
                                 </button>
                             </div>
+                        </div>
                         </div>
                     
                     
