@@ -139,7 +139,7 @@
                                 Rs.<?php echo $row_info["S_amt"] ?>
 
                                 <?php
-                                        //$pay_amt = $_SESSION["S_amt"];
+                                    $_SESSION["payAmt"] = $row_info["S_amt"];
                                 ?>
                             </p>
                         </div>
