@@ -98,8 +98,8 @@
                                         <td><?php echo $servicerow["S_image"]; ?></td>
 
                                         <td>
-                                            <a href="editManAdmin.php?Mnadmin_ID=<?php echo $manAdminrow["Mnadmin_ID"]; ?>" class="edit_btn">Edit</a>
-                                            <a href="deleteCons.php?Mnadmin_ID=<?php echo $manAdminrow["Mnadmin_ID"]; ?>" class="remove_btn">Remove</a>
+                                            <a href="ManageServices/editServices.php?S_ID=<?php echo $servicerow["S_ID"]; ?>" class="edit_btn">Edit</a>
+                                            <a href="deleteServices.php?S_ID=<?php echo $servicerow["S_ID"]; ?>" class="remove_btn">Remove</a>
                                         </td>
                                     </tr>
                             <?php }
