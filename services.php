@@ -9,11 +9,11 @@
     <title>Document</title>
     <style>
         .services__secction {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
     </style>
 </head>
 <body>
