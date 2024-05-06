@@ -53,7 +53,8 @@
                 </div>
 
             </div>
-            <div class="user_details">
+            <div class="cont_contC" style="display: flex; justify-content: center; align-items: center;">
+            <div class="user_details"">
                 <div class="details_cont_user">
                     <h3>My Account Details</h3>
                     <p><b>Fist Name : <?php echo $userDetails['Mnad_Fname']; ?></b></p>
@@ -63,6 +64,7 @@
                     <p><b>Contact Number : <?php echo $userDetails['Mand_contactNO']; ?></b></p>
                 </div>
             </div>
+            </div>
         </div>
     </div>
 
@@ -71,10 +73,10 @@
 
             <div class="customer_info_container">
 
-                <div class="customer_info_table">
+                <div class="customer_info_table" style="width: 1000px;">
                     <table border="1">
                         <a href="ManageServices/createService.php" class="create__btn">Add New Service</a>
-                        <h2>Manager Services</h2>
+                        <h2>Manage Services</h2>
                         <thead>
                             <tr>
                                 <th>Service ID</th>
