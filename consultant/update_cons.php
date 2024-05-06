@@ -1,6 +1,6 @@
 <?php
 
-require 'config.php';
+require ('../config/database.php');
 
 $fname=$_POST["fname"];
 $lname=$_POST["lname"];
@@ -32,11 +32,11 @@ else{
     if($con->query($sql))
     {
         echo "Updated";
-        header("Location: cons_list.php");
+        header("Location: ../consultant.php");
         exit;
     }
     else{
         echo "Not updated";
     }
 
-}
+} ?>

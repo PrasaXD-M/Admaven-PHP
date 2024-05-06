@@ -11,6 +11,9 @@
     <title>Document</title>
     <!-- User Dashboard stylesheet -->
     <link rel="stylesheet" href="consultant.css">
+    <link rel="stylesheet" href="consultant/con_list.css">
+    <link rel="stylesheet" href="condultant/edit_consultant.css">
+    <script src="consultant/consultant.js"></script>
 </head>
 <style>
     .user_side_bar {
@@ -61,6 +64,80 @@
                 </div>
             </div>
         </div>
+    </div>
+
+
+
+    <!-- ************************************************************ -->
+    <div class="include_matheesha_part">
+       <h1>Appointment Details</h1>
+<div>
+<a  href="consultant.php"  class="Ap_add_btn">Add appointment</a>
+    
+    </div>
+
+    <table class="Ap_add_table">
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>#</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Email</th>
+            <th>Contact Number</th>
+            <th>cinterest</th>
+            <!-- <th>Cons_Id</th>
+            <th>User_ID</th> -->
+            
+
+
+
+
+        
+        </tr>
+
+        <tbody>
+            <?php
+
+            include("config/database.php");
+
+            $sql="SELECT fname,lname,Appointment_ID,Date,Time,pemail,cnumber,cinterest,Cons_ID,User_ID FROM appointment";
+
+            $result=$con->query($sql);
+
+            while($row=$result->fetch_assoc()) {
+                ?>
+                        <tr>
+                            <td><?php echo $row["fname"]; ?></td>
+                            <td><?php echo $row["lname"]; ?></td>
+                            <td><?php echo $row["Appointment_ID"]; ?></td>
+                            <td><?php echo $row["Date"]; ?></td>
+                            <td><?php echo $row["Time"]; ?></td>
+                            <td><?php echo $row["pemail"]; ?></td>
+                            <td><?php echo $row["cnumber"]; ?></td>
+                            <td><?php echo $row["cinterest"]; ?></td>
+                           
+
+                            <td>
+                                <a href="consultant/cons_ap_view.php?id=<?php echo $row["Appointment_ID"]; ?>" class="Ap_view_btn">View</a>
+                                <a href="consultant/edit_consultant.php?id=<?php echo $row["Appointment_ID"]; ?>" class="Ap_edit_btn">Edit</a>
+                                <a href="consultant/delete_consultant.php?id=<?php echo $row["Appointment_ID"]; ?>" class="Ap_delete_btn">Delete</a>
+                            </td>
+                        </tr>
+                <?php
+            }
+
+
+
+
+
+
+            ?>
+
+
+        </tbody>
+
+
     </div>
 </body>
 </html>

@@ -1,17 +1,12 @@
-<?php
+<?php 
+    $hostName = "localhost";
+    $dbUser = "root";
+    $dbpassowrd = "";
+    $dbName = "AdMaven";
 
+    $con = mysqli_connect($hostName, $dbUser, $dbpassowrd, $dbName);
 
-$con=new mysqli("localhost","root","","consultant");
-
-if($con->connect_error)
-{
-    die("Connection failed".$con->connect_error);
-}
-else{
-    echo" ";
-}
-
-
-
-
+    if( !$con ) {
+        die("Unable to connect with the database!");
+    }
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-require 'config.php';
+require '../config/database.php';
 
 $apid=$_GET["id"];
 
@@ -11,7 +11,7 @@ $sql="DELETE FROM appointment WHERE Appointment_ID='$apid'";
 if($con->query($sql))
 {
     echo "Deleted";
-    header("Location: cons_list.php");
+    header("Location: ../consultant.php");
     exit;
 }
 else

@@ -41,7 +41,7 @@
 
                             $apid=$_GET["id"];
             
-                            include("config.php");
+                            include("../config/database.php");
             
                             $sql="SELECT * FROM appointment WHERE Appointment_ID=$apid";
                             $result=$con->query($sql);
