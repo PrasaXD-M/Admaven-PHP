@@ -140,7 +140,7 @@
             
                             <div class="pack_btn">
                                 <button>
-                                    <a href="packages.php">View Pckages</a>
+                                    <a href="BUYNOW.php">View Pckages</a>
                                 </button>
                             </div>
                         </div>

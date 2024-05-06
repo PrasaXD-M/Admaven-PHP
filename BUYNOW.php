@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +12,9 @@
  
 </head>
 <body>
-   
+   <div class="header_nav_container">
+    <?php include("header.php"); ?>
+   </div>
   <center>
  <div>
 
@@ -32,7 +35,7 @@
        
 
     </p><div>  
-    <div class="buy-now">Buy Now</div>
+    <div class="buy-now"><a href="payment.php">Buy Now</a></div>
   </div>
   </div>
 </div>
