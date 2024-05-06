@@ -1,0 +1,38 @@
+/* || MEDIA FOR SMALL SCREEN  */
+
+@media screen and ( max-width: 800px ) {
+    .cont-hd-bar {
+        display: none;
+    }
+
+    .image__cont {
+        padding: 10em 2em;
+    }
+
+    .aboutUS__cont::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 0;
+        bottom: 0;
+        background-color: var(--ORANGE-COLOR);
+    }
+
+    .about__content, .about__content__para {
+        flex-direction: column;
+    }
+
+    .para1, .para2 {
+        margin-top: 1rem;
+    }
+
+    .rating-js {
+        display: none;
+    }
+
+    .cake-content {
+        display: flex;
+        flex-direction: column;
+    }
+}

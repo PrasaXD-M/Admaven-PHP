@@ -105,7 +105,7 @@
     </div>
 
     <div class="testimonial item5">
-        <?php include "Testimonial/testimonial.php"; ?> 
+        <?php //include "Testimonial/testimonial.php"; ?> 
 
     </div>
 
