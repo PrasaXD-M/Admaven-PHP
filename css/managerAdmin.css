@@ -125,3 +125,6 @@
     align-items: center;
 }
 
+.manager_admin_crud_container h1 {
+    color: aqua;
+}

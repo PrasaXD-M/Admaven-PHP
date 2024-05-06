@@ -1,0 +1,88 @@
+/* CRUD */
+.customer_info_container{
+    /* width: 100%; */
+    padding: 3em;
+    box-shadow: 10px 5px 14px lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+body {
+    height: 200vh;
+}
+
+
+.customer_info_table table{
+    /* width: 100%; */
+    width: 50rem;
+    border-collapse: collapse;
+    padding: 3em 5em;
+    /* background-color: rgba(0, 0, 255, 0.3); */
+    /* margin-bottom: 1em; */
+}
+
+.User_Admin_details_container_crud {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.customer_info_table table th, td {
+    padding: 0.3em 1em;
+    /* margin-bottom: 1em; */
+    font-family: var(--ABT-FONT);
+}
+
+.customer_info_table h2 {
+    text-align: center;
+    color: var(--ORANGE-COLOR);
+    font-family: var(--ABT-FONT);
+    margin-bottom: 0.6rem;
+}
+
+.edit_btn, .remove_btn {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--LIGHT-COLOR);
+    padding: 6px 13px;
+    border-radius: 5px;
+    font-family: var(--ABT-FONT);
+    font-size: 300;
+}
+
+.edit_btn {
+    background-color: rgb(220, 204, 29);
+}
+
+
+.remove_btn {
+    background-color: rgb(214, 14, 14);
+}
+
+.edit_btn:hover {
+    background-color: rgba(220, 204, 29, 0.8);
+}
+.remove_btn:hover {
+    background-color: rgba(214, 14, 14, 0.8);
+}
+
+.create__btn {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--LIGHT-COLOR);
+    padding: 6px 13px;
+    border-radius: 5px;
+    font-family: var(--ABT-FONT);
+    font-size: 300;
+    
+}
+
+.customer_info_container {
+    background-color: rgb(241, 239, 239);
+}
