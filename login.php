@@ -61,7 +61,7 @@
 
                     if($user) {
                         if($password == $user["password"]) {
-                            session_start();
+                            // session_start();
                             // $_SESSION["user"] = "yes";
                             $_SESSION["user"] = $user["user_ID"];
                             header("location: index.php");
