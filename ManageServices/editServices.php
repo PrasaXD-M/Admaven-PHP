@@ -42,6 +42,11 @@
                 </div>
 
                 <div class="form-bdy">
+                    <label for="serviceamt">Amount:</label><br>
+                    <input type="text" name="seramt" id="serviceamt" value="<?php echo $row['S_amt']; ?>" style="width: 100%;">
+                </div>
+
+                <div class="form-bdy">
                     <label for="serviceImage">Image:</label><br>
                     <input type="file" name="serviceImage" id="serviceImage" value="<?php echo $row['S_image']; ?>" style="width: 100%;">
                 </div>

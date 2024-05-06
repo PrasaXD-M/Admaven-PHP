@@ -84,8 +84,8 @@
                 </div>
 
                 <div class="form-bdy">
-                    <label for="serviceImage">Amount:</label><br>
-                    <input type="text" name="seramt" id="serviceImage" style="width: 100%;">
+                    <label for="serviceamt">Amount:</label><br>
+                    <input type="text" name="seramt" id="serviceamt" style="width: 100%;">
                 </div>
 
                 <div class="form-bdy">
