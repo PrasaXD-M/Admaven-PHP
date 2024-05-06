@@ -111,7 +111,7 @@ body {
 }
 
 .navbar li a::after {
-    content: "";
+    content: ""; 
     position: absolute;
     width: 0%;
     height: 3px;
@@ -726,3 +726,6 @@ img{
    .bottom-bar p{
     text-align: right;
    }
+
+
+   

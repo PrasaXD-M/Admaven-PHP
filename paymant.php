@@ -17,13 +17,15 @@
 
     require_once "config/database.php";
 
-    if(isset($_POST))
+    
 
     mysqli_query($con, "INSERT INTO payments (c_holder, c_number, Amount) VALUES ('$cholder', '$cnumber', '$amount')");
     header("location: index.php");
+
+  }
   
 ?>
-
+ 
 <div class="wrapper">
   <div class="payment">
     <div class="payment-logo">
@@ -33,7 +35,7 @@
     
     <h2>Payment Gateway</h2>
     <div class="form">
-      <form action="paymnt.php" method="post">
+      <form action="paymant.php" method="post">
       <div class="card space icon-relative">
         <label class="label">Card holder:</label>
         <input type="text" class="input" placeholder="Coding Market" name="cholder">
