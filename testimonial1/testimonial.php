@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/testimonial1/testiscreen.css">
-    <link rel="stylesheet" href="/testimonial1/testistyle.css">
-    <link rel="stylesheet" href="/testimonial1/testitest.css">
+    <link rel="stylesheet" href="testimonial1/testiscreen.css">
+    <link rel="stylesheet" href="testimonial1/testistyle.css">
+    <link rel="stylesheet" href="testimonial1/testitest.css">
 
 </head>
 <body>
@@ -97,6 +97,6 @@
     </div>
     
     <!-- link JavaScript file -->
-    <script src="/js/main.js"></script>
+    <script src="testimonial1/main.js"></script>
 </body>
 </html>
