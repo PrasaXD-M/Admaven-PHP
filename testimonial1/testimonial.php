@@ -91,11 +91,6 @@
     </div>
     
     </div>
-    
-    <div class="footer">
-    
-    </div>
-    
     <!-- link JavaScript file -->
     <script src="testimonial1/main.js"></script>
 </body>
