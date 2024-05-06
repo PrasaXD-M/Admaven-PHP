@@ -90,9 +90,11 @@
                             
                         
                             <input type="submit" name="submit" value="submit">
-                       
-
-
+                            <?php 
+                            if(isset($_POST['submit'])) {
+                                header("location: ../paymentgateway/payment_form.php");
+                            }
+                            ?>
                   
 
                     

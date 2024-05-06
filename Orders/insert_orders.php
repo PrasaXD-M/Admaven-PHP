@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once "../config/database.php";
 
 // $=$_POST[;"oid"]
@@ -18,12 +18,19 @@ $Osql="INSERT INTO orders VALUES ('','$C_name','$C_mail','$C_num','$C_pack','$OD
 
 if($con->query($Osql))
 {
+    if(isset($_SESSION["user"])) {
+        header("location: ../paymentgateway/payment_form.php");
+
+    } else {
+        header("location: ../contentCreator.php");
+        exit;
+    }
     // echo "Insert Successful";
-    header("location: ../contentCreator.php");
-    exit; 
+     
 }
 else{
     echo "Error".$con->error;
 }
 
 $Ocon->close();
+?>

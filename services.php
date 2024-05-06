@@ -1,6 +1,7 @@
-<?php session_start(); 
+<?php 
+    session_start(); 
     if(!isset($_SESSION["user"]) OR !isset($_SESSION["usAdmin"]) OR !isset($_SESSION["ManagerAdmin"]) OR !isset($_SESSION["consultant"]) ) {
-        // header("location: services.php");
+        // header("location: login.php");
     }
    
 ?>

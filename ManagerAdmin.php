@@ -112,6 +112,45 @@
             </div>
         </div>
     </div>
+    <div class="manager_admin_crud_container">
+        <div class="User_Admin_details_container_crud">
+
+            <div class="customer_info_container">
+
+                <div class="customer_info_table" style="width: 1000px;">
+                    <table border="1">
+                       
+                        <h2>Payment Details</h2>
+                        <thead>
+                            <tr>
+                                <th>Payment ID</th>
+                                <th>Card Holder</th>
+                                <th>Amount</th>
+                                <!-- <th>Actions</th>-->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                                require_once "config/database.php"; 
+                                $payde = "SELECT * FROM payment";
+                                $paydeResult = mysqli_query($con, $payde);
+
+                                while($payrow = mysqli_fetch_array($paydeResult)) { ?>
+
+                                    <tr>
+                                        <td><?php echo $payrow["payment_id"]; ?></td>
+                                        <td><?php echo $payrow["card_holder"]; ?></td>
+                                        <td><?php echo $payrow["amount"]; ?></td>
+                                    </tr>
+                            <?php }
+                                
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="footer">
         <?php //include('footer.php'); ?>
     </div>
