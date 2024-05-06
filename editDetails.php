@@ -113,10 +113,17 @@
                         mysqli_query($con, "UPDATE manage_admin SET Mnad_Fname = '$fname', Mand_Lname = '$lname', Mand_email = '$email', Mand_password = '$password', Mand_contactNO = '$contactNO', Mand_image = '$cons_img' WHERE Mnadmin_ID = '$manager_admin_id'");
 
                         header("location: managerAdmin.php");
+
+                    } elseif($_SESSION["user"]) {
+                        $user_id = $_SESSION["user"];
+
+                        mysqli_query($con, "UPDATE user_registration SET name = '$fname', L_name = '$lname', email = '$email', password = '$password', contact_no = '$contactNO', profile_photo = '$cons_img' WHERE user_ID = '$user_id'");
+
+                        header("location: userdash.php");
                     }
                 }
             ?>
-
+ 
             <?php 
                 if(isset($_POST["cancel"])) {
                     header("location: index.php");

@@ -10,7 +10,7 @@
 <body>
     <div class="header-cont">
         <div class="cont-hd__mail">
-            <p><b>EMAIL US:</b></p>
+            <p><b>EMAIL US:</b></p> 
             <p>admavensco@gmail.com</p>
         </div>
 
@@ -64,8 +64,8 @@
                 <li><a href="index.php">HOME</a></li>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="services.php">SERVICES</a></li>
-                <li><a href="blog1/blog.php">BLOG</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="blog.php">BLOG</a></li>
+                <li><a href="contactus.php">CONTACT</a></li>
             </ul>
         </div>
     </div> 

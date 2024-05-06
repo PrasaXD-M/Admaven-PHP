@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("call-center-woman-smile-portrait-260nw-2305703987.webp " );
+  background-size: cover;
+}
+.first {
+ 
+  display: flex;
+  justify-content: space-between;
+}
+.phonecall-info.{
+  background-color: rgba(245, 245, 220, 0.234);
+  width:48% ;
+  color: #1a1010;
+} .phonecall-form {
+  background-color: rgba(151, 158, 164, 0.352);
+  width: 48%;
+  
+}
+.phonecall-info h2, .contact-form h2 {
+  margin-bottom: 20px;
+}
+.phonecall-info ul {
+  list-style: none;
+  padding: 0;
+}
+.phonecall-info ul li {
+  margin-bottom: 10px;
+}
+.phonecall-form form {
+  background-color:rgba(211, 211, 211, 0.314);
+  display: flex;
+  flex-direction: column;
+}
+.phonecall-form form label {
+  margin-bottom: 8px;
+}
+.phonecall-form form input {
+  margin-bottom: 25px;
+  padding: 10px;
+  border: 2px solid #742222;
+  border-radius: 10px;
+}
+.phonecall-form form button {
+  padding: 15px 25px;
+  border: aquamarine;
+  border-radius: 10px;
+  background-color: #007bff;
+  color: rgb(54, 10, 156);
+  cursor: pointer;
+}
+.phonecall-form form button:hover {
+  background-color: #0056b3;
+}
+.phonecall-form form textarea{
+  padding: 50px;
+}

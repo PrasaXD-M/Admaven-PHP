@@ -40,7 +40,7 @@
                 <!-- User profile photo -->
                 <div class="user_profile_pic">
                     <div class="style_inner_pic">
-                        <img src="<?php echo $userDetails['profile_photo'] ?>" alt="profile-photo">
+                        <img src="img/userimg/<?php echo $userDetails['profile_photo'] ?>" alt="profile-photo">
                     </div>
                 </div>
                 <!-- Account details edit button -->
