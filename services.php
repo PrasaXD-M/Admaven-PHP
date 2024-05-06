@@ -137,6 +137,10 @@
                             </p>
                             <p class="package_amount" style="margin-top: 0.5em;">
                                 Rs.<?php echo $row_info["S_amt"] ?>
+
+                                <?php
+                                        //$pay_amt = $_SESSION["S_amt"];
+                                ?>
                             </p>
                         </div>
             

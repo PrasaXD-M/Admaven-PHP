@@ -35,12 +35,13 @@
                     $title = $_POST["title"];
                     $description = $_POST["description"];
                     $serviceImg = $_POST["serviceImage"];
+                    $ser_amt = $_POST["seramt"];
                    
                     
 
                     $errors = array(); 
 
-                    if(empty($title) OR empty($description) OR empty($serviceImg)) {
+                    if(empty($title) OR empty($description) OR empty($serviceImg) OR empty($ser_amt)) {
                         array_push($errors, "All fields are requied!");
                     }
 
@@ -53,7 +54,7 @@
                         }
 
                     } else {
-                        mysqli_query($con, "INSERT INTO services (S_title, S_details,  S_image) VALUES ('$title','$description', '$serviceImg')");
+                        mysqli_query($con, "INSERT INTO services (S_title, S_details,  S_image, S_amt) VALUES ('$title','$description', '$serviceImg', '$ser_amt')");
 
                         echo "<div class = 'success-alert'>Welcome to AdMaven You are registered successfully!</div>";
                         header("location: ../ManagerAdmin.php");
@@ -80,6 +81,11 @@
                 <div class="form-bdy">
                     <label for="rfName">Service Title:</label><br>
                     <textarea name="description" id="rfName" placeholder="Enter description..." style="width: 100%;" class="textarea"></textarea>
+                </div>
+
+                <div class="form-bdy">
+                    <label for="serviceImage">Amount:</label><br>
+                    <input type="text" name="seramt" id="serviceImage" style="width: 100%;">
                 </div>
 
                 <div class="form-bdy">
