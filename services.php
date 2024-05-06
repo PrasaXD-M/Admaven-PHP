@@ -18,7 +18,7 @@
             align-items: center;
             flex-direction: column;
         }
-    </style>
+    </style> 
 </head>
 <body>
     <div class="Service_header">
@@ -122,7 +122,7 @@
         <?php 
             require 'config/database.php';
 
-            $ser_info = "SELECT S_ID, S_title, S_details, S_image FROM services";
+            $ser_info = "SELECT S_ID, S_title, S_details, S_image, S_amt FROM services";
             $result_info = $con->query($ser_info);
 
             if($result_info->num_rows > 0) {
@@ -135,7 +135,9 @@
                             <p>
                                 <?php echo $row_info['S_details']; ?>
                             </p>
-                                
+                            <p class="package_amount" style="margin-top: 0.5em;">
+                                Rs.<?php echo $row_info["S_amt"] ?>
+                            </p>
                         </div>
             
                         <div class="service_image_cont">
@@ -144,7 +146,7 @@
             
                             <div class="pack_btn">
                                 <button>
-                                    <a href="BUYNOW.php">View Pckages</a>
+                                    <a href="BUYNOW.php">Order Now</a>
                                 </button>
                             </div>
                         </div>
