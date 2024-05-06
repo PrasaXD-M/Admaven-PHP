@@ -32,30 +32,19 @@
         <?php
                 // print_r($_POST);
                 if(isset($_POST["create"])) {
-                    $fname = $_POST["rfName"];
-                    $lname = $_POST["rlName"];
-                    $email = $_POST["uemail"];
-                    $password = $_POST["password"];
-                    // $passwordRepeat = $_POST["rePassword"];
-                    $contactNO = $_POST["contnum"];
-        
+                    $title = $_POST["title"];
+                    $description = $_POST["description"];
+                    $serviceImg = $_POST["serviceImage"];
+                   
                     
 
                     $errors = array(); 
 
-                    if(empty($fname) OR empty($lname) OR empty($email) OR empty($password) OR empty($contactNO)) {
+                    if(empty($title) OR empty($description) OR empty($serviceImg)) {
                         array_push($errors, "All fields are requied!");
                     }
 
-                    require_once "config/database.php";
-
-                    $sql = "SELECT * FROM content_creator WHERE Cont_email = '$email'";
-                    $result = mysqli_query($con, $sql);
-
-                    $rowCount = mysqli_num_rows($result);
-                    if($rowCount > 0) {
-                        array_push($errors, "Email already exists!");
-                    }
+                    require_once "../config/database.php";
  
 
                     if(count($errors) > 0) {
@@ -64,17 +53,17 @@
                         }
 
                     } else {
-                        mysqli_query($con, "INSERT INTO content_creator (Cont_Fname, Cont_Lname,  Cont_email, Cont_password, Cont_contactNO) VALUES ('$fname','$lname', '$email', '$password', '$contactNO')");
+                        mysqli_query($con, "INSERT INTO services (S_title, S_details,  S_image) VALUES ('$title','$description', '$serviceImg')");
 
                         echo "<div class = 'success-alert'>Welcome to AdMaven You are registered successfully!</div>";
-                        header("location: userAdmin.php");
+                        header("location: ../ManagerAdmin.php");
                     }
                 }
             ?>
 
             <?php 
                 if(isset($_POST["cancel"])) {
-                    header("location: userAdmin.php");
+                    header("location: ../ManagerAdmin.php");
                 } 
             ?>
 
@@ -91,6 +80,11 @@
                 <div class="form-bdy">
                     <label for="rfName">Service Title:</label><br>
                     <textarea name="description" id="rfName" placeholder="Enter description..." style="width: 100%;" class="textarea"></textarea>
+                </div>
+
+                <div class="form-bdy">
+                    <label for="serviceImage">Image:</label><br>
+                    <input type="file" name="serviceImage" id="serviceImage" style="width: 100%;">
                 </div>
 
                 
