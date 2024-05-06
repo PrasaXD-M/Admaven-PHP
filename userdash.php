@@ -35,7 +35,7 @@
     ?>
 
     <div class="main">
-        <div class="user_interface_container">
+        <div class="user_interface_container" style="flex-direction: column;">
             <!-- Side bar -->
             <div class="user_side_bar">
                 <!-- User profile photo -->
@@ -66,8 +66,8 @@
         </div>
     </div>
 
-    <div class="customer_table_details_reading">
-    <div class="customer_info_container">
+        <div class="customer_table_details_reading" style="width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center">
+            <div class="customer_info_container" style="background-color: rgb(196, 207, 242);">
                 <div class="customer_info_table">
                     <table border="1">
                         <h2>Consultant Details</h2>
@@ -77,6 +77,52 @@
                                 <th>Name</th>
                                 <!-- <th>Emali</th> -->
                                 <!-- <th>Contact NO</th> -->
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                                require_once "config/database.php"; 
+                                // $user_email = $_SESSION[""];
+                                $user_email = $userDetails['email'];
+
+
+                                $constSql = "SELECT * FROM appointment WHERE pemail = '$user_email'";
+                                $constResult = mysqli_query($con, $constSql);
+
+                                while($constrow = mysqli_fetch_array($constResult)) { ?>
+
+                                    <tr>
+                                        <td><?php echo $constrow["Appointment_ID"]; ?></td>
+                                        <td><?php echo $constrow["cinterest"]; ?></td>
+                                        <!-- <td><?php //echo $constrow["C_email"]; ?></td> -->
+                                        <!-- <td><?php //echo $constrow["C_contactNO"]; ?></td> -->
+
+                                        <td>
+                                            <a href="consultant/consultant.php" class="remove_btn">Remove</a>
+                                        </td>
+                                        
+                                    </tr>
+                               <?php }
+                                
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="customer_table_details_reading" style="width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center">
+            <div class="customer_info_container" style="background-color: rgb(143, 225, 208); width: 70%;">
+                <div class="customer_info_table">
+                    <table border="1">
+                        <h2>Order Details</h2>
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Package Name</th>
+                                <th>Order Details</th>
+                                <th>amount</th>
                                 <!-- <th>Actions</th>                                -->
                             </tr>
                         </thead>
@@ -87,17 +133,18 @@
                                 $user_email = $userDetails['email'];
 
 
-                                $constSql = "SELECT * FROM newapp WHERE u_email = '$user_email'";
+                                $constSql = "SELECT * FROM orders WHERE email = '$user_email'";
                                 $constResult = mysqli_query($con, $constSql);
 
                                 while($constrow = mysqli_fetch_array($constResult)) { ?>
 
                                     <tr>
-                                        <td><?php echo $constrow["app_ID"]; ?></td>
-                                        <td><?php echo $constrow["app_name"]; ?></td>
-                                        <!-- <td><?php //echo $constrow["C_email"]; ?></td> -->
-                                        <!-- <td><?php //echo $constrow["C_contactNO"]; ?></td> -->
+                                        <td><?php echo $constrow["order_id"]; ?></td>
+                                        <td><?php echo $constrow["package_name"]; ?></td>
+                                        <td><?php echo $constrow["order_detials"]; ?></td>
+                                        <td><?php echo $constrow["amount"]; ?></td>
 
+                                        
                                         
                                     </tr>
                                <?php }
@@ -107,6 +154,6 @@
                     </table>
                 </div>
             </div>
-    </div>
+        </div>
 </body>
 </html>

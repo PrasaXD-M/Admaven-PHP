@@ -37,6 +37,7 @@
 
 .user_interface_container {
     display: flex;
+    /* flex-direction: column; */
 
 }
 
@@ -125,4 +126,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.customer_info_container {
+    background-color: rgb(196, 207, 242);
 }

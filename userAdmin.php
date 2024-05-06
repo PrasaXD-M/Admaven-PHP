@@ -265,6 +265,10 @@
                 </div>
             </div>
     </div>
+
+    <div class="todo_list_container">
+        <?php include('todo.php'); ?>
+    </div>
 </body>
 </html>
 <?php } else {

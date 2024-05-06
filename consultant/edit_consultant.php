@@ -73,10 +73,12 @@
                             </div>
 
                             <!-- <div class="left-input focus">
-                            <input type="text" name="apid" class="input" value="<?php  //echo $row["Appointment_ID"];?>">
+                            <input type="text" name="apid" class="input" value="<?php  echo $row["Appointment_ID"];?>">
                             <label for="">Appointment ID:</label>
                             <span>Appointment ID:</span><br><br>
                             </div> -->
+
+                            <input type="hidden" name="apid" value="<?php echo $apid; ?>">
                             
                             <div class="left-input focus">
                             <input type="date" name="apdate" class="input" value="<?php echo $row["Date"];?>">

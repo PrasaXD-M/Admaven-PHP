@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php session_start(); 
+    if(isset($_SESSION["user"]) || isset($_SESSION["usAdmin"]))
+?>
 
 <!DOCTYPE html>
 <html lang="en">

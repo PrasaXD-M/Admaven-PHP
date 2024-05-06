@@ -2,27 +2,14 @@
 
 require_once "../config/database.php";
 
-if(isset($_POST["edit"])) {
-
-    $fname=$_POST["fname"];
-    $lname=$_POST["lname"];
-    // $apid=$_POST["apid"];
-    $apdate=$_POST["apdate"];
-    $aptime=$_POST["aptime"];
-    $pemail=$_POST["pemail"];
-    $cnumber=$_POST["cnumber"];
-    $cinterest=$_POST["cinterest"];
-    
-}
-
-// $fname=$_POST["fname"];
-// $lname=$_POST["lname"];
-// $apid=$_POST["apid"];
-// $apdate=$_POST["apdate"];
-// $aptime=$_POST["aptime"];
-// $pemail=$_POST["pemail"];
-// $cnumber=$_POST["cnumber"];
-// $cinterest=$_POST["cinterest"];
+$fname=$_POST["fname"];
+$lname=$_POST["lname"];
+$apid=$_POST["apid"];
+$apdate=$_POST["apdate"];
+$aptime=$_POST["aptime"];
+$pemail=$_POST["pemail"];
+$cnumber=$_POST["cnumber"];
+$cinterest=$_POST["cinterest"];
 
 
 

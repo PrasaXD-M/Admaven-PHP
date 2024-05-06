@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,14 +7,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact Us</title>
+<link rel="stylesheet" href="consultant/consultant.css">
+<script src="consultant/consultant.js"></script>
 <style>
 
   
 </style>
 </head>
+<?php include 'header.php'; ?>
+<?php 
+  session_start();
+  if(isset($_SESSION["user"])) {
+    include 'consultant/consultant.php';
+
+  } else {
+?>
+
 <body style="background-color:rgb(194, 116, 161);">
 <div class="header_nav_cont">
-  <?php include("header.php"); ?>
+  <?php //include("header.php"); ?>
 </div>
 <div class="first">
   <div class="phonecall-info">
@@ -79,3 +92,5 @@
 
 </body>
 </html>
+
+<?php  } ?>
