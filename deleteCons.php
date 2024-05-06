@@ -24,6 +24,15 @@
             echo "Deleted!";
             header("location: userAdmin.php");
         }
+
+    } elseif(isset($_GET['Mnadmin_ID'])) {
+        $manAdminid = $_GET['Mnadmin_ID'];
+        require 'config/database.php'; 
+        $sql = "DELETE FROM manage_admin WHERE Mnadmin_ID = $manAdminid";
+        if(mysqli_query($con, $sql)) {
+            echo "Deleted!";
+            header("location: userAdmin.php");
+        }
     }
 
 ?>
