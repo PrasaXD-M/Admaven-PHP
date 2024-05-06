@@ -56,7 +56,7 @@
                         </div>
 
                         <div class="back">
-                                <input type="submit"value="Cancel" 
+                                <input type="submit"value="Cancel"
                                 name="cancel">
                         </div>
                     </div>
