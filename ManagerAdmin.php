@@ -33,7 +33,7 @@
     ?>
 
     <div class="main">
-        <div class="user_interface_container">
+        <div class="user_interface_container" style="flex-direction: column;">
             <!-- Side bar -->
             <div class="user_side_bar">
                 <!-- User profile photo -->
@@ -61,6 +61,10 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="manager_admin_crud_container">
+        <h1>Crud here</h1>
     </div>
 </body>
 </html>
