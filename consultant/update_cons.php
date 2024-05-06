@@ -1,25 +1,38 @@
 <?php
 
-require ('../config/database.php');
+require_once "../config/database.php";
 
-$fname=$_POST["fname"];
-$lname=$_POST["lname"];
-$apid=$_POST["apid"];
-$apdate=$_POST["apdate"];
-$aptime=$_POST["aptime"];
-$pemail=$_POST["pemail"];
-$cnumber=$_POST["cnumber"];
-$cinterest=$_POST["cinterest"];
+if(isset($_POST["edit"])) {
+
+    $fname=$_POST["fname"];
+    $lname=$_POST["lname"];
+    // $apid=$_POST["apid"];
+    $apdate=$_POST["apdate"];
+    $aptime=$_POST["aptime"];
+    $pemail=$_POST["pemail"];
+    $cnumber=$_POST["cnumber"];
+    $cinterest=$_POST["cinterest"];
+    
+}
+
+// $fname=$_POST["fname"];
+// $lname=$_POST["lname"];
+// $apid=$_POST["apid"];
+// $apdate=$_POST["apdate"];
+// $aptime=$_POST["aptime"];
+// $pemail=$_POST["pemail"];
+// $cnumber=$_POST["cnumber"];
+// $cinterest=$_POST["cinterest"];
 
 
 
-if(empty($fname)||empty($lname)||empty($apid)||empty($apdate)||empty($apdate)||empty($aptime)||empty($pemail)||empty($cnumber)||empty($cinterest))
+if(empty($fname)||empty($lname)||empty($apdate)||empty($apdate)||empty($aptime)||empty($pemail)||empty($cnumber)||empty($cinterest))
 {
     echo "All required";
 }
 else{
 
-    $sql="UPDATE appointment set fname='$fname',
+    $sql="UPDATE appointment SET fname='$fname',
                                  lname='$lname',
                                  Date='$apdate' ,
                                  Time='$aptime',

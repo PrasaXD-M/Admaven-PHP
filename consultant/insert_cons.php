@@ -18,7 +18,7 @@ $sql="INSERT INTO appointment VALUES ('$fname','$lname','','$apdate','$aptime','
 if($con->query($sql))
 {
     echo "Insert Successful";
-    header("Location: cons_list.php");
+    header("Location: ../consultant.php");
     exit;
 }
 else{

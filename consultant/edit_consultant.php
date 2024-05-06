@@ -41,9 +41,9 @@
 
                             $apid=$_GET["id"];
             
-                            include("../config/database.php");
+                            require_once "../config/database.php";
             
-                            $sql="SELECT * FROM appointment WHERE Appointment_ID=$apid";
+                            $sql="SELECT * FROM appointment WHERE Appointment_ID = '$apid'";
                             $result=$con->query($sql);
                             $row=$result->fetch_assoc() 
 
@@ -62,7 +62,7 @@
                             <span>First Name:</span><br><br>
                             </div>
 
-                            <!-- <input type="hidden" name="id" value="<?php echo $row['id']; ?>"> -->
+                            <!-- <input type="hidden" name="id" value="<?php //echo $row['id']; ?>"> -->
                            
 
                             
@@ -73,7 +73,7 @@
                             </div>
 
                             <!-- <div class="left-input focus">
-                            <input type="text" name="apid" class="input" value="<?php  echo $row["Appointment_ID"];?>">
+                            <input type="text" name="apid" class="input" value="<?php  //echo $row["Appointment_ID"];?>">
                             <label for="">Appointment ID:</label>
                             <span>Appointment ID:</span><br><br>
                             </div> -->
@@ -106,6 +106,7 @@
                             <div class="left-input focus">
                             <input type="text" name="cinterest" class="input" value="<?php echo $row["cinterest"];?>">
                             <label for="">Consultation interest:</label><br><br>
+                            <input type="hidden" name="">
                             <span>Consultation interest:</span>
                             
                         </div>
