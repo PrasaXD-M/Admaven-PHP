@@ -105,7 +105,7 @@
     </div>
 
     <div class="testimonial item5">
-            <h3>testimonial(php)</h3>
+        <h3>testimonial</h3>
     </div>
 
     <div class="footer item6">

@@ -1,0 +1,630 @@
+/* || INSERT GOOGLE FONT  */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Rubik+Burned&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Protest+Strike&family=Rubik+Burned&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Oswald:wght@500&family=Rubik+Burned&display=swap');
+
+/* || CSS RESET  */
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.clear::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* || CSS ROOT  */
+:root {
+    /* COLOR  */
+    --INFO-BGCOLOR: rgb(237, 232, 232);
+    --INFO-MAIL-COLOR: #000;
+    --LIGHT-COLOR: #fff;
+    --DARK-COLOR: #000;
+    --FLAT-DARK: #333;
+    --ORANGE-COLOR: orange;
+
+    /* FONTS  */
+    --SPACIAL-FF: 'Dancing Script', cursive;
+    --SPACIAL-FF2: 'system-ui';
+
+    --FF-CAPTION: 'Protest Strike', sans-serif;
+
+    --LINK-FF: 'Oswald', sans-serif;
+}
+
+
+
+/* || STYLE THE CONTENT BAR  */
+.cont-hd-bar {
+    background-color: var(--INFO-BGCOLOR);
+    color: var(--INFO-MAIL-COLOR);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cont-hd__logoName {
+    padding: 8px;
+    background-color: hsl(39, 100%, 45%);
+    color: var(--LIGHT-COLOR);
+}
+
+
+/* || increase the size of 'Z' */
+.letter-big {
+    font-size: 50px;
+}
+
+.logo-name {
+    font-weight: bolder;
+    font-size: 35px;
+    border: 2px solid var(--LIGHT-COLOR);
+    padding: 10px 95px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* || SET A FONT FAMILY FOR EMAIL AND CALL  */
+.cont-hd__mail, 
+.cont-hd__call {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* || NAVIGATION BAR  */
+.navbar__nav {
+    display: flex;
+    padding: 23px;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--FLAT-DARK);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.navbar__nav a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 18px;
+    color: var(--LIGHT-COLOR);
+    font-size: larger;
+    font-family: var(--LINK-FF);
+}
+
+.navbar__nav a:hover,
+.navbar__nav a:focus {
+    transition-duration: 0.7s;
+    color: rgb(255, 166, 0);
+}
+
+.navbar__nav a {
+    position: relative;
+}
+
+.navbar__nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    left: 0;
+    bottom: -5px;
+    background-color: var(--ORANGE-COLOR);
+}
+
+.navbar__nav a:hover::after,
+.navbar__nav a:focus::after {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.navbar__nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* || HEADER IMAGE */
+.image {
+    background-image: url(/img/hero.jpg);
+    width: 100%;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.image__cont {
+    color: var(--LIGHT-COLOR);
+    padding: 10em 5.5em;
+}
+
+#spacialFont {
+    font-family: var(--SPACIAL-FF);
+    font-size: 3rem;
+    font-weight: bolder;
+    color: var(--ORANGE-COLOR);
+    padding-left: 2px;
+}
+
+#pcaption {
+    font-family: var(--FF-CAPTION);
+    font-size: 5.5rem;
+    padding-top: 0;
+}
+
+#myName {
+    font-family: system-ui;
+    padding-left: 45px;
+}
+
+#pcaption__2 {
+    font-family: var(--FF-CAPTION);
+    font-size: 2rem;
+    padding-top: 10px;
+}
+
+
+/* || ABOUT CONTENT  */
+
+.aboutUS {
+    margin-top: 4rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.aboutUS__hd {
+    font-size: 35px;
+    font-weight: bolder;
+    color: var(--ORANGE-COLOR);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.aboutUS__cont {
+    font-size: 48px;
+    font-weight: bolder;
+    font-family: sans-serif;
+    position: relative;
+}
+
+.aboutUS__cont::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 3px;
+    left: 4rem;
+    bottom: -5px;
+    background-color: var(--ORANGE-COLOR);
+}
+
+ 
+.about__content {
+    display: flex;
+    height: 85vh;
+    padding: 3rem;
+}
+
+.about__content__img {
+    flex: 40%;
+    
+}
+
+.image__about__cont {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.about__content__cont {
+    flex: 60%;
+    padding-left: 1.5rem;
+} 
+
+.about__content__para {
+    display: flex;
+    padding-top: 1.3rem;
+}
+
+.para1, .para2 {
+    flex: 50%;
+}
+
+.para2 { padding-left: 0.7rem; }
+
+.about__content__para p {
+    font-size: 1.3rem;
+}
+
+/* STYLING ORANGE BOX  */
+.orangebox {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--ORANGE-COLOR);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.orangebox__inner {
+    width: 3rem;
+    height: 3rem;
+    border: 3px solid var(--LIGHT-COLOR);
+}
+
+/* || RATING PART USING JS - (This part have to program using JavaScript) */
+
+.rating-js {
+    width: 100%;
+    height: 20vh;
+    background-color: #333;
+}
+
+
+/* || CAKE CONTEXT  */
+.cake-content {
+    background-image: url(/img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 57vh;
+    margin-top: 2em;
+    
+}
+
+.cake-box {
+    background-color: rgb(207, 138, 10);
+    width: 260px;
+    height: 320px;
+    text-align: center;
+    padding: 2em;
+}
+
+.cake-box p {
+    font-size: 1.1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--LIGHT-COLOR);
+    padding-top: 1.0rem;
+}
+
+.cake-box h2 {
+    font-family: var(--LINK-FF);
+    color: var(--DARK-COLOR);
+}
+
+.cake-content {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* || CHEFS CARDS  */
+.chefs-container {
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.chefss {
+    /* padding: 3px; */
+    position: relative;
+}
+
+.image-chef {
+    width: 310px;
+    height: 300px;
+    background-size: cover;
+}
+
+.chef1 {
+    background-image: url("https://i0.wp.com/www.combekk.com/wp-content/uploads/2023/01/SOUS_CHEF_SIDNEY_007-1-1-bij-1.png?fit=500%2C500&ssl=1");
+}
+.chef2 {
+    background-image: url("https://i.pinimg.com/originals/1f/7b/ad/1f7baddd3b9771eabbae020ff236ba40.jpg");
+}
+.chef3 {
+    background-image: url("https://starsunfolded.com/wp-content/uploads/2018/06/Mia-Khalifa-1.jpg");
+
+}
+
+.caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--DARK-COLOR);
+    color: var(--LIGHT-COLOR);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 1.0s ease-in-out;
+}
+
+.caption h2 {
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.caption p {
+    padding: 15px;
+    text-align: center;
+}
+
+.chefss:hover .caption {
+    opacity: 1;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.chef-box {
+    width: 100%;
+    height: 100px;
+    background-color: var(--FLAT-DARK);
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    z-index: 1;
+}
+
+.chef-box__inner {
+    color: rgb(251, 175, 33);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.chef-box__inner {
+    border: 2px solid var(--LIGHT-COLOR);
+    margin: 8px;
+    padding: 0px 55px;
+}
+
+.chef-box__inner h2 {
+    letter-spacing: 2px;
+}
+
+.chef-box__inner p {
+    color: var(--LIGHT-COLOR) !important;
+    font-weight: 200;
+}
+
+
+/* || SPECIAL CAKE PART  */
+
+/* background image  */
+.special-cake {
+    margin-top: 5rem;
+    background-color: #333;
+    width: 100%;
+    height: 65vh;
+    background-image: url("/img/offer.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* dark color low opacity flexible background  */
+.special-cake__content {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* special cake header content h2 section  */
+.special-cake__cont__hd h2 {
+    font-family: 'Dancing Script';
+    font-weight: bolder;
+    font-size: 3rem;
+    color: orange;
+}
+
+/* special cake header content h1 section  */
+.special-cake__cont__hd h1 {
+    font-family: 'Protest Strike';
+    letter-spacing: 0.1em;
+    font-weight: bolder;
+    font-size: 4.2rem;
+    color: #fff;
+}
+
+/* special cake paragraph  */
+.special-cake__cont__hd p {
+    padding: 12px 38px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* shop now button  */
+
+.special-cake__btn {
+    border: 2px solid orange;
+    padding: 10px 14px;
+    margin-top: 2.5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.special-cake__btn::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: orange;
+
+}
+
+.special-cake__btn:hover::before {
+    transition: all 0.5s ease-in-out;
+    width: 200px;
+    height: 200px;
+}
+
+.btn__inside {
+    border: 2px solid #fff;
+    padding: 5px 10px;
+    z-index: 1;
+}
+
+/* styling link (shop now btn)  */
+.btn__inside a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    text-align: center;
+    font-family: 'Oswald';
+    font-size: larger;
+}
+
+/* || STYLING TESTIMONIO  */
+
+.testimonio {
+    /* background-color: lightblue; */
+    width: 100%;
+    height: 85vh;
+    position: relative;
+    background-image: url("/img/bg.jpg");
+}
+
+.slider {
+    display: flex;
+    width: 3200px;
+    transition: all 0.5s ease-in-out;
+}
+
+.slider__inside {
+    width: 800px;
+    height: 400px;
+    position: relative;
+}
+
+.slider__inside__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+.slider__inside__img img {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.slider__inside__text {
+    background-color: #2d3a59;
+    width: 520px;
+    height: 270px;
+    position: absolute;
+    border-radius: 10px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #eee;
+    padding: 45px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.slider__inside__text p {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.slider__inside__text h3 {
+    margin: 35px 0 5px;
+    color: #fff;
+}
+
+.container {
+    width: 800px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.indicator {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -85px;
+}
+
+.slid__btn {
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+    border-radius: 16px;
+    margin: 4px;
+    background-color: rgb(237, 141, 68);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.slid-active {
+    width: 45px;
+}
+
+.slider-content {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider__image1 {
+    background-image: url("https://thumbs.dreamstime.com/b/beautiful-makeup-sexy-woman-long-hair-looking-serious-elegant-hand-fungers-near-face-black-background-182964346.jpg");
+}
+.slider__image2 {
+    background-image: url("https://images.unsplash.com/photo-1521817760127-e15c26f67fd2?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+.slider__image3 {
+    background-image: url("https://images.unsplash.com/photo-1535467221272-12fb327de525?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTB8MzEwNjQ0OHx8ZW58MHx8fHx8&w=1000&q=80");
+}
+.slider__image4 {
+    background-image: url("https://img.freepik.com/photos-premium/femme-echarpe-grise-echarpe-pose-pour-portrait_7023-4806.jpg");
+}
+
+.slider__inside__img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+
