@@ -1,0 +1,78 @@
+/*table styles*/
+.Ap_add_table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* table header */
+  .Ap_add_table th {
+    background-color: darkgreen; 
+    color: #fff; 
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Styles for table data */
+  .Ap_add_table td {
+    border: 1px solid #ddd; /* Border color */
+    padding: 8px;
+  }
+  
+  /* Alternating row background color */
+  .Ap_add_table tbody tr:nth-child(even) {
+    background-color: #3fe291;
+  }
+  
+  /*buttons */
+  .Ap_view_btn{
+
+    background-color: #007bff;
+  }
+  .Ap_edit_btn{
+
+    background-color: yellow;
+
+  }
+  .Ap_delete_btn{
+
+    background-color: red;
+
+
+}
+.Ap_add_btn{
+
+  background-color: green;
+  margin-bottom: 5px;
+}
+
+  .Ap_view_btn,
+  .Ap_edit_btn,
+  .Ap_add_btn,
+  .Ap_delete_btn {
+    display: inline-block;
+    padding: 6px 12px;
+    /*background-color: #007bff;  Blue background */
+    color: #fff; 
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* buttons hover  */
+  .Ap_view_btn:hover{
+    background-color: green; 
+
+  }
+  .Ap_edit_btn:hover{
+    background-color: darkgoldenrod;
+  }
+  .Ap_delete_btn:hover {
+    
+    background-color: darkred;
+  }
+  .Ap_add_btn:hover{
+
+    background-color:blue;
+  }

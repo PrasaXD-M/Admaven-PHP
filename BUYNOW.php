@@ -7,8 +7,11 @@
 
   <link rel="stylesheet" href="TITLE/TITLE.css">
   <style>
-   
-</style>
+    .buy-now a{
+      color: #fff;
+      text-decoration: none;
+    }
+  </style>
  
 </head>
 <body>
@@ -35,7 +38,7 @@
        
 
     </p><div>  
-    <div class="buy-now"><a href="payment.php">Buy Now</a></div>
+    <div class="buy-now"><a href="paymant.php">Buy Now</a></div>
   </div>
   </div>
 </div>
@@ -59,7 +62,7 @@
           
            </p>
           
-        <div class="buy-now">Buy Now</div>
+        <div class="buy-now"><a href="paymant.php">Buy Now</a></div>
       </div>
     </div>
 
@@ -82,7 +85,7 @@
         <p> Pricing: Starting at $5,999 </p>
        
         </p>
-      <div class="buy-now">Buy Now</div>
+      <div class="buy-now"><a href="paymant.php">Buy Now</a></div>
     </div>
   </div>
   </div>

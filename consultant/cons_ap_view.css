@@ -1,0 +1,40 @@
+/* Styles for the container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: aquamarine;
+  }
+  
+  /* Styles for the headings */
+  .container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .container h2 {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  
+  .container p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  /* Styles for the appointment details */
+  .appointment-detail {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  
+  .appointment-detail h2 {
+    flex: 1;
+    width: 200px; /* Adjust width as needed */
+  }
+  
+  .appointment-detail p {
+    flex: 2;
+  }

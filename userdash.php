@@ -12,6 +12,7 @@
     <title>Document</title>
     <!-- User Dashboard stylesheet -->
     <link rel="stylesheet" href="css/userdash.css">
+    <link rel="stylesheet" href="css/userAdmin.css">
 </head>
 <style>
     .user_side_bar {
@@ -60,8 +61,52 @@
                     <p><b>Password : <?php echo $userDetails['password']; ?></b></p>
                     <p><b>Contact Number : <?php echo $userDetails['contact_no']; ?></b></p>
                 </div>
+
             </div>
         </div>
+    </div>
+
+    <div class="customer_table_details_reading">
+    <div class="customer_info_container">
+                <div class="customer_info_table">
+                    <table border="1">
+                        <h2>Consultant Details</h2>
+                        <thead>
+                            <tr>
+                                <th>App ID</th>
+                                <th>Name</th>
+                                <!-- <th>Emali</th> -->
+                                <!-- <th>Contact NO</th> -->
+                                <!-- <th>Actions</th>                                -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                                require_once "config/database.php"; 
+                                // $user_email = $_SESSION[""];
+                                $user_email = $userDetails['email'];
+
+
+                                $constSql = "SELECT * FROM newapp WHERE u_email = '$user_email'";
+                                $constResult = mysqli_query($con, $constSql);
+
+                                while($constrow = mysqli_fetch_array($constResult)) { ?>
+
+                                    <tr>
+                                        <td><?php echo $constrow["app_ID"]; ?></td>
+                                        <td><?php echo $constrow["app_name"]; ?></td>
+                                        <!-- <td><?php //echo $constrow["C_email"]; ?></td> -->
+                                        <!-- <td><?php //echo $constrow["C_contactNO"]; ?></td> -->
+
+                                        
+                                    </tr>
+                               <?php }
+                                
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
     </div>
 </body>
 </html>

@@ -1,0 +1,18 @@
+.update_btn{
+    display: inline-block;
+    padding: 9px 52px;
+    background-color: #007bff;
+    color: #fff; /* White text */
+    text-decoration: none;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transition-property: transform;
+    transition-duration: 1s;
+}
+.update_btn:hover{
+
+    background-color: darkred;
+    transform:scale(1.18);
+}
