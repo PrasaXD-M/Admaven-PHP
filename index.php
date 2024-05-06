@@ -88,21 +88,20 @@
     </div>
 
     <div class="service_card_container">
-        
+        <?php include "cardContent/card_cont.php"; ?>
     </div>
 
-    <div class="brand-cont item4">
+    <!-- <div class="brand-cont item4">
             <div class="cont-video">
-                <!-- <video src=""></video> -->
             </div>
 
-            <!-- <div class="brand-name"> -->
+            <div class="brand-name"> 
                 <div class="inner-about brand-abt">
                     <h1 id="headabt">OUR CLIENTS</h1>
                     <h1 id="abtsecondhd">BRANDS WE WORK WITH</h1>
                </div>
-            <!-- </div> -->
-    </div>
+            
+    </div> -->
 
     <div class="testimonial item5">
         <?php include "/xampp/htdocs/IWTproject/Admaven-PHP/testimonial1/testimonial.php"; ?> 
