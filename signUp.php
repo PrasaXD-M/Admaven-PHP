@@ -23,9 +23,9 @@
             background-image: url("https://th.bing.com/th/id/R.0e9ed103714e886da56317a8adcc7c4e?rik=XA5cl9krLY8U8Q&riu=http%3a%2f%2fcdn.wallpapersafari.com%2f80%2f28%2fLbzN9a.jpg&ehk=b%2fMaBFPVkyKmFbvlBc8z%2fOP9pYWYu6djADuUSKRbr9g%3d&risl=&pid=ImgRaw&r=0");
         }
 
-        .signup-container {
-            /* background-image: url("img/generic-background.jpg"); */
-        }
+        /* .signup-container {
+            background-image: url("img/generic-background.jpg");
+        } */
 
 
     </style>
