@@ -73,31 +73,29 @@
 
                 <div class="customer_info_table">
                     <table border="1">
-                        <a href="ManAdminCreate.php" class="create__btn">Add Manager Admin</a>
+                        <a href="ManageServices/createService.php" class="create__btn">Add New Service</a>
                         <h2>Manager Admin Table</h2>
                         <!-- <a href="#" class="create_btn">Create Account</a> -->
                         <thead>
                             <tr>
-                                <th>Consultant ID</th>
-                                <th>Name</th>
-                                <th>Emali</th>
-                                <th>Contact NO</th>
+                                <th>Service ID</th>
+                                <th>Service Title</th>
+                                <th>Image</th>
                                 <th>Actions</th>                               
                             </tr>
                         </thead>
                         <tbody>
                             <?php
                                 require_once "config/database.php"; 
-                                $manadminSql = "SELECT * FROM manage_admin";
-                                $manadminResult = mysqli_query($con, $manadminSql);
+                                $servicesSql = "SELECT * FROM Services";
+                                $serviceResult = mysqli_query($con, $servicesSql);
 
-                                while($manAdminrow = mysqli_fetch_array($manadminResult)) { ?>
+                                while($servicerow = mysqli_fetch_array($serviceResult)) { ?>
 
                                     <tr>
-                                        <td><?php echo $manAdminrow["Mnadmin_ID"]; ?></td>
-                                        <td><?php echo $manAdminrow["Mnad_Fname"]; ?></td>
-                                        <td><?php echo $manAdminrow["Mand_email"]; ?></td>
-                                        <td><?php echo $manAdminrow["Mand_contactNO"]; ?></td>
+                                        <td><?php echo $servicerow["S_ID"]; ?></td>
+                                        <td><?php echo $servicerow["S_title"]; ?></td>
+                                        <td><?php echo $servicerow["S_image"]; ?></td>
 
                                         <td>
                                             <a href="editManAdmin.php?Mnadmin_ID=<?php echo $manAdminrow["Mnadmin_ID"]; ?>" class="edit_btn">Edit</a>
