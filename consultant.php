@@ -72,7 +72,7 @@
     <div class="include_matheesha_part">
        <h1>Appointment Details</h1>
 <div>
-<a  href="consultant.php"  class="Ap_add_btn">Add appointment</a>
+<a  href="consultant/.php"  class="Ap_add_btn">Add appointment</a>
     
     </div>
 
