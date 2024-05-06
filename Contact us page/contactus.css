@@ -1,10 +1,53 @@
+/* || INSERT GOOGLE FONT  */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Rubik+Burned&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Protest+Strike&family=Rubik+Burned&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Oswald:wght@500&family=Rubik+Burned&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato&display=swap');
+
 body {
   font-family: Arial, sans-serif;
   background-image: url("call-center-woman-smile-portrait-260nw-2305703987.webp " );
   background-size: cover;
 }
+
+:root {
+  /* || FONTS */
+  --SPACIAL-FF: 'Dancing Script', cursive;
+  --SPACIAL-FF2: 'system-ui';
+
+  --FF-CAPTION: 'Protest Strike', sans-serif;
+
+  --LINK-FF: 'Oswald', sans-serif;
+
+  --ABT-FONT: "Kanit";
+
+  /* || COLORS */
+  --INFO-MAIL-COLOR: #000;
+  --INFO-BGCOLOR: rgb(237, 232, 232);
+  --LIGHT-COLOR: #fff;
+      /* Nav color */
+  --NAV-BACK-COLOR: #333;
+  --NAV-LINE-BACK: hsl(39, 93%, 45%);
+
+  /* header content */
+  --ORANGE-COLOR: rgb(228, 151, 6); 
+}
+
+.phonecall-info h2{
+  color: var(--ORANGE-COLOR);
+  font-family: var(--ABT-FONT);
+  font-size: 900;
+}
+
+.phonecall-info ul li {
+  color: var(--LIGHT-COLOR);
+}
+
 .first {
- 
+  
   display: flex;
   justify-content: space-between;
 }

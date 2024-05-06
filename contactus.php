@@ -19,7 +19,7 @@
     <!-- <div class="help_cont"></div> -->
     <h2>Need any help?</h2>
     <ul>
-      <li>  <h3>Contact</h3></li>
+      <li><h3>Contact</h3></li>
       <li>📞 +1 456 789  234</li>
       <li><h3>Address</h3></li>
       <li><h3>Emai</h3> </li>
@@ -46,16 +46,11 @@
      
     
     <!-- Add your social media links here -->
-  </div>
-  
-  
-  
- 
+  </div> 
     
-  
   <div class="phonecall-form">
-    <h1>Contact Us</h1>
-    <p>Contact Our Support Team that will help you with Quick and Professional Solutions for your Problems. Required fields are marked *</p>
+    <h1 style="color: #fff;">Contact Us</h1>
+    <p style="color: #fff;">Contact Our Support Team that will help you with Quick and Professional Solutions for your Problems. Required fields are marked *</p>
     <form action="submit_form.php" method="post">
       <label for="subject">Subject*</label>
       <input type="text" id="subject" name="subject" required>
