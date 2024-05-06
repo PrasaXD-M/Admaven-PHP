@@ -1,0 +1,79 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+  background-image: url('abstract-watercolor-design-texture-background_1055-7882.avif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+h1 {
+  color: #333;
+}
+
+
+.order_details_table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.order_details_table th,
+.order_details_table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.order_details_table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+.order_add_btn,
+.order_view_btn,
+.order_edit_btn,
+.order_delete_btn {
+  text-decoration: none;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.order_add_btn {
+  background-color: #5cb85c;
+}
+
+.order_view_btn {
+  background-color: #337ab7;
+}
+
+.order_edit_btn {
+  background-color: #f0ad4e;
+}
+
+.order_delete_btn {
+  background-color: #d9534f;
+}
+
+
+.order_add_btn:hover,
+.order_view_btn:hover,
+.order_edit_btn:hover,
+.order_delete_btn:hover {
+  opacity: 0.8;
+}
+.order_details_table tr:nth-child(even) {
+  background-color: #f2f2f2eb;
+}
+
+.order_details_table tr:hover {
+  background-color: #ddd;
+}

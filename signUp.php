@@ -24,7 +24,7 @@
         }
 
         .signup-container {
-            background-image: url("img/generic-background.jpg");
+            /* background-image: url("img/generic-background.jpg"); */
         }
 
 
@@ -141,7 +141,7 @@
                 </div>
             </form>
             <div class="remember-terms">
-                <p>By continuing, you agree to AdMaven's <a href="#">Tearms of service & privacy policy.</a></p>
+                <p>By continuing, you agree to AdMaven's <a href="terms.php">Tearms of service & privacy policy.</a></p>
             </div>
         </div>
     </div>

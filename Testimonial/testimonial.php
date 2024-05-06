@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>testtimonial</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/screen.css">
-    <link rel="stylesheet" href="/css/test.css">
+    <link rel="stylesheet" href="Testimonial/style.css">
+    <link rel="stylesheet" href="Testimonial/screen.css">
+    <link rel="stylesheet" href="Testimonial/test.css">
 </head>
 <body>
     <div class="aboutUS" id="chefs">
@@ -90,12 +90,6 @@
     </div>
 
 </div>
-
-<div class="footer">
-    
-</div>
-
-<!-- link JavaScript file -->
-<script src="/js/main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

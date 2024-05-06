@@ -62,7 +62,7 @@
         <div class="inner-nav">
             <ul>
                 <li><a href="index.php">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
+                <li><a href="About.php">ABOUT</a></li>
                 <li><a href="services.php">SERVICES</a></li>
                 <li><a href="blog.php">BLOG</a></li>
                 <li><a href="contactus.php">CONTACT</a></li>

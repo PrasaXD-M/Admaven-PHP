@@ -62,6 +62,9 @@
             </div>
         </div>
     </div>
+    <div class="contentCreator_cont_crud">
+        <?php include "Orders/order_table.php"; ?>
+    </div>
 </body>
 </html>
 <?php } else {

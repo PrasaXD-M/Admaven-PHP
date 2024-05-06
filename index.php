@@ -105,10 +105,11 @@
     </div>
 
     <div class="testimonial item5">
-        <h3>testimonial</h3>
+        <?php include "Testimonial/testimonial.php"; ?> 
+
     </div>
 
-    <div class="footer item6">
+    <!-- <div class="footer item6">
         <footer>
             <div class="container">
                 <div class="row">
@@ -159,11 +160,11 @@
             
             
         </div>
-        
-        </footer>
+         -->
+        <!-- </footer>
         <div class="bottom-bar">
             <p>&copy;2023 your company.All rights reserved</p>
-        </div>
+        </div> -->
     </div>
 </body>
 </html>

@@ -1,0 +1,37 @@
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e9ecf6;
+  margin: 0;
+  padding: 20px;
+  margin: 40px auto;
+  background-image: url('pexels-fabianwiktor-994605.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+div {
+  background-color: #ffffffaa;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-top: 20px;
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+h2 {
+  color: #555;
+  margin-bottom: 5px;
+}
+
+p {
+  color: #666;
+  margin-top: 0;
+}

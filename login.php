@@ -153,7 +153,7 @@
                 </div>
             </form>
            <div class="remember-terms">
-            <a href="#">Terms & Conditions | Privacy</a>
+            <a href="terms.php">Terms & Conditions | Privacy</a>
            </div>
         </div>
     </div>
