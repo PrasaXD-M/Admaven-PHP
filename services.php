@@ -1,5 +1,7 @@
 <?php session_start(); 
-    if(isset($_SESSION["user"]) || isset($_SESSION["usAdmin"]))
+    if(isset($_SESSION["user"]) OR !isset($_SESSION["usAdmin"]) OR isset($_SESSION["ManagerAdmin"]) OR isset($_SESSION["consultant"]) ) {
+        // header("location: login.php");
+   
 ?>
 
 <!DOCTYPE html>
@@ -160,3 +162,7 @@
     </div>
 </body>
 </html>
+
+<?php } else { 
+    header("location: login.php");
+} ?>
