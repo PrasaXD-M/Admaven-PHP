@@ -14,8 +14,10 @@
 <title>AdMaven</title>
 <link rel="stylesheet"  href="About/About.css">
   </head>
-  <body >
-    
+  <body>
+    <div class="header_cont">
+      <?php include "header.php"; ?>
+    </div>
     <header class="banner">
      <div class="theme">
       <h1>  WEL  COME ADMAVAN  <img src="About/colorful-fins-forming-globe-2047ld.png" style="width:128px;height:128px;">   </h1>   
@@ -203,6 +205,8 @@
       dots[slideIndex-1].className += " active";
     } 
     </script>
-  
+    <div class="footer_include">
+      <?php include "footer.php"; ?>
+    </div>
   </body>
 </html>

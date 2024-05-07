@@ -168,6 +168,10 @@
         
 
     </div>
+
+    <div class="footer_cont_include">
+        <?php include "footer.php"; ?>
+    </div>
 </body>
 </html>
 

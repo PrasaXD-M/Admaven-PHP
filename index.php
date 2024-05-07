@@ -165,5 +165,8 @@
             <p>&copy;2023 your company.All rights reserved</p>
         </div> -->
     </div>
+    <div class="footer_cont_include" style="margin-top: 8em;">
+        <?php include "footer.php"; ?>
+    </div>
 </body>
 </html>
