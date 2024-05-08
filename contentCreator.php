@@ -18,6 +18,12 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
+
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 </style>
 <body>
     <header>
