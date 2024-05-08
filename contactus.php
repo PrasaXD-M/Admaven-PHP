@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +16,7 @@
 </head>
 <?php include 'header.php'; ?>
 <?php 
-  session_start();
+  // session_start();
   if(isset($_SESSION["user"])) {
     include 'consultant/consultant.php';
 

@@ -131,3 +131,8 @@
 .customer_info_container {
     background-color: rgb(196, 207, 242);
 }
+
+.Detailsedit-btn {
+    padding: 1em;
+    margin-bottom: 1rem !important;
+}

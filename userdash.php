@@ -13,6 +13,12 @@
     <!-- User Dashboard stylesheet -->
     <link rel="stylesheet" href="css/userdash.css">
     <link rel="stylesheet" href="css/userAdmin.css">
+    <style>
+    .Detailsedit-btn {
+        padding: 1em;
+        margin-bottom: 1rem !important;
+    }
+    </style>
 </head>
 <style>
     .user_side_bar {
@@ -48,6 +54,7 @@
                 <div class="Detailsedit-btn">
                     <div class="edit_profile">
                         <a href="editDetails.php">Edit Profile</a>
+                        <a href="deleteUserAcc.php">Delete My Profile</a>
                     </div>
                 </div>
 
@@ -70,13 +77,13 @@
             <div class="customer_info_container" style="background-color: rgb(196, 207, 242);">
                 <div class="customer_info_table">
                     <table border="1">
-                        <h2>Consultant Details</h2>
+                        <h2>Appointment Details</h2>
                         <thead>
                             <tr>
                                 <th>App ID</th>
-                                <th>Name</th>
-                                <!-- <th>Emali</th> -->
-                                <!-- <th>Contact NO</th> -->
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Title</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
@@ -94,9 +101,9 @@
 
                                     <tr>
                                         <td><?php echo $constrow["Appointment_ID"]; ?></td>
+                                        <td><?php echo $constrow["Date"]; ?></td>
+                                        <td><?php echo $constrow["Time"]; ?></td>
                                         <td><?php echo $constrow["cinterest"]; ?></td>
-                                        <!-- <td><?php //echo $constrow["C_email"]; ?></td> -->
-                                        <!-- <td><?php //echo $constrow["C_contactNO"]; ?></td> -->
 
                                         <td>
                                             <a href="consultant/consultant.php" class="remove_btn">Remove</a>
@@ -120,7 +127,6 @@
                         <thead>
                             <tr>
                                 <th>Order ID</th>
-                                <th>Package Name</th>
                                 <th>Order Details</th>
                                 <th>amount</th>
                                 <!-- <th>Actions</th>                                -->
@@ -140,7 +146,6 @@
 
                                     <tr>
                                         <td><?php echo $constrow["order_id"]; ?></td>
-                                        <td><?php echo $constrow["package_name"]; ?></td>
                                         <td><?php echo $constrow["order_detials"]; ?></td>
                                         <td><?php echo $constrow["amount"]; ?></td>
 
