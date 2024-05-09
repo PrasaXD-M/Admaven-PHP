@@ -17,7 +17,7 @@
 <?php include 'header.php'; ?>
 <?php 
   // session_start();
-  if(isset($_SESSION["user"])) {
+  if(isset($_SESSION["user"]) OR isset($_SESSION["consultant"])) {
     include 'consultant/consultant.php';
 
   } else {
