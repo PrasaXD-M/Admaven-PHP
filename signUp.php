@@ -46,6 +46,7 @@
                     $email = $_POST["uemail"];
                     $password = $_POST["password"];
                     $passwordRepeat = $_POST["rePassword"];
+                    $contact = $_POST["cont"];
         
                     $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
@@ -86,7 +87,7 @@
                         }
 
                     } else {
-                        mysqli_query($con, "INSERT INTO user_registration (name, L_name,  email, password) VALUES ('$fname','$lname', '$email', '$password')");
+                        mysqli_query($con, "INSERT INTO user_registration (name, L_name,  email, password, contact_no) VALUES ('$fname','$lname', '$email', '$password', '$contact')");
 
                         //echo "<div class = 'success-alert'>Welcome to AdMaven You are registered successfully!</div>";
                         header("location: login.php");
@@ -117,13 +118,15 @@
                     <label for="password">Password:</label><br>
                     <input type="password" name="password" id="password" style="width: 100%;">
                 </div>
-                <!-- <div class="form-bdy">
-                    <label for="cont-num">Contact No:</label><br>
-                    <input type="tel" name="cont-num" id="cont-num" style="width: 100%;">
-                </div> -->
+                
                 <div class="form-bdy">
                     <label for="rePassword">Repeat Password:</label><br>
                     <input type="password" name="rePassword" id="rePassword" style="width: 100%;">
+                </div>
+
+                <div class="form-bdy">
+                    <label for="cont-num">Contact No:</label><br>
+                    <input type="tel" name="cont" id="cont-num" style="width: 100%;">
                 </div>
 
                 <div class="already-msg">

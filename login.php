@@ -71,7 +71,7 @@
                         }
                     } elseif($consultant) {
                         if($password == $consultant["C_password"]) {
-                            session_start();
+                            // session_start();
                             $_SESSION["consultant"] = $consultant["cons_ID"];
                             header("location: consultant.php");
                             die();
@@ -83,7 +83,7 @@
 
                     } elseif($us_admin) {
                         if($password == $us_admin["ua_password"]) {
-                            session_start();
+                            // session_start();
                             $_SESSION["usAdmin"] = $us_admin["User_admin_id"];
                             header("location: userAdmin.php");
                             die();
@@ -93,7 +93,7 @@
                         }
                     } elseif($contCreator) {
                         if($password == $contCreator["Cont_password"]) {
-                            session_start();
+                            // session_start();
                             $_SESSION["contentCreator"] = $contCreator["Cont_ID"];
                             header("location: contentCreator.php");
                             die();
@@ -103,7 +103,7 @@
                         }
                     } elseif($managerAdmin) {
                         if($password == $managerAdmin["Mand_password"]){
-                            session_start();
+                            // session_start();
                             $_SESSION["ManagerAdmin"] = $managerAdmin["Mnadmin_ID"];
 
                             header("location: ManagerAdmin.php");
