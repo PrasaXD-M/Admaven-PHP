@@ -8,7 +8,7 @@
         
                     
 
-                    require_once "../config/database.php";
+                        require_once "../config/database.php";
  
                         $update_sql = "UPDATE Services SET S_title = '$title', S_details = '$description', S_image = '$simage', S_amt = '$samt' WHERE S_ID = '$hiddencons_idh'";
 

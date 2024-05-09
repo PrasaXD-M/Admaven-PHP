@@ -28,7 +28,7 @@
                     $result = mysqli_query($con, $sql);
                     $row = mysqli_fetch_array($result);
                 ?> 
-
+ 
                 <form action="ServiceProcess.php" method="post">
 
                 <div class="form-bdy">
