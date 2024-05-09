@@ -109,7 +109,7 @@
                                 <th>Name</th>
                                 <th>Emali</th>
                                 <th>Contact NO</th>
-                                <th>Actions</th>                               
+                                <th>Actions</th>                             
                             </tr>
                         </thead>
                         <tbody>
