@@ -1,4 +1,7 @@
 
+<?php //session_start(); 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -14,7 +17,7 @@
             
                 <div class="container-slide">
                     <div class="wrapper-slide">
-                        <img class="img-slide" src="new 3.jpg">
+                        <img class="img-slide" src="image-3.jpg">
                         <img class="img-slide" src="new.jpeg">
                         <img class="img-slide" src="new 4.jpg">
                         <img class="img-slide" src="new 2.jpg">

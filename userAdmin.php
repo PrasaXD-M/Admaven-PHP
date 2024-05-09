@@ -131,7 +131,7 @@
                                             <a href="deleteCons.php?Mnadmin_ID=<?php echo $manAdminrow["Mnadmin_ID"]; ?>" class="remove_btn">Remove</a>
                                         </td>
                                     </tr>
-                               <?php }
+                               <?php } 
                                 
                             ?>
                         </tbody>
