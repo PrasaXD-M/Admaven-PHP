@@ -1,4 +1,7 @@
-<?php 
+<?php
+
+use PSpell\Config;
+
     session_start(); 
     // if(!isset($_SESSION["user"]) || !isset($_SESSION["consultant"]) ) {
     //     header("location: index.php");
@@ -130,32 +133,44 @@
                 } 
             ?>
 
+            <?php
+
+            if(isset($_SESSION['user'])) {
+
+            
+                $sessionUserID = $_SESSION['user'];
+                require 'config/database.php';
+                $qur = "SELECT * FROM user_registration WHERE user_ID = $sessionUserID";
+                $showresult = mysqli_query($con, $qur);
+                $resultRow = mysqli_fetch_array($showresult); 
+            ?>
+
             <form action="editDetails.php" method="post">
                 <div class="form-bdy">
                     <label for="rfName">First Name:</label><br>
-                    <input type="text" name="rfName" id="rfName" placeholder="Your fist name.." style="width: 100%;">
+                    <input type="text" name="rfName" id="rfName" value="<?php echo $resultRow['name']; ?>" style="width: 100%;">
                 </div>
                 <div class="form-bdy">
                     <label for="rlName">Last Name:</label><br>
-                    <input type="text" name="rlName" id="rlName" placeholder="Your last name.." style="width: 100%;">
+                    <input type="text" name="rlName" id="rlName" value="<?php echo $resultRow['L_name']; ?>" style="width: 100%;">
                 </div>
                 <div class="form-bdy">
                     <label for="uemail">Email:</label><br>
-                    <input type="email" name="uemail" id="uemail" placeholder="eg: 123@gmail.com" style="width: 100%;">
+                    <input type="email" name="uemail" value="<?php echo $resultRow['email']; ?>" id="uemail" placeholder="eg: 123@gmail.com" style="width: 100%;">
                 </div>
                 <div class="form-bdy">
                     <label for="password">Password:</label><br>
-                    <input type="password" name="password" id="password" style="width: 100%;">
+                    <input type="password" name="password" placeholder="<?php echo $resultRow['password']; ?>" id="password" style="width: 100%;">
                 </div>
 
                 <div class="form-bdy">
                     <label for="rePassword">Repeat Password:</label><br>
-                    <input type="password" name="rePassword" id="rePassword" style="width: 100%;">
+                    <input type="password" name="rePassword" placeholder="<?php echo $resultRow['password']; ?>" id="rePassword" style="width: 100%;">
                 </div>
 
                 <div class="form-bdy">
                     <label for="contnum">Contact No:</label><br>
-                    <input type="text" name="contnum" id="contnum" style="width: 100%;">
+                    <input type="text" name="contnum" value="<?php echo $resultRow['contact_no']; ?>" id="contnum" style="width: 100%;">
                 </div>
 
                 <!-- <div class="already-msg">
@@ -172,6 +187,7 @@
                         <input type="submit"value="Update" 
                         name="submit">
                     </div>
+                
                     <div class="back">
                         <input type="submit" value="Cancel"
                         name="cancel">
@@ -183,6 +199,6 @@
             </div>
         </div>
     </div>
-
+                <?php } ?>
 </body>
 </html>
