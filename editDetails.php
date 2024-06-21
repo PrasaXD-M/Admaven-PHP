@@ -134,7 +134,7 @@ use PSpell\Config;
             ?>
 
             <?php
-
+            //This is how we can access detils using session.
             if(isset($_SESSION['user'])) {
 
             
